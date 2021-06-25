@@ -5,7 +5,7 @@ const app = express();
 const mongoose = require("mongoose");
 
 // imports models to use with queries
-const db = require('./models');
+const db = require('./models/index');
 const routes = require('./controllers')
 
 // Define middleware here
