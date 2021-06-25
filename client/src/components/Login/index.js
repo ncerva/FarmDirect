@@ -1,37 +1,67 @@
 import React from "react";
+import { GiFarmer } from 'react-icons/gi';
+import { FaCarrot } from 'react-icons/fa';
 
 
-export function FarmerLogin() {
+export function SignUpCard() {
+    //sign up 
+        //are you are farmer or a customer
+    //log in
     return (
-    <form>
-        <h3>Farmer Sign In/ Sign Up</h3>
-        
-        <div className="form-group">
-            <label>Email address</label>
-            <input type="email" className="form-control" placeholder="Enter email" />
+        <div className="column">
+            <div className="text-block login-block logout-block" id="signup-block">
+                <p>Sign up</p>
+            <div className="field">
+                <p className="control">
+                <input className="input" id="email-signup" type="text" placeholder="Email" />
+                </p>
+            </div>
+            <div className="field">
+                <p className="control">
+                <input className="input" id="password-signup" type="password" placeholder="Password" />
+                </p>
+            </div>
+            <div className="field">
+                <p className="control">
+                    <button id="signup-farmer"> 
+                    I am a farmer! <GiFarmer />
+                    </button>
+                </p>
+            </div>
+            <div className="field">
+                <p className="control">
+                    <button id="signup-customer">
+                    I am a customer! <FaCarrot />
+                    </button>
+                </p>
+            </div>
+            </div>
         </div>
-
-        <div className="form-group">
-            <label>Password</label>
-            <input type="password" className="form-control" placeholder="Enter password" />
-        </div>
-
-<div className="form-group">
-    <div className="custom-control custom-checkbox">
-        <input type="checkbox" className="custom-control-input" id="customCheck1" />
-        <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
-    </div>
-</div>
-
-<button type="submit" className="btn btn-primary btn-block">Submit</button>
-    </form>
     );
 }
-
-export function UserLogin(props) {
+export function LoginCard() {
     return (
-    <div className="form-group">
-        <input className="form-control" {...props} />
-    </div>
-    );
+        <div className="column ">
+            <div className="text-block login-block logout-block">
+                <p>Login</p>
+            <div className="field">
+                <p className="control">
+                <input id="email-login" className="input" type="text" placeholder="Email" />
+                </p>
+            </div>
+            <div className="field">
+                <p className="control">
+                <input id="password-login" className="input" type="password" placeholder="Password" />
+                </p>
+            </div>
+            <div className="field">
+                <p className="control">
+                    <button id="login-submit">
+                    Login
+                    </button>
+                </p>
+            </div>
+            </div>
+        </div>
+    )
 }
