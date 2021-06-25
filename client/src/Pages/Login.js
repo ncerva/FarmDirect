@@ -1,12 +1,13 @@
 import React from "react";
-import { FarmerLogin } from "../components/Login";
+import { SignUpCard, LoginCard } from "../components/Login";
 
 
 const Login = () => {
     return (
-    <div>
-        <FarmerLogin />
-    </div>
+<div className="columns is-multiline" id="card-container">
+            <SignUpCard />
+            <LoginCard />
+</div>
     );
 };
 
