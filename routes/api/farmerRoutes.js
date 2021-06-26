@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const User = require('../../models/User');
+const Farmer = require('../../models/Farmer');
 
 
 router.get('/', (req, res) => {
-  User.find({})
-  .then(dbUser => {
-    res.json(dbUser);
+  Farmer.find({})
+  .then(dbFarmer => {
+    res.json(dbFarmer);
   })
   .catch(err => {
     res.status(400).json(err);
@@ -13,12 +13,13 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', ({ body }, res) => {
-  User.create(body)
-  .then(dbUser => {
-    res.json(dbUser);
+  Farmer.create(body)
+  .then(dbFarmer => {
+    res.json(dbFarmer);
   })
   .catch(err => {
     res.status(400).json(err)
   })
 });
+
 module.exports = router;

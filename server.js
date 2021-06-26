@@ -1,18 +1,19 @@
 const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
+const cors = require('cors');
 const app = express();
 const mongoose = require("mongoose");
 
 // imports models to use with queries
 const db = require('./models/index');
-const routes = require('./controllers')
+const routes = require('./routes');
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(routes);
-
+app.use(cors());
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -39,5 +40,5 @@ app.get("*", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`🌎 ==> API server now on port ${PORT}!`);
+  console.log(`🌎 ==> CORS enabled API server now on port ${PORT}!`);
 });
