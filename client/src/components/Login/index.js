@@ -120,7 +120,7 @@ export function SignUpCard() {
         </div>
         <div className="field">
           <p className="control">
-            <button id="signup-farmer" >
+            <button id="signup-farmer" onClick={ () => API.addNewFarmer(signup) }>
               I am a farmer! <GiFarmer />
             </button>
           </p>
