@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 
 // imports models to use with queries
 const db = require('./models/index');
-const routes = require('./controllers')
+const routes = require('./routes');
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -39,5 +39,5 @@ app.get("*", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`🌎 ==> API server now on port ${PORT}!`);
+  console.log(`🌎 ==> CORS enabled API server now on port ${PORT}!`);
 });
