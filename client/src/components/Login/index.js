@@ -137,23 +137,34 @@ export function SignUpCard() {
   );
 }
 export function LoginCard() {
+  const [login, setLogin] = useState({
+    email: '',
+    password: ''
+  })
+
+  const handleLogin = async () => {
+    event.preventDefault;
+    await API.loginUser(login.email)
+      .then(res => {alert(`${res.data.first_name} ${res.data.last_name} is now logged in!`)});
+  }
+
   return (
     <div className="column ">
       <div className="text-block login-block logout-block">
         <p>Login</p>
         <div className="field">
           <p className="control">
-            <input id="email-login" className="input" type="text" placeholder="Email" />
+            <input id="email-login" className="input" type="text" placeholder="Email" onChange={e => setLogin({...login, email: e.target.value})} />
           </p>
         </div>
         <div className="field">
           <p className="control">
-            <input id="password-login" className="input" type="password" placeholder="Password" />
+            <input id="password-login" className="input" type="password" placeholder="Password" onChange={e => setLogin({...login, password: e.target.value})} />
           </p>
         </div>
         <div className="field">
           <p className="control">
-            <button id="login-submit">
+            <button id="login-submit" onClick={handleLogin}>
               Login
             </button>
           </p>

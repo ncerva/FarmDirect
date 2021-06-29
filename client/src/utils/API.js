@@ -9,6 +9,10 @@ export default {
   addNewUser: function(postData) {
     return axios.post('/api/users', postData)
   },
+  //login user by email GET
+  loginUser: function(email) {
+    return axios.get(`api/users/${email}`)
+  },
   //get all farmers
   getAllFarmers: function() {
     return axios.get('/api/farmer')

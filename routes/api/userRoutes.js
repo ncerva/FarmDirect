@@ -7,6 +7,15 @@ router
   .get(userController.findAll)
   .post(userController.create);
 
+router
+  .route('/:email')
+  .get(userController.findByEmail);
+
+
+
+
+
+
 
 // router.get('/', (req, res) => {
 //   User.find({})
