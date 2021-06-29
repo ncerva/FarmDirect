@@ -4,12 +4,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: .5s ease;
 }
 
 .image {
     width: 1000px;
-    height: 600px;
-    border-radius: 10px;
+    height: auto;
+    border-radius: 50px;
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
 }
 
 .right {
@@ -20,6 +25,7 @@
     color: cornflowerblue;
     cursor: pointer;
     user-select: none;
+    z-index: 1;
 }
 
 .left {
@@ -30,10 +36,10 @@
     color: cornflowerblue;
     cursor: pointer;
     user-select: none;
+    z-index: 1;
 }
 
-.slide {
-    opacity: 0;
+.slides {
     transition-duration: 1s ease;
 }
 
