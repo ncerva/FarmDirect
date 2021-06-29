@@ -15,8 +15,6 @@ export function Carousel() {
         setCurrent(current === 0 ? length -1 : current -1)
     }
 
-
-
     return (
         <section className='slides'>
             <BsFillCaretLeftFill className="left" onClick={prevSlide}/>
