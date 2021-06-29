@@ -16,6 +16,7 @@ export function Carousel() {
     }
 
     return (
+        <div>
         <section className='slides'>
             <BsFillCaretLeftFill className="left" onClick={prevSlide}/>
             <BsFillCaretRightFill className="right" onClick={nextSlide}/>
@@ -66,6 +67,7 @@ export function Carousel() {
             <span className="carousel-control-next-icon" aria-hidden="true"></span>
             <span className="visually-hidden">Next</span>
         </button>
+    </div>
     </div>
     )
 }
