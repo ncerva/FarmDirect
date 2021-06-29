@@ -23,10 +23,14 @@ export function Carousel() {
             <BsFillCaretRightFill className="right" onClick={nextSlide}/>
         {CarouselData.map((slides,index) => {
             return (
+                <div>
+                    
                 <div className={index === current ? 'slides active' : 'slides'} key={index}>
                     {index === current && (<img src={slides.image} alt='' className='image'/>
                     )}
-                
+                    <div className="image__overlay">
+                    </div>
+                </div>
                 </div>
             ) 
         })}
