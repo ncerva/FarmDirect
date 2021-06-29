@@ -30,8 +30,7 @@ export function Carousel() {
                 </div>
             ) 
         })}
-</section>
-</div>
+    </section>
         <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
