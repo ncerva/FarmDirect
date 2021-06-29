@@ -6,6 +6,7 @@ import Home from "./Pages/Homepage";
 import Login from "./Pages/Login";
 import Results from "./Pages/Results";
 import Checkout from "./Pages/Checkout";
+import Profile from "./Pages/Profile";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route exact path="/home" component={Home} />
             <Route exact path="/login" component={Login}/>
             <Route exact path="/results" component={Results} />
+            <Route exact path="/profile" component={Profile} />
             <Route exact path="/checkout" component={Checkout} />
           </Switch>
           <Footer />
