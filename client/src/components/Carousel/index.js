@@ -17,6 +17,7 @@ export function Carousel() {
 
 
     return (
+        <div>
         <section className='slides'>
             <BsFillCaretLeftFill className="left" onClick={prevSlide}/>
             <BsFillCaretRightFill className="right" onClick={nextSlide}/>
@@ -30,6 +31,7 @@ export function Carousel() {
             ) 
         })}
 </section>
+</div>
     )
 }
      // <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
