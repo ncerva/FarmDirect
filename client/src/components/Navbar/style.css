@@ -1,1 +1,7 @@
-
+.navbar {
+    position: fixed;
+    text-align: center;
+    padding: 3px;
+    background: #b8b8b8;
+    width: 100%;
+    }
