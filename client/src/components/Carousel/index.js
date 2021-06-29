@@ -15,7 +15,9 @@ export function Carousel() {
         setCurrent(current === 0 ? length -1 : current -1)
     }
 
+
     return (
+        <div>
         <section className='slides'>
             <BsFillCaretLeftFill className="left" onClick={prevSlide}/>
             <BsFillCaretRightFill className="right" onClick={nextSlide}/>
@@ -29,6 +31,7 @@ export function Carousel() {
             ) 
         })}
 </section>
+</div>
         <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
