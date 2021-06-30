@@ -1,8 +1,14 @@
 import React from "react";
 
 
-// export function PaymentCard() {
-//     return (
-//     )
-// }
+function CartCard() {
+    return (
+        <div className="card">
+            <div className="card-content">
+                
+            </div>
+        </div>
+    )
+}
 
+export default CartCard;
