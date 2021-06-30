@@ -136,6 +136,7 @@ export function SignUpCard() {
     </div>
   );
 }
+
 export function LoginCard() {
   const [login, setLogin] = useState({
     email: '',
@@ -145,7 +146,15 @@ export function LoginCard() {
   const handleLogin = async () => {
     event.preventDefault;
     await API.loginUser(login.email)
-      .then(res => {alert(`${res.data.first_name} ${res.data.last_name} is now logged in!`)});
+      .then(res => { 
+        if (res.data.password === login.password) {
+          alert (`${res.data.email} is now logged in!`)
+        }
+      })
+      .catch(err => {
+        console.log(err)
+        alert(`invalid username or password`)
+      }) 
   }
 
   return (
