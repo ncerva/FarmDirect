@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
 import "./style.css";
 
 
@@ -8,7 +9,9 @@ function Navbar() {
 return (
     
     <nav className="navbar navbar-expand-lg navbar-light">
-        <Link className="navbar-brand" to="/">
+        <Link className="navbar-brand" to="/"
+        to="/"
+        className={window.location.pathname === "/" || window.location.pathname === "/home" ? "nav-link active" : "nav-link"}>
             <img className="logo responsive" src="https://user-images.githubusercontent.com/76188076/123719680-c8ea2d80-d847-11eb-8086-15f4b50ddbf4.png" a=""></img>
         </Link>
     <div>
@@ -26,7 +29,7 @@ return (
                 to="/results"
                 className={window.location.pathname === "/results" ? "nav-link active" : "nav-link"}
                 >
-                Search Results
+                Farmers Near You
                 </Link>
             </li>
             <li className="nav-item">
@@ -44,6 +47,11 @@ return (
                 >
                 <FaShoppingCart />
                 </Link>
+            </li>
+            <li> 
+            <FaSearch className="searchicon"/>
+            <input type="text" name="" className="search" placeholder="search"Search>
+            </input>
             </li>
         </ul>
     </div>
