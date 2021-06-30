@@ -17,9 +17,7 @@ module.exports = {
         console.log('its a match')
         console.log(dbUser); 
         res.json(dbUser)
-      } else {
-        
-      }
+      } 
     })
     .catch(err => res.status(404).json(err));
   },

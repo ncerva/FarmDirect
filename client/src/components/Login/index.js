@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import API from '../../utils/API'
 import { GiFarmer } from 'react-icons/gi';
 import { FaCarrot } from 'react-icons/fa';
+import AuthContext from "../../utils/AuthContext";
+
 
 
 export function SignUpCard() {
+  
 
   const [signup, setSignup] = useState({
     first_name: '',
@@ -21,7 +24,10 @@ export function SignUpCard() {
   //are you are farmer or a customer
   //log in
   return (
-    <div className="column">
+    <AuthContext.Consumer>{(context) => {
+      const { isAuthorized, token, isFarmer, currentUser, setAuthState } = context;
+      return (
+<div className="column">
       <div className="text-block login-block logout-block" id="signup-block">
         <p>Sign up</p>
         <div className="field">
@@ -120,20 +126,24 @@ export function SignUpCard() {
         </div>
         <div className="field">
           <p className="control">
-            <button id="signup-farmer" onClick={ () => API.addNewFarmer(signup) }>
+            <button id="signup-farmer" onClick={() => API.addNewFarmer(signup)}>
               I am a farmer! <GiFarmer />
             </button>
           </p>
         </div>
         <div className="field">
           <p className="control">
-            <button id="signup-customer" onClick={ () => API.addNewUser(signup) }>
+            <button id="signup-customer" onClick={() => API.addNewUser(signup)}>
               I am a customer! <FaCarrot />
             </button>
           </p>
         </div>
       </div>
     </div>
+      )
+    }}
+    
+    </AuthContext.Consumer>
   );
 }
 
@@ -143,32 +153,57 @@ export function LoginCard() {
     password: ''
   })
 
-  const handleLogin = async () => {
-    event.preventDefault;
-    await API.loginUser(login.email)
-      .then(res => { 
-        if (res.data.password === login.password) {
-          alert (`${res.data.email} is now logged in!`)
-        }
-      })
-      .catch(err => {
-        console.log(err)
-        alert(`invalid username or password`)
-      }) 
-  }
+  // const handleLogin = async () => {
+  //   event.preventDefault;
+  //   await API.loginUser(login.email)
+  //     .then(res => {
+  //       if (res.data.password === login.password) {
+  //         alert(`${res.data.email} is now logged in!`);
+  //         setAuthState( res.data._id, true, false, res.data.email);
+  //       } else {
+  //         alert(`invalid username or password`)
+  //       }
+  //     })
+  //     .catch(err => {
+  //       console.log(err)
+  //       alert(`invalid username or password`)
+  //     })
+  // }
 
   return (
-    <div className="column ">
+    <AuthContext.Consumer>{(context) => {
+      const { isAuthorized, token, isFarmer, currentUser, setAuthState } = context;
+
+      const handleLogin = async (event) => {
+        event.preventDefault;
+        await API.loginUser(login.email)
+          .then(res => {
+            if (res.data.password === login.password) {
+              alert(`${res.data.email} is now logged in!`);
+              setAuthState( res.data._id, true, false, res.data.email);
+            } else {
+              alert(`invalid username or password`)
+            }
+          })
+          .catch(err => {
+            console.log(err)
+            alert(`invalid username or password`)
+          })
+      };
+
+
+      return(
+        <div className="column ">
       <div className="text-block login-block logout-block">
         <p>Login</p>
         <div className="field">
           <p className="control">
-            <input id="email-login" className="input" type="text" placeholder="Email" onChange={e => setLogin({...login, email: e.target.value})} />
+            <input id="email-login" className="input" type="text" placeholder="Email" onChange={e => setLogin({ ...login, email: e.target.value })} />
           </p>
         </div>
         <div className="field">
           <p className="control">
-            <input id="password-login" className="input" type="password" placeholder="Password" onChange={e => setLogin({...login, password: e.target.value})} />
+            <input id="password-login" className="input" type="password" placeholder="Password" onChange={e => setLogin({ ...login, password: e.target.value })} />
           </p>
         </div>
         <div className="field">
@@ -180,5 +215,9 @@ export function LoginCard() {
         </div>
       </div>
     </div>
+      )
+    }}
+    
+    </AuthContext.Consumer>
   )
 }
