@@ -1,11 +1,12 @@
 import React from "react";
 import { Carousel } from "../components/Carousel";
+import { CarouselData } from "../components/Carousel/CarouselData";
 
 
 const Home = () => {
     return (
     <div>
-        <Carousel />
+        <Carousel slides={CarouselData} />
     </div>
     );
 };
