@@ -25,7 +25,7 @@ if (process.env.NODE_ENV === "production") {
 // Define any API routes before this runs
 
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/deep-thoughts',
+  process.env.MONGODB_URI || 'mongodb://localhost/farm-direct',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
