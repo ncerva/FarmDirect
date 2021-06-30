@@ -48,10 +48,10 @@ return (
                 <FaShoppingCart />
                 </Link>
             </li>
-            <li> 
-            <FaSearch className="searchicon"/>
-            <input type="text" name="" className="search" placeholder="search"Search>
+            <li className="search-box"> 
+            <input type="text" name="" className="search-txt" placeholder="Search">
             </input>
+            <a className="search-btn" href="#"> <FaSearch className="searchicon"/> </a>
             </li>
         </ul>
     </div>
