@@ -20,5 +20,8 @@ export default {
   //create new farmer POST
   addNewFarmer: function (postData) {
     return axios.post('/api/farmer', postData)
-  }
+  },
+  loginFarmer: function(email) {
+    return axios.get(`api/farmer/${email}`)
+  },
 };
