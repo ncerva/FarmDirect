@@ -7,6 +7,7 @@ import Login from "./Pages/Login";
 import Results from "./Pages/Results";
 import Checkout from "./Pages/Checkout";
 import Profile from "./Pages/Profile";
+import FarmerPortal from "./Pages/FarmerPortal";
 import AuthContext from "./utils/AuthContext";
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
           <Route exact path="/results" component={Results} />
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/checkout" component={Checkout} />
+          <Route exact path="/farmerportal" component={FarmerPortal} />
           
         </Switch>
         <Footer />

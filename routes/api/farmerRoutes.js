@@ -6,6 +6,11 @@ router
   .route('/')
   .get(farmerController.findAll)
   .post(farmerController.create);
+
+
+  router
+  .route('/:email')
+  .get(farmerController.findByEmail);
 // router.get('/', (req, res) => {
 //   Farmer.find({})
 //   .then(dbFarmer => {
