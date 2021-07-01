@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
 import "./style.css";
 import AuthContext from "../../utils/AuthContext";
 
@@ -13,7 +14,7 @@ function Navbar() {
 
       const handleLogout = (e) => {
         e.preventDefault;
-        setAuthState( '', false, false, '');
+        setAuthState('', false, false, '');
       }
       if (isAuthorized) {
         return (
@@ -54,6 +55,11 @@ function Navbar() {
                   >
                     <FaShoppingCart />
                   </Link>
+                </li>
+                <li className="search-box">
+                  <input type="text" name="" className="search-txt" placeholder="Search">
+                  </input>
+                  <a className="search-btn" href="#"> <FaSearch className="searchicon" /> </a>
                 </li>
                 <li className="nav-item">
                   <p>logged in as {currentUser}</p>
@@ -115,7 +121,7 @@ function Navbar() {
         )
       }
 
-      
+
     }}
     </AuthContext.Consumer>
   );
