@@ -7,7 +7,6 @@ import "./style.css";
 
 function Navbar() {
 return (
-    
     <nav className="navbar navbar-expand-lg navbar-light">
         <Link className="navbar-brand" to="/"
         to="/"
