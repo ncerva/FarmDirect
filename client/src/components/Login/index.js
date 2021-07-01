@@ -193,11 +193,11 @@ export function LoginCard() {
 
       const handleLoginFarmer = async (event) => {
         event.preventDefault;
-        await API.loginUser(login.email)
+        await API.loginFarmer(login.email)
           .then(res => {
             if (res.data.password === login.password) {
               alert(`${res.data.email} is now logged in!`);
-              setAuthState(res.data._id, true, false, res.data.email);
+              setAuthState(res.data._id, true, true, res.data.email);
             } else {
               alert(`invalid username or password`)
             }
