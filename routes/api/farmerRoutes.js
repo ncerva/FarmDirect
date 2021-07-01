@@ -15,6 +15,10 @@ router
 //     res.status(400).json(err);
 //   });
 // });
+router
+  .route('/:email')
+  .get(farmerController.findByEmail);
+
 
 // router.post('/', ({ body }, res) => {
 //   Farmer.create(body)
