@@ -7,10 +7,14 @@ module.exports = {
       .then(dbFarm => res.json(dbFarm))
       .catch(err => res.status(422).json(err))
   },
+  findByOwner: function  (req, res){
+    db.Farm.findOne({ owner: req.params.id})
+    .then(dbFarm => res.json(dbFarm))
+  },
   create: function ( {body}, res) {
     db.Farm.create(body)
     .then(console.log(JSON.stringify(body)))
-    .then(({_id}) => db.Farmer.findByIdAndUpdate(body.owner, {farms: _id}, {new: true}))
+    // .then(({_id}) => db.Farmer.findByIdAndUpdate(body.owner, {farms: _id}, {new: true}))
     .then(dbFarm => res.json(dbFarm))
     .catch(err => res.status(422).json(err));
   }
