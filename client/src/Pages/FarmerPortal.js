@@ -2,6 +2,7 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import FarmInput from "../components/FarmInput"
+import ProductInput from '../components/ProductInput';
 import AuthContext from '../utils/AuthContext';
 function FarmerPortal() {
 
@@ -18,7 +19,8 @@ function FarmerPortal() {
           <div className="container">
           <div className="columns">
 
-            <FarmInput></FarmInput>
+            <FarmInput />
+            <ProductInput />
           </div>
           </div>
         )

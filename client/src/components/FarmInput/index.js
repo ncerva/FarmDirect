@@ -33,7 +33,7 @@ function FarmInput() {
         <div className="field">
           <label className="label is-small">State</label>
           <p className="control">
-            <select className="form-control" id="state-signup" name="state" onSelect={e => setSignup({ ...signup, state: e.target.value })}>
+            <select className="form-control" id="state-signup" name="state">
               <option value="">Select State</option>
               <option value="AK">Alaska</option>
               <option value="AL">Alabama</option>
