@@ -15,20 +15,27 @@ export function Carousel() {
         setCurrent(current === 0 ? length -1 : current -1)
     }
 
+
     return (
+        <div>
         <section className='slides'>
             <BsFillCaretLeftFill className="left" onClick={prevSlide}/>
             <BsFillCaretRightFill className="right" onClick={nextSlide}/>
         {CarouselData.map((slides,index) => {
             return (
+                <div>
+                    
                 <div className={index === current ? 'slides active' : 'slides'} key={index}>
                     {index === current && (<img src={slides.image} alt='' className='image'/>
                     )}
-                
+                    <div className="image__overlay">
+                    </div>
+                </div>
                 </div>
             ) 
         })}
 </section>
+</div>
     )
 }
      // <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
