@@ -10,14 +10,7 @@ router
 router
   .route('/:id')
   .get(farmController.findByOwner)
-// router.get('/', (req, res) => {
-//   Farm.find({})
-//   .then(dbFarm => {
-//     res.json(dbFarm);
-//   })
-//   .catch(err => {
-//     res.status(400).json(err);
-//   });
-// });
+  .put(farmController.Update)
+
 
 module.exports = router;

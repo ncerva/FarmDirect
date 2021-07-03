@@ -21,6 +21,7 @@ function FarmerPortal() {
 
             <FarmInput />
             <ProductInput />
+            
           </div>
           </div>
         )
