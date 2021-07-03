@@ -16,7 +16,7 @@ function Navbar() {
         e.preventDefault;
         setAuthState('', false, false, '');
       }
-      if (isAuthorized) {
+      if (isAuthorized && isFarmer) {
         return (
           <nav className="navbar navbar-expand-lg navbar-light">
             <Link className="navbar-brand" to="/">
@@ -54,6 +54,14 @@ function Navbar() {
                     className={window.location.pathname === "/checkout" ? "nav-link active" : "nav-link"}
                   >
                     <FaShoppingCart />
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    to="/farmerportal"
+                    className={window.location.pathname === "/farmerportal" ? "nav-link active" : "nav-link"}
+                  >
+                    farmerportal
                   </Link>
                 </li>
                 <li className="search-box">
