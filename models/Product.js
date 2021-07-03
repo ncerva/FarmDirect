@@ -15,10 +15,14 @@ const ProductSchema = new Schema({
     type: Number,
     required: true
   },
+  quantity: {
+    type: Number,
+    required: true,
+  },
   farmId: {
     type: Schema.Types.ObjectId,
     ref: 'Farm'
-  },
+  }
 });
 
 const Product = mongoose.model('Product', ProductSchema);

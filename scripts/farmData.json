@@ -1,0 +1,92 @@
+[
+    {
+        "farm_name": "Misty River Farmstead",
+        "zipcode": "78606",
+        "description": "",
+        "bio": "",
+        "owner": "Billy Jones",
+        "image": "https://user-images.githubusercontent.com/76696641/124362268-820a8800-dbf9-11eb-8b0a-4759ac8417ad.png",
+        "products": "corn & carrots"
+    },
+    {
+        "farm_name": "Paradise Meadow",
+        "zipcode": "78602",
+        "description": "",
+        "bio": "",
+        "owner": "Sheryl Hayes",
+        "image": "https://user-images.githubusercontent.com/76696641/124362227-4ec7f900-dbf9-11eb-8ebe-78fe8a5fd976.png",
+        "products": "carrots & lettuce"
+    },
+    {
+        "farm_name": "Crossroad Farms",
+        "zipcode": "78702",
+        "description": "",
+        "bio": "",
+        "owner": "Rufus Winston",
+        "image": "https://user-images.githubusercontent.com/76696641/124362384-1248cd00-dbfa-11eb-83dc-53efb5bea747.png",
+        "products": "beets"
+    },
+    {
+        "farm_name": "Sleeping Hills Fields",
+        "zipcode": "78626",
+        "description": "Jane Deere",
+        "bio": "",
+        "owner": "",
+        "image": "https://user-images.githubusercontent.com/76696641/124362484-c185a400-dbfa-11eb-8c5c-94077936c8a8.png",
+        "products": "strawberries"
+    },
+    {
+        "farm_name": "Sweet Dreams Orchard",
+        "zipcode": "78624",
+        "description": "",
+        "bio": "",
+        "owner": "Hoy Kelly",
+        "image": "https://user-images.githubusercontent.com/76696641/124362519-fa257d80-dbfa-11eb-810d-31b65322d296.png",
+        "products": "peaches"
+    },
+    {
+        "farm_name": "Moonlight Ranch",
+        "zipcode": "76501",
+        "description": "",
+        "bio": "",
+        "owner": "Neatha Kelley",
+        "image": "https://user-images.githubusercontent.com/76696641/124362586-6acc9a00-dbfb-11eb-8bb4-199edbad467b.png",
+        "products": "corn"
+    },
+    {
+        "farm_name": "Lucky Star Acres",
+        "zipcode": "78653",
+        "description": "",
+        "bio": "",
+        "owner": "Bonnie Parker",
+        "image": "https://user-images.githubusercontent.com/76696641/124362550-31942a00-dbfb-11eb-8828-ccc94d606f1a.png",
+        "products": "corn & broccoli"
+    },
+    {
+        "farm_name": "Old Stone Farm",
+        "zipcode": "78676",
+        "description": "",
+        "bio": "Toad McNeil",
+        "owner": "",
+        "image": "https://user-images.githubusercontent.com/76696641/124362623-a36c7380-dbfb-11eb-8b33-87a7a7aa0549.png",
+        "products": "carrots & pumpkin"
+    },
+    {
+        "farm_name": "Willow Creek Farms",
+        "zipcode": "76578",
+        "description": "",
+        "bio": "",
+        "owner": "Martha Jefferson",
+        "image": "https://user-images.githubusercontent.com/76696641/124362675-1249cc80-dbfc-11eb-908d-4e35ca7afc3e.png",
+        "products": "corn, onion "
+    },
+    {
+        "farm_name": "Happy Acres",
+        "zipcode": "76527",
+        "description": "",
+        "bio": "",
+        "owner": "Jed Withers",
+        "image": "https://user-images.githubusercontent.com/76696641/124362699-3dccb700-dbfc-11eb-9a5b-3608dbadb211.png",
+        "products": "onions"
+    }
+]
