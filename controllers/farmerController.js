@@ -1,4 +1,5 @@
 const db = require('../models');
+const { populate } = require('../models/Farm');
 
 module.exports = {
   findAll: function (req, res) {
@@ -8,6 +9,7 @@ module.exports = {
   },
   findByEmail: async function ( req, res ) {
     await db.Farmer.findOne({ email: req.params.email})
+    .populate("farms")
     .then(console.log('getting' + ' ' + req.params.email))
     // .then(console.log(res))
     .then(dbFarmer => {
