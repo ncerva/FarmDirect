@@ -3,78 +3,91 @@
         "title": "carrots",
         "packsize": "",
         "price": "",
+        "quantity": "",
         "farmId": ""
     },
     {
         "title": "lettuce",
         "packsize": "",
         "price": "",
+        "quantity": "",
         "farmId": ""
     },
     {
         "title": "beets",
         "packsize": "",
         "price": "",
+        "quantity": "",
         "farmId": ""
     },
     {
         "title": "strawberries",
         "packsize": "",
         "price": "",
+        "quantity": "",
         "farmId": ""
     },
     {
         "title": "peaches",
         "packsize": "",
         "price": "",
+        "quantity": "",
         "farmId": ""
     },
     {
         "title": "corn",
         "packsize": "",
         "price": "",
+        "quantity": "",
         "farmId": ""
     },
     {
         "title": "broccoli",
         "packsize": "",
         "price": "",
+        "quantity": "",
         "farmId": ""
     },
     {
         "title": "pumpkin",
         "packsize": "",
         "price": "",
+        "quantity": "",
         "farmId": ""
     },
     {
         "title": "onion",
         "packsize": "",
         "price": "",
+        "quantity": "",
         "farmId": ""
     },
     {
         "title": "",
         "packsize": "",
         "price": "",
+        "quantity": "",
         "farmId": ""
     },
     {
         "title": "",
         "packsize": "",
         "price": "",
+        "quantity": "",
         "farmId": ""
     },
     {
         "title": "",
         "packsize": "",
         "price": "",
+        "quantity": "",
         "farmId": ""
     },
     {
         "title": "",
         "packsize": "",
         "price": "",
+        "quantity": "",
         "farmId": ""
     }
 ]

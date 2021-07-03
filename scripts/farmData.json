@@ -5,8 +5,8 @@
         "description": "",
         "bio": "",
         "owner": "Billy Jones",
-        "image": "https://user-images.githubusercontent.com/76696641/124333868-0bb74880-db5b-11eb-8bbb-c06c0d4d69bf.png",
-        "products": "carrots"
+        "image": "https://user-images.githubusercontent.com/76696641/124362268-820a8800-dbf9-11eb-8b0a-4759ac8417ad.png",
+        "products": "corn & carrots"
     },
     {
         "farm_name": "Paradise Meadow",
@@ -14,8 +14,8 @@
         "description": "",
         "bio": "",
         "owner": "Sheryl Hayes",
-        "image": "https://user-images.githubusercontent.com/76696641/124334316-59808080-db5c-11eb-9d3c-691e6dd9c75d.png",
-        "products": "lettuce"
+        "image": "https://user-images.githubusercontent.com/76696641/124362227-4ec7f900-dbf9-11eb-8ebe-78fe8a5fd976.png",
+        "products": "carrots & lettuce"
     },
     {
         "farm_name": "Crossroad Farms",
@@ -77,8 +77,8 @@
         "description": "",
         "bio": "",
         "owner": "Martha Jefferson",
-        "image": "",
-        "products": ""
+        "image": "https://user-images.githubusercontent.com/76696641/124361839-e4ae5480-dbf6-11eb-8dcb-c154cc9c77d2.png",
+        "products": "corn, "
     },
     {
         "farm_name": "Happy Acres",
@@ -86,7 +86,7 @@
         "description": "",
         "bio": "",
         "owner": "Jed Withers",
-        "image": "",
-        "products": ""
+        "image": "https://user-images.githubusercontent.com/76696641/124361958-c2690680-dbf7-11eb-885d-0a03c2e15805.png",
+        "products": "onions"
     }
 ]
