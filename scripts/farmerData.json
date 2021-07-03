@@ -33,17 +33,6 @@
         "farms": ""
     },
     {
-        "first_name": "Hoy",
-        "last_name": "Kelly",
-        "email": "HKelly@email.com",
-        "password": "23es2wws",
-        "street_address": "1801 FM1980",
-        "city": "Marble Falls",
-        "state": "TX",
-        "zipcode": "78654",
-        "farms": ""
-    },
-    {
         "first_name": "Jane",
         "last_name": "Deere",
         "email": "JDeere",
@@ -52,6 +41,17 @@
         "city": "Georgetown,",
         "state": "TX",
         "zipcode": "78626",
+        "farms": ""
+    },
+    {
+        "first_name": "Hoy",
+        "last_name": "Kelly",
+        "email": "HKelly@email.com",
+        "password": "23es2wws",
+        "street_address": "8301 US-290",
+        "city": "Fredericksburg",
+        "state": "TX",
+        "zipcode": "78624",
         "farms": ""
     },
     {

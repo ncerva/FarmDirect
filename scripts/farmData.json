@@ -1,71 +1,91 @@
 [
     {
-        "farm_name": "",
-        "zipcode": "",
+        "farm_name": "Misty River Farmstead",
+        "zipcode": "78606",
         "description": "",
+        "bio": "",
+        "owner": "Billy Jones",
+        "image": "https://user-images.githubusercontent.com/76696641/124333868-0bb74880-db5b-11eb-8bbb-c06c0d4d69bf.png",
+        "products": "carrots"
+    },
+    {
+        "farm_name": "Paradise Meadow",
+        "zipcode": "78602",
+        "description": "",
+        "bio": "",
+        "owner": "Sheryl Hayes",
+        "image": "https://user-images.githubusercontent.com/76696641/124334316-59808080-db5c-11eb-9d3c-691e6dd9c75d.png",
+        "products": "lettuce"
+    },
+    {
+        "farm_name": "Crossroad Farms",
+        "zipcode": "78702",
+        "description": "",
+        "bio": "",
+        "owner": "Rufus Winston",
+        "image": "https://user-images.githubusercontent.com/76696641/124334163-d9f2b180-db5b-11eb-8787-9f003d4f0423.png",
+        "products": "beets"
+    },
+    {
+        "farm_name": "Sleeping Hills Fields",
+        "zipcode": "78626",
+        "description": "Jane Deere",
+        "bio": "",
+        "owner": "",
+        "image": "https://user-images.githubusercontent.com/76696641/124334495-d875b900-db5c-11eb-8f4e-706935f64a09.png",
+        "products": "strawberries"
+    },
+    {
+        "farm_name": "Sweet Dreams Orchard",
+        "zipcode": "78624",
+        "description": "",
+        "bio": "",
+        "owner": "Hoy Kelly",
+        "image": "(https://user-images.githubusercontent.com/76696641/124334704-913bf800-db5d-11eb-8752-c871d25b56be.png",
+        "products": "peaches"
+    },
+    {
+        "farm_name": "Moonlight Ranch",
+        "zipcode": "76501",
+        "description": "",
+        "bio": "",
+        "owner": "Neatha Kelley",
+        "image": "https://user-images.githubusercontent.com/76696641/124334759-bb8db580-db5d-11eb-95f5-dac4c79dc5d8.png",
+        "products": "corn"
+    },
+    {
+        "farm_name": "Lucky Star Acres",
+        "zipcode": "78653",
+        "description": "",
+        "bio": "",
+        "owner": "Bonnie Parker",
+        "image": "https://user-images.githubusercontent.com/76696641/124334882-17f0d500-db5e-11eb-9aac-989b5d2aa71f.png",
+        "products": "broccoli"
+    },
+    {
+        "farm_name": "Old Stone Farm",
+        "zipcode": "78676",
+        "description": "",
+        "bio": "Toad McNeil",
+        "owner": "",
+        "image": "https://user-images.githubusercontent.com/76696641/124334954-54243580-db5e-11eb-87be-205f6c7fd36e.png",
+        "products": "pumpkin"
+    },
+    {
+        "farm_name": "Willow Creek Farms",
+        "zipcode": "76578",
+        "description": "",
+        "bio": "",
+        "owner": "Martha Jefferson",
         "image": "",
         "products": ""
     },
     {
-        "farm_name": "",
-        "zipcode": "",
+        "farm_name": "Happy Acres",
+        "zipcode": "76527",
         "description": "",
-        "image": "",
-        "products": ""
-    },
-    {
-        "farm_name": "",
-        "zipcode": "",
-        "description": "",
-        "image": "",
-        "products": ""
-    },
-    {
-        "farm_name": "",
-        "zipcode": "",
-        "description": "",
-        "image": "",
-        "products": ""
-    },
-    {
-        "farm_name": "",
-        "zipcode": "",
-        "description": "",
-        "image": "",
-        "products": ""
-    },
-    {
-        "farm_name": "",
-        "zipcode": "",
-        "description": "",
-        "image": "",
-        "products": ""
-    },
-    {
-        "farm_name": "",
-        "zipcode": "",
-        "description": "",
-        "image": "",
-        "products": ""
-    },
-    {
-        "farm_name": "",
-        "zipcode": "",
-        "description": "",
-        "image": "",
-        "products": ""
-    },
-    {
-        "farm_name": "",
-        "zipcode": "",
-        "description": "",
-        "image": "",
-        "products": ""
-    },
-    {
-        "farm_name": "",
-        "zipcode": "",
-        "description": "",
+        "bio": "",
+        "owner": "Jed Withers",
         "image": "",
         "products": ""
     }
