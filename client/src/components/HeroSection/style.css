@@ -1,0 +1,26 @@
+.img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    height: auto;
+}
+
+.containers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://user-images.githubusercontent.com/76188076/123734826-a960fe00-d863-11eb-8f83-abef5dc64d25.jpeg) no-repeat 50% 50% / cover;
+    box-shadow: inset 0 0 0 1000px rgba(114, 210, 255, 0.2);
+}
+
+.containers > p {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    justify-content: center;
+    text-align:center;
+}

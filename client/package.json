@@ -5,6 +5,7 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "aos": "^3.0.0-beta.6",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "bulma-carousel": "^4.0.24",
@@ -13,7 +14,8 @@
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^4.0.3"
+    "react-scripts": "^4.0.3",
+    "react-spring": "^9.0.0-rc.3"
   },
   "scripts": {
     "start": "react-scripts start",
