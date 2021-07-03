@@ -2,17 +2,17 @@
     {
         "farm_name": "Misty River Farmstead",
         "zipcode": "78606",
-        "description": "",
-        "bio": "",
+        "description": "A fourth generation corn farmer in Blanco, TX. In addition to corn, Misty River Farmstead now produces carrots and onions.",
+        "bio": "A fourth generation corn farmer in Blanco, TX. My great grandfather started to grow corn back in 1945 as a way to suport and feed his family. In addition to corn, Misty River Farmstead now produces carrots and onions.",
         "owner": "Billy Jones",
         "image": "https://user-images.githubusercontent.com/76696641/124362268-820a8800-dbf9-11eb-8b0a-4759ac8417ad.png",
-        "products": "corn & carrots"
+        "products": "corn, carrots, and onions"
     },
     {
         "farm_name": "Paradise Meadow",
         "zipcode": "78602",
-        "description": "",
-        "bio": "",
+        "description": "Howdy, my name is Sheryl Hayes! My family and I are very proud of our produce.",
+        "bio": "Howdy, my name is Sheryl Hayes! I live on 25 aceres in Bastrop, TX with my hunsband and two sons. My family and I are very proud of the carrots and lettuce that we produce.",
         "owner": "Sheryl Hayes",
         "image": "https://user-images.githubusercontent.com/76696641/124362227-4ec7f900-dbf9-11eb-8ebe-78fe8a5fd976.png",
         "products": "carrots & lettuce"
@@ -20,11 +20,11 @@
     {
         "farm_name": "Crossroad Farms",
         "zipcode": "78702",
-        "description": "",
-        "bio": "",
+        "description": "I am a third generation beet and carrot farmer who is passionate about his sustainable produce.",
+        "bio": "I am a third generation beet and carrot farmer who is passionate about his sustainable produce. My pride and joy is Crossroad Farms located in the state's capital, the great Austin, TX.",
         "owner": "Rufus Winston",
         "image": "https://user-images.githubusercontent.com/76696641/124362384-1248cd00-dbfa-11eb-83dc-53efb5bea747.png",
-        "products": "beets"
+        "products": "beets and carrots"
     },
     {
         "farm_name": "Sleeping Hills Fields",
