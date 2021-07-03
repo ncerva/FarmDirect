@@ -1,12 +1,16 @@
 import React from "react";
-import { Carousel } from "../components/Carousel/index";
-import { CarouselData } from "../components/Carousel/CarouselData"
+import Farmers from "../components/Farmers/index"
+// import Hero from "../components/HeroSection/index"
+// import { Carousel } from "../components/Carousel/index";
+// import { CarouselData } from "../components/Carousel/CarouselData"
 
 
 const Home = () => {
     return (
     <div>
-        <Carousel slides={CarouselData}/>
+        {/* <Hero/> */}
+        <Farmers/>
+        {/* <Carousel slides={CarouselData}/> */}
         </div>
     );
 };

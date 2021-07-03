@@ -1,0 +1,45 @@
+.image {
+    width: 30%;
+    height: 30%;
+}
+
+.about {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    display:flex;
+}
+
+#hello {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+width: 200px;
+height: 50px;
+border: none;
+color: black;
+background-color: rgb(191, 224, 248);
+border-radius: 4px;
+transition: ease-out 0.3s;
+font-size: 16px;
+outline: none;
+font-family: 'Roboto', sans-serif;
+font-weight: 400;
+}
+
+.btn:hover {
+    box-shadow: inset 200px 0 0 0 #0d60c0;;
+}
+
