@@ -24,4 +24,10 @@ export default {
   loginFarmer: function(email) {
     return axios.get(`api/farmer/${email}`)
   },
+  getFarm: function(token) {
+    return axios.get(`api/farm/${token}`)
+  },
+  updateFarm: function(token) {
+    return axios.put(`api/farm/${token}`)
+  }
 };

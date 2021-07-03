@@ -1,0 +1,112 @@
+[
+    {
+        "first_name": "Billy",
+        "last_name": "Jones",
+        "email": "BillyJones@email.com",
+        "password": "sayjkdG23",
+        "street_address": "13977 FM2325",
+        "city": "Blanco",
+        "state": "TX",
+        "zipcode": "78606",
+        "farms": "Misty River Farmstead"
+    },
+    {
+        "first_name": "Sheryl",
+        "last_name": "Hayes",
+        "email": "sherylhayes@email.com",
+        "password": "a12e1ewsA",
+        "street_address": "1115 FM 969",
+        "city": "Bastrop",
+        "state": "TX",
+        "zipcode": "78602",
+        "farms": "Paradise Meadow"
+    },
+    {
+        "first_name": "Rufus",
+        "last_name": "Winston",
+        "email": "RWinston@email.com",
+        "password": "12ewdsqsa",
+        "street_address": "3414 Lyons Rd",
+        "city": "Austin",
+        "state": "TX",
+        "zipcode": "78702",
+        "farms": ""
+    },
+    {
+        "first_name": "Jane",
+        "last_name": "Deere",
+        "email": "JDeere",
+        "password": "dsr3efs",
+        "street_address": "14400 E State Hwy 29",
+        "city": "Georgetown,",
+        "state": "TX",
+        "zipcode": "78626",
+        "farms": ""
+    },
+    {
+        "first_name": "Hoy",
+        "last_name": "Kelly",
+        "email": "HKelly@email.com",
+        "password": "23es2wws",
+        "street_address": "8301 US-290",
+        "city": "Fredericksburg",
+        "state": "TX",
+        "zipcode": "78624",
+        "farms": ""
+    },
+    {
+        "first_name": "Neatha",
+        "last_name": "Kelley",
+        "email": "NeathaKelley@email.com",
+        "password": "324r34fr",
+        "street_address": "3780 White Owl Ln",
+        "city": "Temple",
+        "state": "TX",
+        "zipcode": "76501",
+        "farms": ""
+    },
+    {
+        "first_name": "Bonnie",
+        "last_name": "Parker",
+        "email": "BParker@email.com",
+        "password": "sdr34redf",
+        "street_address": "10300 Taylor Ln",
+        "city": "Manor",
+        "state": "TX",
+        "zipcode": "78653",
+        "farms": ""
+    },
+    {
+        "first_name": "Toad",
+        "last_name": "McNeil",
+        "email": "ToadM@email.com",
+        "password": "23efwdsds",
+        "street_address": "12550 FM2325",
+        "city": "Wimberley",
+        "state": "TX",
+        "zipcode": "78676",
+        "farms": ""
+    },
+    {
+        "first_name": "Martha",
+        "last_name": "Jefferson",
+        "email": "MarthaJefferson@email.com",
+        "password": "sferfvd332",
+        "street_address": "680 Co Rd 476",
+        "city": "Thrall",
+        "state": "TX",
+        "zipcode": "76578",
+        "farms": ""
+    },
+    {
+        "first_name": "Jed",
+        "last_name": "Withers",
+        "email": "JWithers12@email.com",
+        "password": "wedfsyuywa2",
+        "street_address": "1250 Co Rd 249",
+        "city": "Florence",
+        "state": "TX",
+        "zipcode": "76527",
+        "farms": ""
+    }
+]

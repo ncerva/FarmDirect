@@ -16,12 +16,12 @@ function Navbar() {
         e.preventDefault;
         setAuthState('', false, false, '');
       }
-      if (isAuthorized) {
+      if (isAuthorized && isFarmer) {
         return (
           <nav className="navbar navbar-expand-lg navbar-light">
-            <Link className="navbar-brand" to="/">
+            {/* <Link className="navbar-brand" to="/">
               <img className="logo responsive" src="https://user-images.githubusercontent.com/76188076/123719680-c8ea2d80-d847-11eb-8086-15f4b50ddbf4.png" a=""></img>
-            </Link>
+            </Link> */}
             <div>
               <ul className="navbar-nav">
                 <li className="nav-item">
@@ -56,6 +56,14 @@ function Navbar() {
                     <FaShoppingCart />
                   </Link>
                 </li>
+                <li className="nav-item">
+                  <Link
+                    to="/farmerportal"
+                    className={window.location.pathname === "/farmerportal" ? "nav-link active" : "nav-link"}
+                  >
+                    farmerportal
+                  </Link>
+                </li>
                 <li className="search-box">
                   <input type="text" name="" className="search-txt" placeholder="Search">
                   </input>
@@ -75,9 +83,9 @@ function Navbar() {
       } else {
         return (
           <nav className="navbar navbar-expand-lg navbar-light">
-            <Link className="navbar-brand" to="/">
+            {/* <Link className="navbar-brand" to="/">
               <img className="logo responsive" src="https://user-images.githubusercontent.com/76188076/123719680-c8ea2d80-d847-11eb-8086-15f4b50ddbf4.png" a=""></img>
-            </Link>
+            </Link> */}
             <div>
               <ul className="navbar-nav">
                 <li className="nav-item">

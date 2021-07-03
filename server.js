@@ -25,7 +25,7 @@ if (process.env.NODE_ENV === "production") {
 // Define any API routes before this runs
 
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/deep-thoughts',
+  process.env.MONGODB_URI || 'mongodb://localhost/farm-direct',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -39,5 +39,5 @@ app.get("*", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`🌎 ==> CORS enabled API server now on port ${PORT}!`);
+  console.log(`🌎 ==> API server now on port ${PORT}!`);
 });

@@ -32,7 +32,7 @@ const FarmSchema = new Schema({
   bio: {
     /* A longer, paragragh or so description of the farm and its history. this will appear on the farms profile page */
     type: String,
-    required: true
+    required: true 
   },
   owner: {
     type: Schema.Types.ObjectId,

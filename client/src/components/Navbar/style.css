@@ -1,12 +1,12 @@
 .navbar {
-    text-align: center;
-    padding: 10px;
-    width: 100%;
-    height: 17%;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    }
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  height: 17%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
 
 .navbar-expand-lg{
     background-color: transparent;
