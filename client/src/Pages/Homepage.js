@@ -1,6 +1,6 @@
 import React from "react";
+import Hero from "../components/HeroSection/index"
 import Farmers from "../components/Farmers/index"
-// import Hero from "../components/HeroSection/index"
 // import { Carousel } from "../components/Carousel/index";
 // import { CarouselData } from "../components/Carousel/CarouselData"
 
@@ -8,7 +8,7 @@ import Farmers from "../components/Farmers/index"
 const Home = () => {
     return (
     <div>
-        {/* <Hero/> */}
+        <Hero/>
         <Farmers/>
         {/* <Carousel slides={CarouselData}/> */}
         </div>
