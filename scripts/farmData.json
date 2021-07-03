@@ -23,7 +23,7 @@
         "description": "",
         "bio": "",
         "owner": "Rufus Winston",
-        "image": "https://user-images.githubusercontent.com/76696641/124334163-d9f2b180-db5b-11eb-8787-9f003d4f0423.png",
+        "image": "https://user-images.githubusercontent.com/76696641/124362384-1248cd00-dbfa-11eb-83dc-53efb5bea747.png",
         "products": "beets"
     },
     {
@@ -32,7 +32,7 @@
         "description": "Jane Deere",
         "bio": "",
         "owner": "",
-        "image": "https://user-images.githubusercontent.com/76696641/124334495-d875b900-db5c-11eb-8f4e-706935f64a09.png",
+        "image": "https://user-images.githubusercontent.com/76696641/124362484-c185a400-dbfa-11eb-8c5c-94077936c8a8.png",
         "products": "strawberries"
     },
     {
@@ -41,7 +41,7 @@
         "description": "",
         "bio": "",
         "owner": "Hoy Kelly",
-        "image": "(https://user-images.githubusercontent.com/76696641/124334704-913bf800-db5d-11eb-8752-c871d25b56be.png",
+        "image": "https://user-images.githubusercontent.com/76696641/124362519-fa257d80-dbfa-11eb-810d-31b65322d296.png",
         "products": "peaches"
     },
     {
@@ -50,7 +50,7 @@
         "description": "",
         "bio": "",
         "owner": "Neatha Kelley",
-        "image": "https://user-images.githubusercontent.com/76696641/124334759-bb8db580-db5d-11eb-95f5-dac4c79dc5d8.png",
+        "image": "https://user-images.githubusercontent.com/76696641/124362586-6acc9a00-dbfb-11eb-8bb4-199edbad467b.png",
         "products": "corn"
     },
     {
@@ -59,8 +59,8 @@
         "description": "",
         "bio": "",
         "owner": "Bonnie Parker",
-        "image": "https://user-images.githubusercontent.com/76696641/124334882-17f0d500-db5e-11eb-9aac-989b5d2aa71f.png",
-        "products": "broccoli"
+        "image": "https://user-images.githubusercontent.com/76696641/124362550-31942a00-dbfb-11eb-8828-ccc94d606f1a.png",
+        "products": "corn & broccoli"
     },
     {
         "farm_name": "Old Stone Farm",
@@ -68,8 +68,8 @@
         "description": "",
         "bio": "Toad McNeil",
         "owner": "",
-        "image": "https://user-images.githubusercontent.com/76696641/124334954-54243580-db5e-11eb-87be-205f6c7fd36e.png",
-        "products": "pumpkin"
+        "image": "https://user-images.githubusercontent.com/76696641/124362623-a36c7380-dbfb-11eb-8b33-87a7a7aa0549.png",
+        "products": "carrots & pumpkin"
     },
     {
         "farm_name": "Willow Creek Farms",
@@ -77,8 +77,8 @@
         "description": "",
         "bio": "",
         "owner": "Martha Jefferson",
-        "image": "https://user-images.githubusercontent.com/76696641/124361839-e4ae5480-dbf6-11eb-8dcb-c154cc9c77d2.png",
-        "products": "corn, "
+        "image": "https://user-images.githubusercontent.com/76696641/124362675-1249cc80-dbfc-11eb-908d-4e35ca7afc3e.png",
+        "products": "corn, onion "
     },
     {
         "farm_name": "Happy Acres",
@@ -86,7 +86,7 @@
         "description": "",
         "bio": "",
         "owner": "Jed Withers",
-        "image": "https://user-images.githubusercontent.com/76696641/124361958-c2690680-dbf7-11eb-885d-0a03c2e15805.png",
+        "image": "https://user-images.githubusercontent.com/76696641/124362699-3dccb700-dbfc-11eb-9a5b-3608dbadb211.png",
         "products": "onions"
     }
 ]
