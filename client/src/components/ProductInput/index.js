@@ -2,6 +2,7 @@ import React from 'react';
 import "./style.css"
 
 function ProductInput() {
+  
   return (
     <div className="column is-half has-background-primary">
       <div className="block">
