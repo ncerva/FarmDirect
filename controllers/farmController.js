@@ -12,9 +12,11 @@ module.exports = {
     .then(dbFarm => res.json(dbFarm))
     .catch(err => res.status(400).json(err))
   },
-  Update: function(req, res) {
-    db.Farm.findOne({owner: req.params.id}, req.body)
+  Update: async function(req, res) {
+    await db.Farm.findOneAndUpdate({owner: req.params.id}, req.body)
+    .then(console.log('sending' + JSON.stringify( req.body)))
     .then(dbFarm => res.json(dbFarm))
+    .then(console.log('updated' + res))
     .catch(err => res.status(422).json(err));
   },
   create: function ( {body}, res) {
@@ -23,5 +25,18 @@ module.exports = {
     // .then(({_id}) => db.Farmer.findByIdAndUpdate(body.owner, {farms: _id}, {new: true}))
     .then(dbFarm => res.json(dbFarm))
     .catch(err => res.status(422).json(err));
-  }
+  },
+  createById: function (req, res) {
+    db.Farm.create({
+      farm_name: "",
+      description: "",
+      bio: "",
+      owner: req.params.id
+    })
+    .then(console.log(JSON.stringify(req.body)))
+    // .then(({_id}) => db.Farmer.findByIdAndUpdate(body.owner, {farms: _id}, {new: true}))
+    .then(dbFarm => res.json(dbFarm))
+    .catch(err => res.status(422).json(err));
+  },
+  
 }
