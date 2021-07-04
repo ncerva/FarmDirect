@@ -27,7 +27,10 @@ export default {
   getFarm: function(token) {
     return axios.get(`api/farm/${token}`)
   },
-  updateFarm: function(token) {
-    return axios.put(`api/farm/${token}`)
+  createFarmById: function(token) {
+    return axios.post(`api/farm/${token}`)
+  },
+  updateFarm: function(token, body) {
+    return axios.put(`api/farm/${token}`, body)
   }
 };
