@@ -81,49 +81,49 @@ function FarmInput() {
                 <div className="field">
                   <label className="label is-small">Farm Name</label>
                   <div className="control">
-                    <input className="input" type="text" placeholder={farmInfo.farm_name} />
+                    <input className="input" type="text" placeholder={ farmInfo.farm_name ? farmInfo.farm_name : "Sample Farms" } />
                   </div>
                 </div>
 
                 <div className="field">
                   <label className="label is-small">Street Adress</label>
                   <div className="control">
-                    <input className="input" type="text" placeholder={farmInfo.street_address} />
+                    <input className="input" type="text" placeholder={ farmInfo.street_address ? farmInfo.street_address : "123 Fleet st" } />
                   </div>
                 </div>
 
                 <div className="field">
                   <label className="label is-small">City</label>
                   <div className="control">
-                    <input className="input" type="text" placeholder={farmInfo.city} />
+                    <input className="input" type="text" placeholder={farmInfo.city ? farmInfo.city : "Anytown"} />
                   </div>
                 </div>
 
                 <div className="field">
                   <label className="label is-small">State</label>
                   <div className="control">
-                    <input className="input" type="text" placeholder={farmInfo.state} />
+                    <input className="input" type="text" placeholder={farmInfo.state ? farmInfo.state : "State"} />
                   </div>
                 </div>
 
                 <div className="field">
                   <label className="label is-small">Zip Code</label>
                   <div className="control">
-                    <input className="input" type="text" placeholder={farmInfo.zipcode} />
+                    <input className="input" type="text" placeholder={ farmInfo.zipcode ? farmInfo.zipcode : "12345"} />
                   </div>
                 </div>
 
                 <div className="field">
                   <label className="label is-small">Description</label>
                   <div className="control">
-                    <textarea className="textarea" placeholder={farmInfo.description} />
+                    <textarea className="textarea" placeholder={ farmInfo.description ? farmInfo.description : "A short description of your farm, this will appear on our results page.     e.g. 'A small hydroponic farm in Austin TX, specializing in tomatoes and lettuces'"} />
                   </div>
                 </div>
 
                 <div className="field">
                   <label className="label is-small">Bio</label>
                   <div className="control">
-                    <textarea className="textarea" placeholder={farmInfo.bio} rows="10" />
+                    <textarea className="textarea" placeholder={ farmInfo.bio ? farmInfo.bio : "This can be a bit longer, it will appear on your farms results page. Describe your farm, it's history and values etc..."} rows="10" />
                   </div>
                 </div>
 
