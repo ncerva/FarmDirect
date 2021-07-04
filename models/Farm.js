@@ -5,7 +5,7 @@ const FarmSchema = new Schema({
   /*Id automatically added to all mongoose schema's under '_id' with type objectId, returns 24 char hexidecimal string */
   farm_name: {
     type: String,
-    required: true, 
+    // required: true, 
   },
   street_address: {
     type: String,
@@ -27,12 +27,12 @@ const FarmSchema = new Schema({
   description: {
     /* A small blurb describing the farm in a sentence or 2, this will appear on the carousel or on the search result card */
     type: String,
-    required: true,
+    // required: true,
   },
   bio: {
     /* A longer, paragragh or so description of the farm and its history. this will appear on the farms profile page */
     type: String,
-    required: true 
+    // required: true 
   },
   owner: {
     type: Schema.Types.ObjectId,

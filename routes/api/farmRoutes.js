@@ -10,6 +10,7 @@ router
 router
   .route('/:id')
   .get(farmController.findByOwner)
+  .post(farmController.createById)
   .put(farmController.Update)
 
 

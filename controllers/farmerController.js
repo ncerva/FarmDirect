@@ -24,8 +24,10 @@ module.exports = {
   create: function( {body} , res) {
     db.Farmer.create(body)
     .then(console.log(JSON.stringify(body)))
-    .then(dbFarmer => res.json(dbFarmer))
-    // .catch(err => console.log(err));
+    .then(dbFarmer => {
+      res.json(dbFarmer)
+      console.log(dbFarmer)
+    })
     .catch(err => res.status(422).json(err)); 
   }
 };

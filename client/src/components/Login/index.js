@@ -20,6 +20,14 @@ export function SignUpCard() {
     zipcode: ''
   });
 
+  const addFarmer = (e) => {
+    e.preventDefault();
+    API.addNewFarmer(signup)
+    .then(res => {
+      API.createFarmById(res.data._id)
+    })
+  }
+
   //sign up 
   //are you are farmer or a customer
   //log in
@@ -62,7 +70,7 @@ export function SignUpCard() {
             </div>
             <div className="field">
               <p className="control">
-                <select className="form-control" id="state-signup" name="state" onSelect={e => setSignup({ ...signup, state: e.target.value })}>
+                <select className="form-control" id="state-signup" name="state" onChange={e => setSignup({ ...signup, state: e.target.value })}>
                   <option value="">Select State</option>
                   <option value="AK">Alaska</option>
                   <option value="AL">Alabama</option>
@@ -126,7 +134,7 @@ export function SignUpCard() {
             </div>
             <div className="field">
               <p className="control">
-                <button id="signup-farmer" onClick={() => API.addNewFarmer(signup)}>
+                <button id="signup-farmer" onClick={addFarmer}>
                   I am a farmer! <GiFarmer />
                 </button>
               </p>
