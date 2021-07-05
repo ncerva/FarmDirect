@@ -19,9 +19,9 @@ const ProductSchema = new Schema({
     type: Number,
     required: true,
   },
-  farmId: {
+  farmerId: {
     type: Schema.Types.ObjectId,
-    ref: 'Farm'
+    ref: 'Farmer'
   }
 });
 

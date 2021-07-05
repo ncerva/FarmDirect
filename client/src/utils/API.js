@@ -32,5 +32,11 @@ export default {
   },
   updateFarm: function(token, body) {
     return axios.put(`api/farm/${token}`, body)
+  }, 
+  getProductsByFarmer: function(token) {
+    return axios.get(`api/product/${token}`)
+  },
+  addProduct: function(postData) {
+    return axios.post(`api/product/`, postData)
   }
 };
