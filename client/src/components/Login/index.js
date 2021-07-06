@@ -232,19 +232,7 @@ export function LoginCard() {
             }));
           })
         }
-          //   if (res.data.password === login.password) {
-          //     alert(`${res.data.email} is now logged in!`);
-          //     setAuthState(res.data._id, true, true, res.data.email);
-          //   } else {
-          //     alert(`invalid username or password`)
-          //   }
-          // })
-          // .catch(err => {
-          //   console.log(err)
-          //   alert(`invalid username or password`)
-          
-    
-
+        
 
       return (
         <div className="column ">

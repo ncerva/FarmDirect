@@ -18,5 +18,15 @@ module.exports = {
     })
     .then(dbFarm => res.json(dbFarm))
     .catch(err => res.status(404).json(err));
+  }, 
+  deleteProduct: function(req, res) {
+    db.Product.deleteOne({
+      _id: req.params.id
+    })
+    .then(dbProduct => {
+      res.json(dbProduct)
+      console.log(dbProduct)
+    })
+    .catch(err => res.status(422).json(err));
   }
 }

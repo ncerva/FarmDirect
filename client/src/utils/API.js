@@ -38,5 +38,8 @@ export default {
   },
   addProduct: function(postData) {
     return axios.post(`api/product/`, postData)
+  },
+  deleteProduct: function(id) {
+    return axios.delete(`api/product/${id}`)
   }
 };
