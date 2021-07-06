@@ -25,6 +25,13 @@ function ProductInput() {
       quantity: newProduct.quantity,
       farmerId: context.token
     })
+    .then(setNewProduct({
+    title: '',
+    packsize: '',
+    price: '',
+    quantity: '',
+    farmerId: ''
+    }));
   }
 
 

@@ -9,6 +9,7 @@ router
   router
     .route('/:id')
     .get(productController.getByFarmer)
+    .put(productController.updateProduct)
     .delete(productController.deleteProduct)
 
 

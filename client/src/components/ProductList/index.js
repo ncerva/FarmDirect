@@ -10,6 +10,8 @@ function ProductList() {
     items: []
   })
 
+  const [rendering, setRendering] = useState(false)
+
   const context = useContext(AuthContext)
   // const addProducts = () => {
   //   API.getProductsByFarmer(context.token)
@@ -27,19 +29,25 @@ function ProductList() {
       setProducts({...products, items: res.data})
       console.log(products.items) 
     })
-  }, []);
+  }, [rendering]);
 
   const handleDelete = (id) => {
     const newProducts = products.items.filter(product => product._id !== id);
     setProducts({ items: newProducts });
+  }
 
+  const handleUpdate = () => {
+    API.getProductsByFarmer(context.token)
+    .then((res) => {
+      setProducts({...products, items: res.data})
+    })
   }
 
   return (
     <div>
       {products.items.map(product => (
         // <ProductBlock />
-        <ProductBlock onDelete={handleDelete} title={product.title} quantity={product.quantity} packsize={product.packsize} price={product.price} productId={product._id} key={product._id} farmerId={product.farmerId} />
+        <ProductBlock onUpdate={handleUpdate} onDelete={handleDelete} title={product.title} quantity={product.quantity} packsize={product.packsize} price={product.price} productId={product._id} key={product._id} farmerId={product.farmerId} />
         
       ))}
     </div>

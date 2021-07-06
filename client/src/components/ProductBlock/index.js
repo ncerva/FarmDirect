@@ -9,10 +9,10 @@ function ProductBlock(props) {
   const [editable, setEditable] = useState(false);
   const [deleting, setDeleting] = useState(false)
   const [productInfo, setProductInfo] = useState({
-    title: "",
-    price: "",
-    packsize: "",
-    quantity: ""
+    title: props.title,
+    price: props.price,
+    packsize: props.packsize,
+    quantity: props.quantity
   })
 
   const toggleEditable = (e) => {
@@ -25,6 +25,17 @@ function ProductBlock(props) {
     API.deleteProduct(props.productId)
     // .then(setEditable(editable ? false : true));
     .then(props.onDelete(props.productId))
+  }
+
+  const updateProduct = (e) => {
+    e.preventDefault();
+    API.updateProduct(props.productId, {
+      price: productInfo.price,
+      packsize: productInfo.packsize,
+      quantity: productInfo.quantity
+    })
+    .then(setEditable(editable ? false : true))
+    .then(props.onUpdate);
   }
 
   if (!editable) {
@@ -46,11 +57,18 @@ function ProductBlock(props) {
           </p>
           <p className="control">
             <label className="label is-small">Price</label>
-            <input className="input" type="number" placeholder={props.price} onChange={e => setProductInfo({ ...productInfo, title: e.target.value })}></input>
+            <input className="input" type="number" placeholder={props.price} onChange={e => setProductInfo({ ...productInfo, price: e.target.value })}></input>
           </p>
           <p className="control">
             <label className="label is-small">Pack size</label>
-            <input className="input" type="number" placeholder={props.packsize} onChange={e => setProductInfo({ ...productInfo, packsize: e.target.value })}></input>
+            <select className="form-control" id="unit-select" name="unit" onChange={e => setProductInfo({ ...productInfo, packsize: e.target.value })}>
+                <option value="">Select Unit</option>
+                <option value="lb">Per Pound</option>
+                <option value="oz">Per Ounce</option>
+                <option value="ea">Each</option>
+                <option value="cs">Per Case</option>
+                <option value="bu">per bunch</option>
+              </select>
           </p>
         </div>
         <div className="field is-grouped">
@@ -58,7 +76,7 @@ function ProductBlock(props) {
             <label className="label is-small">Stock</label>
             <input className="input" type="number" placeholder={props.quantity} onChange={e => setProductInfo({ ...productInfo, quantity: e.target.value })}></input>
           </p>
-          <button className="button is-link" onClick={toggleEditable} >Save</button>
+          <button className="button is-link" onClick={updateProduct} >Save</button>
           <button className="button is-delete is-danger" onClick={deleteProduct}>Delete</button>
         </div>
       </form>
