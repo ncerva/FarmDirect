@@ -3,7 +3,7 @@ import API from '../../utils/API'
 import { GiFarmer } from 'react-icons/gi';
 import { FaCarrot } from 'react-icons/fa';
 import AuthContext from "../../utils/AuthContext";
-
+const bcrypt = require('bcryptjs');
 
 
 export function SignUpCard() {
