@@ -14,15 +14,15 @@ module.exports = {
   },
   Update: async function(req, res) {
     await db.Farm.findOneAndUpdate({owner: req.params.id}, req.body)
-    .then(console.log('sending' + JSON.stringify( req.body)))
+    // .then(console.log('sending' + JSON.stringify( req.body)))
     .then(dbFarm => res.json(dbFarm))
-    .then(console.log('updated' + res))
+    // .then(console.log('updated' + res))
     .catch(err => res.status(422).json(err));
   },
   create: function ( {body}, res) {
     db.Farm.create(body)
-    .then(console.log(JSON.stringify(body)))
-    // .then(({_id}) => db.Farmer.findByIdAndUpdate(body.owner, {farms: _id}, {new: true}))
+    // .then(console.log(JSON.stringify(body)))
+    
     .then(dbFarm => res.json(dbFarm))
     .catch(err => res.status(422).json(err));
   },
@@ -33,7 +33,7 @@ module.exports = {
       bio: "",
       owner: req.params.id
     })
-    .then(console.log(JSON.stringify(req.body)))
+    // .then(console.log(JSON.stringify(req.body)))
     // .then(({_id}) => db.Farmer.findByIdAndUpdate(body.owner, {farms: _id}, {new: true}))
     .then(dbFarm => res.json(dbFarm))
     .catch(err => res.status(422).json(err));
