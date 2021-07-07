@@ -5,22 +5,21 @@ import { FaCarrot } from "react-icons/fa";
 import AuthContext from "../../utils/AuthContext";
 import "./style.css";
 
-// to toggle between login and register form
-var x =document.getElementById("login");
-var y =document.getElementById("register");
-var z =document.getElementById("btn");
 
-function register() {
-  x.style.left = "-400px";
-  y.style.left = "50px";
-  z.style.left = "110px";
-}
+// to toggle 
+// const [editable, setEditable] = useState(false);
+// const [deleting, setDeleting] = useState(false)
+// const [productInfo, setProductInfo] = useState({
+//   title: props.title,
+//   price: props.price,
+//   packsize: props.packsize,
+//   quantity: props.quantity
+// })
 
-function login() {
-  x.style.left = "50px";
-  y.style.left = "450px";
-  z.style.left = "0";
-}
+// const toggleEditable = (e) => {
+//   e.preventDefault();
+//   setEditable(editable ? false : true)
+// }
 
 export function SignUpCard() {
   const [signup, setSignup] = useState({
@@ -58,23 +57,21 @@ export function SignUpCard() {
           //toggle button
           <div className="hero">
             <div className="box">
-              <div className="button-box">
-                <div id="btn"></div>
-                <button type="button" className="toggle-btn" onClick="login()">
+             <div className="button-box">
+                <button className="button is-info is-rounded toggle-btn"  type="button" onClick="login()">
                   Log In
                 </button>
-                <button
-                  type="button" className="toggle-btn" onClick="register()">
+                <button class="button is-info is-rounded toggle-btn" 
+                  type="button" onClick="register()">
                   Register
                 </button>
-              </div>
-
+              </div> 
               <form id="register" className="input-group">
               <div
                 className="text-block login-block logout-block"
                 id="signup-block"
               >
-               <div className="field">
+              <div className="field">
               <p className="control">
                 <input className="input" id="email-signup" type="text" placeholder="Email" onChange={e => setSignup({ ...signup, email: e.target.value })} />
               </p>
@@ -104,7 +101,7 @@ export function SignUpCard() {
                 <input className="input" id="city-signup" type="text" placeholder="City" onChange={e => setSignup({ ...signup, city: e.target.value })} />
               </p>
             </div> 
-                 <div className="field">
+                <div className="field">
               <p className="control">
                 <select className="form-control" id="state-signup" name="state" onChange={e => setSignup({ ...signup, state: e.target.value })}>
                   <option value="">Select State</option>
@@ -272,10 +269,10 @@ export function LoginCard() {
             </div>
             <div className="field">
               <div className="button-box">
-                  <button id="login-submit" onClick={handleLoginUser}>
+                  <button className="button is-info is-rounded" onClick={handleLoginUser}>
                     Login as customer <FaCarrot />
                   </button>
-                  <button id="login-submit" onClick={handleLoginFarmer}>
+                  <button className="button is-info is-rounded" onClick={handleLoginFarmer}>
                     Login as farmer <GiFarmer />
                   </button>
               </div>
