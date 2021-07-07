@@ -7,7 +7,6 @@ import AuthContext from "../../utils/AuthContext";
 
 
 function Navbar() {
-
   return (
     <AuthContext.Consumer>{(context) => {
       const { isAuthorized, token, isFarmer, currentUser, setAuthState } = context;
@@ -17,11 +16,9 @@ function Navbar() {
         setAuthState('', false, false, '');
       }
       if (isAuthorized && isFarmer) {
+        // navbar start
         return (
           <nav className="navbar navbar-expand-lg navbar-light">
-            {/* <Link className="navbar-brand" to="/">
-              <img className="logo responsive" src="https://user-images.githubusercontent.com/76188076/123719680-c8ea2d80-d847-11eb-8086-15f4b50ddbf4.png" a=""></img>
-            </Link> */}
             <div>
               <ul className="navbar-nav">
                 <li className="nav-item">
@@ -61,15 +58,14 @@ function Navbar() {
                     to="/farmerportal"
                     className={window.location.pathname === "/farmerportal" ? "nav-link active" : "nav-link"}
                   >
-                    farmerportal
+                    Farmer Portal
                   </Link>
                 </li>
                 <li className="search-box">
-                  <input type="text" name="" className="search-txt" placeholder="Search">
+                  <input type="text" name="" className="search search-txt" placeholder="Search">
                   </input>
                   <a className="search-btn" href="#"> <FaSearch className="searchicon" /> </a>
                 </li>
-
                 <li className="nav-item">
                   <p>logged in as {currentUser}</p>
                 </li>
@@ -83,9 +79,6 @@ function Navbar() {
       } else {
         return (
           <nav className="navbar navbar-expand-lg navbar-light">
-            {/* <Link className="navbar-brand" to="/">
-              <img className="logo responsive" src="https://user-images.githubusercontent.com/76188076/123719680-c8ea2d80-d847-11eb-8086-15f4b50ddbf4.png" a=""></img>
-            </Link> */}
             <div>
               <ul className="navbar-nav">
                 <li className="nav-item">
@@ -121,16 +114,14 @@ function Navbar() {
                   </Link>
                 </li>
                 <li className="search-box">
-                  <input type="text" name="" className="search-txt" placeholder="Search">
+                  <input type="text" name="" className="search search-txt" placeholder="Search">
                   </input>
                   <a className="search-btn" href="#"> <FaSearch className="searchicon" /> </a>
                 </li>
-
-
                 
                 <li className="nav-item">
-                  <p>logged in as {currentUser}</p>
-                  <p>NOT AUTHORIZED</p>
+                  <p className="notLogged">{currentUser}</p>
+                  {/* <p>NOT AUTHORIZED</p> */}
                 </li>
               </ul>
             </div>

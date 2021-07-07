@@ -4,6 +4,7 @@
     margin-right: auto;
     width: 25%;
     height: auto;
+    margin-top: 10%;
 }
 
 .containers {
@@ -20,7 +21,7 @@
     color: white;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 3vw;
     justify-content: center;
     text-align:center;
 }
