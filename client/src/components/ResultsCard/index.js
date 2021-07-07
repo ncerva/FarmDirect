@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 
 
-function ResultsCard() {
+function ResultsCard(props) {
     return (
     <div className="column is-full">
         <div className="container">
