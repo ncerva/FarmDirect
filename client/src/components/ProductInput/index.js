@@ -5,7 +5,7 @@ import "./style.css";
 import ProductBlock from "../ProductBlock/index";
 import ProductList from '../ProductList';
 
-function ProductInput() {
+function ProductInput(props) {
   const [newProduct, setNewProduct] = useState({
     title: '',
     packsize: '',
@@ -24,8 +24,15 @@ function ProductInput() {
       price: newProduct.price,
       quantity: newProduct.quantity,
       farmerId: context.token
-
     })
+    .then(setNewProduct({
+    title: '',
+    packsize: '',
+    price: '',
+    quantity: '',
+    farmerId: ''
+    }))
+    .then(props.onAdd());
   }
 
 
@@ -67,6 +74,7 @@ function ProductInput() {
                 <option value="oz">Per Ounce</option>
                 <option value="ea">Each</option>
                 <option value="cs">Per Case</option>
+                <option value="bu">per bunch</option>
               </select>
             </div>
 
@@ -76,23 +84,47 @@ function ProductInput() {
             </div>
 
             <div className="control">
-              <button className="button is-link" onClick={submitNewProduct}>Edit/Submit</button>
+              <button className="button is-link" onClick={submitNewProduct}>Add product</button>
             </div>
           </div>
         </form>
 
-
         <div className="box has-background-primary-light is-flex is-justify-content-space-evenly">
-          <span>Item Name</span>
-          <span>Price/unit</span>
-          <span><a>+</a>stock<a>-</a></span>
-          <button className="button is-link">edit</button>
+          <span>Product Name</span>
+          <span>Price/pack</span>
+          <span>stock</span>
+          <span></span>
         </div>
-        <div>
-          <ProductList />
-          <h2> this is wher the list wants to be</h2>
 
-        </div>
+        {/* <div className="box has-background-primary-light is-flex is-justify-content-space-evenly">
+          <form>
+            <div className="field is-grouped">
+              <p className="control">
+                <strong>Product.title</strong>
+              </p>
+              <p className="control">
+                <label className="label is-small">Price</label>
+                <input className="input" type="number" placeholder="product.price"></input>
+              </p>
+              <p className="control">
+                <label className="label is-small">Pack size</label>
+                <input className="input" type="number" placeholder="product.packsize"></input>
+              </p>
+            </div>
+            <div className="field is-grouped">
+              <p className="control">
+                <label className="label is-small">Stock</label>
+                <input className="input" type="number" placeholder="product.quantity"></input>
+              </p>
+              <button className="button is-link" >Save</button>
+              <button className="button is-delete is-danger">Delete</button>
+            </div>
+          </form>
+        </div> */}
+
+        <section id="product field">
+          <ProductList />
+        </section>
       </div>
     </div>
   )
