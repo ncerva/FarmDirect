@@ -5,7 +5,7 @@ import "./style.css";
 import ProductBlock from "../ProductBlock/index";
 import ProductList from '../ProductList';
 
-function ProductInput() {
+function ProductInput(props) {
   const [newProduct, setNewProduct] = useState({
     title: '',
     packsize: '',
@@ -31,7 +31,8 @@ function ProductInput() {
     price: '',
     quantity: '',
     farmerId: ''
-    }));
+    }))
+    .then(props.onAdd());
   }
 
 
@@ -73,6 +74,7 @@ function ProductInput() {
                 <option value="oz">Per Ounce</option>
                 <option value="ea">Each</option>
                 <option value="cs">Per Case</option>
+                <option value="bu">per bunch</option>
               </select>
             </div>
 
