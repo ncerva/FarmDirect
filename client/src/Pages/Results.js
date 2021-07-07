@@ -1,29 +1,47 @@
-import React from "react";
+import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import API from "../utils/API";
 import ResultsCard from "../components/ResultsCard";
+import SearchForm from "../components/SearchForm";
 import AuthContext from "../utils/AuthContext";
 
+
 const Results = () => {
-  const [farm, setFarms] = useState([])
+  const [farm, setFarm] = useState([])
   const [formObject, setFormObject] = useState({})
 
   useEffect(() => {
     loadFarms()
   }, [])
-  
+
   function loadFarms() {
     API.getFarm()
       .then(res => 
-        setFarms(res.data)
+        setFarm(res.data)
       )
       .catch(err => console.log(err));
   };
+
   function handleInputChange(event) {
     const { name, value } = event.target;
     setFormObject({...formObject, [name]: value})
   };
 
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    if (formObject.title && formObject.farmer) {
+      API.getFarm(this.state.farm)
+      .then(res => {
+        this.setState({
+            farm: res.data.items,
+            products: ""
+        });
+        console.log(this.state.farms)
+    })
+    .catch(err => console.log(err));
+    }
+  };
+  
   return (
     <AuthContext.Consumer>{(context) => {
       const { isAuthorized, token, isFarmer, currentUser, setAuthState } = context;
@@ -42,7 +60,28 @@ const Results = () => {
       return (
         <div className="columns is-multiline">
           <div className="container">
-            <ResultsCard />
+            <div className="column is-full">
+              <div className="container">
+                <SearchForm 
+                  onChange={handleInputChange}
+                  onClick={handleFormSubmit}/>
+                {/* {farm.length ? (
+                  {farms.map(farm => (
+                <ResultsCard heading="Search Results">
+                  key={farm._id},
+                  farm_name={farm.farm_name},
+                  farmer={farm.farmer},
+                  image={farm.image},
+                  description={farm.description} 
+                  ))} 
+                  </ResultsCard>
+                  ) : (
+                    <ResultsCard>
+                    <h3>No Results to Display</h3>          
+                    </ResultsCard>
+                  )}  */}
+          </div>
+          </div>
           </div>
         </div>
       )
@@ -51,6 +90,6 @@ const Results = () => {
 
     </AuthContext.Consumer>
   );
-};
+}
 
 export default Results;

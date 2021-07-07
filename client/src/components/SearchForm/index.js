@@ -2,22 +2,25 @@ import React from "react";
 
 export function SearchForm(props) {
     return (
-        <form>
-            <div className="form-group" style={{ textAlign: "center" }}>
-                <input style={{ textAlign: "left" }}
-                onChange={props.handleInputChange}
-                value={props.value}
-                name="title"
-                type="text"
-                className="form-control"
-                placeholder="Search for a Book, Author, or Topic"
-                id="title" />
-                <br />
-                <button onClick={props.handleFormSubmit} className="btn btn-info">
-                    Search
-                </button>
+        <div className="card">
+            <header className="card-header">
+            <p className="title">
+            Farm Search
+            </p>
+            </header>
+            <div className="card-content">
+                <div className="content">
+                    <div className="field">
+                        <div className="control">
+                            <input onChange={props.handleInputChange} className="input" type="text" placeholder="Search for farm by zip code" />
+                        </div>
+                    </div>
+                    <div className="control">
+                        <button onClick={props.handleFormSubmit} className="button">Submit</button>
+                    </div>
+                </div>
             </div>
-        </form>
+        </div>
     )
 }
 export default SearchForm;
