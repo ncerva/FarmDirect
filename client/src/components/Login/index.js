@@ -1,44 +1,77 @@
 import React, { useState } from "react";
-import API from '../../utils/API'
-import { GiFarmer } from 'react-icons/gi';
-import { FaCarrot } from 'react-icons/fa';
+import API from "../../utils/API";
+import { GiFarmer } from "react-icons/gi";
+import { FaCarrot } from "react-icons/fa";
 import AuthContext from "../../utils/AuthContext";
-const bcrypt = require('bcryptjs')
+import "./style.css";
+
+
+// to toggle 
+// const [editable, setEditable] = useState(false);
+// const [deleting, setDeleting] = useState(false)
+// const [productInfo, setProductInfo] = useState({
+//   title: props.title,
+//   price: props.price,
+//   packsize: props.packsize,
+//   quantity: props.quantity
+// })
+
+// const toggleEditable = (e) => {
+//   e.preventDefault();
+//   setEditable(editable ? false : true)
+// }
 
 export function SignUpCard() {
-
-
-
   const [signup, setSignup] = useState({
-    first_name: '',
-    last_name: '',
-    email: '',
-    password: '',
-    street_address: '',
-    city: '',
-    state: '',
-    zipcode: ''
+    first_name: "",
+    last_name: "",
+    email: "",
+    password: "",
+    street_address: "",
+    city: "",
+    state: "",
+    zipcode: "",
   });
 
   const addFarmer = (e) => {
     e.preventDefault();
-    API.addNewFarmer(signup)
-    .then(res => {
-      API.createFarmById(res.data._id)
-    })
-  }
+    API.addNewFarmer(signup).then((res) => {
+      API.createFarmById(res.data._id);
+    });
+  };
 
-  //sign up 
+  //sign up
   //are you are farmer or a customer
   //log in
   return (
-    <AuthContext.Consumer>{(context) => {
-      const { isAuthorized, token, isFarmer, currentUser, setAuthState } = context;
-      return (
-        <div className="column">
-          <div className="text-block login-block logout-block" id="signup-block">
-            <p>Sign up</p>
-            <div className="field">
+    <AuthContext.Consumer>
+      {(context) => {
+        const {
+          isAuthorized,
+          token,
+          isFarmer,
+          currentUser,
+          setAuthState,
+        } = context;
+        return (
+          //toggle button
+          <div className="hero">
+            <div className="box">
+            <div className="button-box">
+                <button className="button is-info is-rounded toggle-btn"  type="button" onClick="login()">
+                  Log In
+                </button>
+                <button class="button is-info is-rounded toggle-btn" 
+                  type="button" onClick="register()">
+                  Register
+                </button>
+              </div> 
+              <form id="register" className="input-group">
+              <div
+                className="text-block login-block logout-block"
+                id="signup-block"
+              >
+              <div className="field">
               <p className="control">
                 <input className="input" id="email-signup" type="text" placeholder="Email" onChange={e => setSignup({ ...signup, email: e.target.value })} />
               </p>
@@ -67,8 +100,8 @@ export function SignUpCard() {
               <p className="control">
                 <input className="input" id="city-signup" type="text" placeholder="City" onChange={e => setSignup({ ...signup, city: e.target.value })} />
               </p>
-            </div>
-            <div className="field">
+            </div> 
+                <div className="field">
               <p className="control">
                 <select className="form-control" id="state-signup" name="state" onChange={e => setSignup({ ...signup, state: e.target.value })}>
                   <option value="">Select State</option>
@@ -131,139 +164,122 @@ export function SignUpCard() {
               <p className="control">
                 <input className="input" id="zip-signup" type="text" placeholder="Zipcode" onChange={e => setSignup({ ...signup, zipcode: e.target.value })} />
               </p>
+            </div> 
+                <div className="field">
+                  <p className="control">
+                    <button className="button is-info is-rounded" id="signup-farmer" onClick={addFarmer}>
+                      I am a farmer! <GiFarmer />
+                    </button>
+                  </p>
+                </div>
+                <div className="field">
+                  <p className="control">
+                    <button className="button is-info is-rounded"
+                      id="signup-customer"
+                      onClick={() => API.addNewUser(signup)}
+                    >
+                      I am a customer! <FaCarrot />
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </form>
             </div>
-            <div className="field">
-              <p className="control">
-                <button id="signup-farmer" onClick={addFarmer}>
-                  I am a farmer! <GiFarmer />
-                </button>
-              </p>
             </div>
-            <div className="field">
-              <p className="control">
-                <button id="signup-customer" onClick={() => API.addNewUser(signup)}>
-                  I am a customer! <FaCarrot />
-                </button>
-              </p>
-            </div>
-          </div>
-        </div>
-      )
-    }}
-
+        );
+      }}
     </AuthContext.Consumer>
   );
 }
 
 export function LoginCard() {
   const [login, setLogin] = useState({
-    email: '',
-    password: ''
-  })
+    email: "",
+    password: "",
+  });
 
   return (
-    <AuthContext.Consumer>{(context) => {
-      const { isAuthorized, token, isFarmer, currentUser, setAuthState } = context;
+    <AuthContext.Consumer>
+      {(context) => {
+        const {
+          isAuthorized,
+          token,
+          isFarmer,
+          currentUser,
+          setAuthState,
+        } = context;
 
-      // const handleLoginUser = async (event) => {
-      //   event.preventDefault;
-      //   await API.loginUser(login.email)
-      //     .then(res => {
-      //       if (res.data.password === login.password) {
-      //         alert(`${res.data.email} is now logged in!`);
-      //         setAuthState(res.data._id, true, false, res.data.email);
-      //       } else {
-      //         alert(`invalid username or password`)
-      //       }
-      //     })
-      //     .catch(err => {
-      //       console.log(err)
-      //       alert(`invalid username or password`)
-      //     })
-      // };
+        const handleLoginUser = async (event) => {
+          event.preventDefault;
+          await API.loginUser(login.email)
+            .then((res) => {
+              if (res.data.password === login.password) {
+                alert(`${res.data.email} is now logged in!`);
+                setAuthState(res.data._id, true, false, res.data.email);
+              } else {
+                alert(`invalid username or password`);
+              }
+            })
+            .catch((err) => {
+              console.log(err);
+              alert(`invalid username or password`);
+            });
+        };
 
-      // const handleLoginFarmer = async (event) => {
-      //   event.preventDefault;
-      //   await API.loginFarmer(login.email)
-      //     .then(res => {
-      //       if (res.data.password === login.password) {
-      //         alert(`${res.data.email} is now logged in!`);
-      //         setAuthState(res.data._id, true, true, res.data.email);
-      //       } else {
-      //         alert(`invalid username or password`)
-      //       }
-      //     })
-      //     .catch(err => {
-      //       console.log(err)
-      //       alert(`invalid username or password`)
-      //     })
-      // };
-      
-      const handleLoginUser = async (event) => {
-        event.preventDefault;
-        await API.loginUser(login.email)
-          .then(res => {
-            if (bcrypt.compare(login.password, res.data.password, (err, success) => {
-              if (err) {
-                alert('invalid username or password')
-              } else if (success) {
-                alert(`${res.data.email} is now logged in!`)
+        const handleLoginFarmer = async (event) => {
+          event.preventDefault;
+          await API.loginFarmer(login.email)
+            .then((res) => {
+              if (res.data.password === login.password) {
+                alert(`${res.data.email} is now logged in!`);
                 setAuthState(res.data._id, true, true, res.data.email);
               } else {
-                alert('invalid username or password')
+                alert(`invalid username or password`);
               }
-            }));
-          })
-        }
-        
-      const handleLoginFarmer = async (event) => {
-        event.preventDefault;
-        await API.loginFarmer(login.email)
-          .then(res => {
-            if (bcrypt.compare(login.password, res.data.password, (err, success) => {
-              if (err) {
-                alert('invalid username or password')
-              } else if (success) {
-                alert(`${res.data.email} is now logged in!`)
-                setAuthState(res.data._id, true, true, res.data.email);
-              } else {
-                alert('invalid username or password')
-              }
-            }));
-          })
-        }
-        
+            })
+            .catch((err) => {
+              console.log(err);
+              alert(`invalid username or password`);
+            });
+        };
 
-      return (
-        <div className="column ">
-          <div className="text-block login-block logout-block">
-            <p>Login</p>
+        return (
+          <form id="login" className="input-group">
             <div className="field">
-              <p className="control">
-                <input id="email-login" className="input" type="text" placeholder="Email" onChange={e => setLogin({ ...login, email: e.target.value })} />
-              </p>
+                <input
+                  id="email-login"
+                  className="input"
+                  type="text"
+                  placeholder="Email"
+                  onChange={(e) =>
+                    setLogin({ ...login, email: e.target.value })
+                  }
+                />
             </div>
             <div className="field">
-              <p className="control">
-                <input id="password-login" className="input" type="password" placeholder="Password" onChange={e => setLogin({ ...login, password: e.target.value })} />
-              </p>
+                <input
+                  id="password-login"
+                  className="input"
+                  type="password"
+                  placeholder="Password"
+                  onChange={(e) =>
+                    setLogin({ ...login, password: e.target.value })
+                  }
+                />
             </div>
             <div className="field">
-              <p className="control">
-                <button id="login-submit" onClick={handleLoginUser}>
-                  Login as customer <FaCarrot />
-                </button>
-                <button id="login-submit" onClick={handleLoginFarmer}>
-                  Login as farmer <GiFarmer />
-                </button>
-                
-              </p>
+              <div className="button-box">
+                  <button className="button is-info is-rounded" onClick={handleLoginUser}>
+                    Login as customer <FaCarrot />
+                  </button>
+                  <button className="button is-info is-rounded" onClick={handleLoginFarmer}>
+                    Login as farmer <GiFarmer />
+                  </button>
+              </div>
             </div>
-          </div>
-        </div>
-      )
-    }}
-
+          </form>
+        );
+      }}
     </AuthContext.Consumer>
-  )
+  );
 }
