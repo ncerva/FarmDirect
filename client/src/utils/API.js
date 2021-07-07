@@ -38,5 +38,11 @@ export default {
   },
   addProduct: function(postData) {
     return axios.post(`api/product/`, postData)
+  },
+  updateProduct: function(token, body) {
+    return axios.put(`api/product/${token}`, body)
+  },
+  deleteProduct: function(id) {
+    return axios.delete(`api/product/${id}`)
   }
 };

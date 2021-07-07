@@ -1,10 +1,17 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import FarmInput from "../components/FarmInput"
 import ProductInput from '../components/ProductInput';
 import AuthContext from '../utils/AuthContext';
 function FarmerPortal() {
+  
+  const [render, setRender] = useState();
+
+  const onAdd = () => {
+    setRender( true )
+  }
+
 
   return (
     <AuthContext.Consumer>{(context) => {
@@ -20,7 +27,7 @@ function FarmerPortal() {
           <div className="columns">
 
             <FarmInput />
-            <ProductInput />
+            <ProductInput onAdd={onAdd}/>
             
           </div>
           </div>
