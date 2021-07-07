@@ -1,93 +1,198 @@
 [
     {
-        "title": "carrots",
-        "packsize": "",
-        "price": "",
-        "quantity": "",
-        "farmId": ""
+        "title": "corn",
+        "packsize": "each",
+        "price": "0.60",
+        "quantity": "180",
+        "farmId": "Misty River Farmstead"
     },
     {
-        "title": "lettuce",
-        "packsize": "",
-        "price": "",
-        "quantity": "",
-        "farmId": ""
+        "title": "carrots",
+        "packsize": "per pound",
+        "price": "1.00",
+        "quantity": "160",
+        "farmId": "Misty River Farmstead"
+    },
+    {
+        "title": "yellow onion",
+        "packsize": "each",
+        "price": "0.65",
+        "quantity": "130",
+        "farmId": "Misty River Farmstead"
+    },
+    {
+        "title": "carrots",
+        "packsize": "per pound",
+        "price": "0.98",
+        "quantity": "100",
+        "farmId": "Paradise Meadow"
+    },
+    {
+        "title": "romain lettuce",
+        "packsize": "each",
+        "price": "1.85",
+        "quantity": "75",
+        "farmId": "Paradise Meadow"
+    },
+    {
+        "title": "radishes",
+        "packsize": "each",
+        "price": "1.00",
+        "quantity": "120",
+        "farmId": "Paradise Meadow"
     },
     {
         "title": "beets",
-        "packsize": "",
-        "price": "",
-        "quantity": "",
-        "farmId": ""
+        "packsize": "each",
+        "price": "2.15",
+        "quantity": "95",
+        "farmId": "Crossroad Farms"
+    },
+    {
+        "title": "carrots",
+        "packsize": "per pound",
+        "price": "0.85",
+        "quantity": "100",
+        "farmId": "Crossroad Farms"
+    },
+    {
+        "title": "radishes",
+        "packsize": "each",
+        "price": "0.95",
+        "quantity": "70",
+        "farmId": "Crossroad Farms"
     },
     {
         "title": "strawberries",
-        "packsize": "",
-        "price": "",
-        "quantity": "",
-        "farmId": ""
+        "packsize": "per pound",
+        "price": "2.20",
+        "quantity": "150",
+        "farmId": "Sleeping Hills Fields"
+    },
+    {
+        "title": "blueberries",
+        "packsize": "per pound",
+        "price": "2.90",
+        "quantity": "120",
+        "farmId": "Sleeping Hills Fields"
     },
     {
         "title": "peaches",
-        "packsize": "",
-        "price": "",
-        "quantity": "",
-        "farmId": ""
+        "packsize": "each",
+        "price": "0.97",
+        "quantity": "200",
+        "farmId": "Sweet Dreams Orchard"
+    },
+    {
+        "title": "plums",
+        "packsize": "each",
+        "price": "0.90",
+        "quantity": "150",
+        "farmId": "Sweet Dreams Orchard"
     },
     {
         "title": "corn",
-        "packsize": "",
-        "price": "",
-        "quantity": "",
-        "farmId": ""
+        "packsize": "each",
+        "price": "0.50",
+        "quantity": "250",
+        "farmId": "Moonlight Ranch"
+    },
+    {
+        "title": "vine tomatoes",
+        "packsize": "each",
+        "price": "2.10",
+        "quantity": "75",
+        "farmId": "Moonlight Ranch"
+    },
+    {
+        "title": "corn",
+        "packsize": "each",
+        "price": "0.75",
+        "quantity": "150",
+        "farmId": "Lucky Star Acres"
     },
     {
         "title": "broccoli",
-        "packsize": "",
-        "price": "",
-        "quantity": "",
-        "farmId": ""
+        "packsize": "each",
+        "price": "1.10",
+        "quantity": "160",
+        "farmId": "Lucky Star Acres"
     },
     {
-        "title": "pumpkin",
-        "packsize": "",
-        "price": "",
-        "quantity": "",
-        "farmId": ""
+        "title": "cauliflower",
+        "packsize": "each",
+        "price": "2.75",
+        "quantity": "155",
+        "farmId": "Lucky Star Acres"
     },
     {
-        "title": "onion",
-        "packsize": "",
-        "price": "",
-        "quantity": "",
-        "farmId": ""
+        "title": "carrots",
+        "packsize": "per pound",
+        "price": "0.97",
+        "quantity": "175",
+        "farmId": "Old Stone Farm"
     },
     {
-        "title": "",
-        "packsize": "",
-        "price": "",
-        "quantity": "",
-        "farmId": ""
+        "title": "red bell peppers",
+        "packsize": "each",
+        "price": "1.45",
+        "quantity": "145",
+        "farmId": "Old Stone Farm"
     },
     {
-        "title": "",
-        "packsize": "",
-        "price": "",
-        "quantity": "",
-        "farmId": ""
+        "title": "green bell peppers",
+        "packsize": "each",
+        "price": "0.85",
+        "quantity": "150",
+        "farmId": "Old Stone Farm"
     },
     {
-        "title": "",
-        "packsize": "",
-        "price": "",
-        "quantity": "",
-        "farmId": ""
+        "title": "orange bell peppers",
+        "packsize": "each",
+        "price": "1.45",
+        "quantity": "145",
+        "farmId": "Old Stone Farm"
     },
     {
-        "title": "",
-        "packsize": "",
-        "price": "",
-        "quantity": "",
-        "farmId": ""
+        "title": "red onion",
+        "packsize": "each",
+        "price": ".75",
+        "quantity": "130",
+        "farmId": "Willow Creek Farms"
+    },
+    {
+        "title": "yellow onion",
+        "packsize": "each",
+        "price": ".70",
+        "quantity": "150",
+        "farmId": "Willow Creek Farms"
+    },
+    {
+        "title": "corn",
+        "packsize": "each",
+        "price": ".50",
+        "quantity": "200",
+        "farmId": "Willow Creek Farms"
+    },
+    {
+        "title": "red onions",
+        "packsize": "each",
+        "price": ".70",
+        "quantity": "165",
+        "farmId": "Happy Acres"
+    },
+    {
+        "title": "romain lettuce",
+        "packsize": "each",
+        "price": "1.72",
+        "quantity": "150",
+        "farmId": "Happy Acres"
+    },
+    {
+        "title": "vine tomatoes",
+        "packsize": "each",
+        "price": "2.15",
+        "quantity": "100",
+        "farmId": "Happy Acres"
     }
 ]
