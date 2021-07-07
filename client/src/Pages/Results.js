@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState, useEffect, Component } from "react";
 import { Redirect } from "react-router-dom";
 import API from "../utils/API";
 import ResultsCard from "../components/ResultsCard";
@@ -7,7 +7,7 @@ import AuthContext from "../utils/AuthContext";
 
 
 const Results = () => {
-  const [farm, setFarm] = useState([])
+  const [farm, setFarm] = useState([ 1,2,3])
   const [formObject, setFormObject] = useState({})
 
   useEffect(() => {
@@ -64,23 +64,31 @@ const Results = () => {
               <div className="container">
                 <SearchForm 
                   onChange={handleInputChange}
-                  onClick={handleFormSubmit}/>
-                {/* {farm.length ? (
-                  {farms.map(farm => (
-                <ResultsCard heading="Search Results">
-                  key={farm._id},
-                  farm_name={farm.farm_name},
-                  farmer={farm.farmer},
-                  image={farm.image},
-                  description={farm.description} 
-                  ))} 
+                  onClick={handleFormSubmit}
+                />
+                  {farm.map(farm => (
+                <ResultsCard heading="Search Results"
+                key={farm._id}
+                farm_name={farm.farm_name}
+                farmer={farm.farmer}
+                image={farm.image}
+                description={farm.description} >
                   </ResultsCard>
-                  ) : (
-                    <ResultsCard>
-                    <h3>No Results to Display</h3>          
-                    </ResultsCard>
-                  )}  */}
-          </div>
+                /* {farm.length ? ( */
+                  /* farm.map(farm => (
+                <ResultsCard heading="Search Results"
+                key={farm._id}
+                farm_name={farm.farm_name}
+                farmer={farm.farmer}
+                image={farm.image}
+                description={farm.description} >
+                  </ResultsCard> */
+                  
+                  /* //   <ResultsCard>
+                  // {/* <h3>No Results to Display</h3>           */
+                  /* //   </ResultsCard> */
+                ))}
+            </div>
           </div>
           </div>
         </div>
