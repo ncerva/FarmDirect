@@ -19,7 +19,7 @@ const index = () => {
             className="team"
             src="https://user-images.githubusercontent.com/76188076/124361364-6ea8ee00-dbf4-11eb-86f7-5b1c614f5deb.png"
           ></img>
-          <div className="box"><h1 className="head">Nicole Tribo</h1>
+          <div id="box"><h1 className="head">Nicole Tribo</h1>
           <p>Fullstack Web Developer</p>
           <FaGithub/> <p>https://github.com/nicoletribo</p>
           </div>
@@ -29,7 +29,7 @@ const index = () => {
             className="team"
             src="https://user-images.githubusercontent.com/76188076/124361014-5b951e80-dbf2-11eb-9c74-d3b05865d5b2.jpeg"
           ></img>
-          <div className="box"><h1 className="head">Reid Johnson</h1>
+          <div id="box"><h1 className="head">Reid Johnson</h1>
           <p>Fullstack Web Developer</p>
           <FaGithub/> <p>https://github.com/Rjsa210</p>
           </div>
@@ -39,7 +39,7 @@ const index = () => {
             className="team"
             src="https://user-images.githubusercontent.com/76188076/124361023-6a7bd100-dbf2-11eb-9767-53878e0cbbd5.jpeg"
           ></img>
-          <div className="box"><h1 className="head">Nayeli Cervantes</h1><p>Fullstack Web Developer</p>
+          <div id="box"><h1 className="head">Nayeli Cervantes</h1><p>Fullstack Web Developer</p>
           <FaGithub/> <p>https://github.com/ncerva</p>
           </div>
         </div>

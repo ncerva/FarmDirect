@@ -5,20 +5,6 @@ import { FaCarrot } from "react-icons/fa";
 import AuthContext from "../../utils/AuthContext";
 import "./style.css";
 
-// to toggle 
-// const [editable, setEditable] = useState(false);
-// const [deleting, setDeleting] = useState(false)
-// const [productInfo, setProductInfo] = useState({
-//   title: props.title,
-//   price: props.price,
-//   packsize: props.packsize,
-//   quantity: props.quantity
-// })
-
-// const toggleEditable = (e) => {
-//   e.preventDefault();
-//   setEditable(editable ? false : true)
-// }
 
 export function SignUpCard() {
   const [signup, setSignup] = useState({

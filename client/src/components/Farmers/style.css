@@ -73,8 +73,16 @@ font-weight: 400;
     height: auto;
 }
 
-.box {
+#box {
     margin-top: 5%;
+    background-color: rgb(238, 238, 238);
+    width: 380px;
+    height: 150px;
+    padding: 20px;
+    top: 30%;
+    left: 40%;
+    border-radius: 15px;
+
 }
 
 .head {
