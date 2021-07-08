@@ -5,6 +5,8 @@ import { FaCarrot } from "react-icons/fa";
 import AuthContext from "../../utils/AuthContext";
 import "./style.css";
 
+const bcrypt = require("bcryptjs");
+
 // to toggle 
 // const [editable, setEditable] = useState(false);
 // const [deleting, setDeleting] = useState(false)
@@ -215,40 +217,57 @@ export function LoginCard() {
           setAuthState,
         } = context;
 
+        // const handleLoginUser = async (event) => {
+        //   event.preventDefault();
+        //   await API.loginUser(login.email)
+        //     .then((res) => {
+        //       if (res.data.password === login.password) {
+        //         alert(`${res.data.email} is now logged in!`);
+        //         setAuthState(res.data._id, true, false, res.data.email);
+        //       } else {
+        //         alert(`invalid username or password`);
+        //       }
+        //     })
+        //     .catch((err) => {
+        //       console.log(err);
+        //       alert(`invalid username or password`);
+        //     });
+        // };
         const handleLoginUser = async (event) => {
-          event.preventDefault;
+          event.preventDefault();
           await API.loginUser(login.email)
-            .then((res) => {
-              if (res.data.password === login.password) {
-                alert(`${res.data.email} is now logged in!`);
-                setAuthState(res.data._id, true, false, res.data.email);
-              } else {
-                alert(`invalid username or password`);
-              }
+            .then(res => {
+              if (bcrypt.compare(login.password, res.data.password, (err, success) => {
+                if (err) {
+                  alert('invalid username or password')
+                } else if (success) {
+                  alert(`${res.data.email} is now logged in!`)
+                  setAuthState(res.data._id, true, true, res.data.email);
+                } else {
+                  alert('invalid username or password')
+                }
+              }));
             })
-            .catch((err) => {
-              console.log(err);
-              alert(`invalid username or password`);
-            });
-        };
+          }
+
 
         const handleLoginFarmer = async (event) => {
-          event.preventDefault;
+          event.preventDefault();
           await API.loginFarmer(login.email)
-            .then((res) => {
-              if (res.data.password === login.password) {
-                alert(`${res.data.email} is now logged in!`);
-                setAuthState(res.data._id, true, true, res.data.email);
-              } else {
-                alert(`invalid username or password`);
-              }
+            .then(res => {
+              if (bcrypt.compare(login.password, res.data.password, (err, success) => {
+                if (err) {
+                  alert('invalid username or password')
+                } else if (success) {
+                  alert(`${res.data.email} is now logged in!`)
+                  setAuthState(res.data._id, true, true, res.data.email);
+                } else {
+                  alert('invalid username or password')
+                }
+              }));
             })
-            .catch((err) => {
-              console.log(err);
-              alert(`invalid username or password`);
-            });
-        };
-
+          }
+       
         return (
             <form id="login" className="input-group">
             <div className="field">
