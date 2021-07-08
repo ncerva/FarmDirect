@@ -5,7 +5,6 @@ import { FaCarrot } from "react-icons/fa";
 import AuthContext from "../../utils/AuthContext";
 import "./style.css";
 
-
 // to toggle 
 // const [editable, setEditable] = useState(false);
 // const [deleting, setDeleting] = useState(false)
@@ -33,6 +32,9 @@ export function SignUpCard() {
     zipcode: "",
   });
 
+// toggle
+const [show, setShow] = useState(false)
+
   const addFarmer = (e) => {
     e.preventDefault();
     API.addNewFarmer(signup).then((res) => {
@@ -58,15 +60,18 @@ export function SignUpCard() {
           <div className="hero">
             <div className="box">
             <div className="button-box">
-                <button className="button is-info is-rounded toggle-btn"  type="button" onClick="login()">
-                  Log In
+                <button className="button is-info is-rounded toggle-btn"  type="button" onClick={() => setShow(false)}>
+                  Start Connecting
                 </button>
-                <button class="button is-info is-rounded toggle-btn" 
-                  type="button" onClick="register()">
-                  Register
+                </div> 
+                <div>
+                <button className="button toggle-btn"  type="button" onClick={() => setShow(true)}>
+                  Don't have an account? Click here to sign up
                 </button>
-              </div> 
+                </div>
+              {show?
               <form id="register" className="input-group">
+                <div className="box" id="formBox">
               <div
                 className="text-block login-block logout-block"
                 id="signup-block"
@@ -183,7 +188,8 @@ export function SignUpCard() {
                   </p>
                 </div>
               </div>
-            </form>
+              </div>
+            </form>:null}
             </div>
             </div>
         );
@@ -244,7 +250,7 @@ export function LoginCard() {
         };
 
         return (
-          <form id="login" className="input-group">
+            <form id="login" className="input-group">
             <div className="field">
                 <input
                   id="email-login"

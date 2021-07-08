@@ -22,11 +22,9 @@
 }
 
 .button-box {
-    width: 220px;
+    width: 100px;
     margin: 35px auto;
-    position: relative;
-    box-shadow: 0 0 20px 9px #4c49471f;
-    border-radius: 30px;
+    position:relative;
 }
 
 .toggle-btn {
@@ -41,8 +39,6 @@
 .button {
     top: 0;
     left: 0;
-    position: relative;
-    transition: .5s;
     cursor: pointer;
 }
 
@@ -65,24 +61,12 @@
     background: transparent;
 }
 
-#login-submit {
-    width: 85%;
-    padding: 10px 30px;
-    cursor: pointer;
-    display: block;
-    margin: auto;
-    background: linear-gradient(#bdd0f4, #066aff);
-    border: 0;
-    outline: none;
-    border-radius: 30px;
-}
-
 #login {
-    left: 50px;
+    left: 43%;
 }
 
 #register {
-    left: 450px;
+    left: 600px;
 }
 
 .img {
@@ -97,6 +81,17 @@
 .input-group {
     top: 50%;
     left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+}
+
+#formBox {
+    width: 380px;
+    height: 800px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.409);
+    padding: 25px;
+    left: 0%;
     margin-top: -50px;
     margin-left: -50px;
 }
