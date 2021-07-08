@@ -57,7 +57,7 @@ export function SignUpCard() {
           //toggle button
           <div className="hero">
             <div className="box">
-             <div className="button-box">
+            <div className="button-box">
                 <button className="button is-info is-rounded toggle-btn"  type="button" onClick="login()">
                   Log In
                 </button>
