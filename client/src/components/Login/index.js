@@ -210,7 +210,7 @@ export function LoginCard() {
         } = context;
 
         const handleLoginUser = async (event) => {
-          event.preventDefault;
+          event.preventDefault();
           await API.loginUser(login.email)
             .then((res) => {
               if (res.data.password === login.password) {
@@ -227,7 +227,7 @@ export function LoginCard() {
         };
 
         const handleLoginFarmer = async (event) => {
-          event.preventDefault;
+          event.preventDefault();
           await API.loginFarmer(login.email)
             .then((res) => {
               if (res.data.password === login.password) {
