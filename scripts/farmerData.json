@@ -2,13 +2,12 @@
     {
         "first_name": "Billy",
         "last_name": "Jones",
-        "email": "BillyJones@email.com",
+        "email": "Billyjones@email.com",
         "password": "sayjkdG23",
         "street_address": "13977 FM2325",
         "city": "Blanco",
         "state": "TX",
-        "zipcode": "78606",
-        "farms": "Misty River Farmstead"
+        "zipcode": "78606"
     },
     {
         "first_name": "Sheryl",
@@ -18,8 +17,7 @@
         "street_address": "1115 FM 969",
         "city": "Bastrop",
         "state": "TX",
-        "zipcode": "78602",
-        "farms": "Paradise Meadow"
+        "zipcode": "78602"
     },
     {
         "first_name": "Rufus",
@@ -29,19 +27,17 @@
         "street_address": "3414 Lyons Rd",
         "city": "Austin",
         "state": "TX",
-        "zipcode": "78702",
-        "farms": "Crossroad Farms"
+        "zipcode": "78702"
     },
     {
         "first_name": "Jane",
         "last_name": "Deere",
-        "email": "JDeere",
+        "email": "Jdeere@email.com",
         "password": "dsr3efs",
         "street_address": "14400 E State Hwy 29",
         "city": "Georgetown,",
         "state": "TX",
-        "zipcode": "78626",
-        "farms": "Sleeping Hills Fields"
+        "zipcode": "78626"
     },
     {
         "first_name": "Hoy",
@@ -51,8 +47,7 @@
         "street_address": "8301 US-290",
         "city": "Fredericksburg",
         "state": "TX",
-        "zipcode": "78624",
-        "farms": "Sweet Dreams Orchard"
+        "zipcode": "78624"
     },
     {
         "first_name": "Neatha",
@@ -62,8 +57,7 @@
         "street_address": "3780 White Owl Ln",
         "city": "Temple",
         "state": "TX",
-        "zipcode": "76501",
-        "farms": "Moonlight Ranch"
+        "zipcode": "76501"
     },
     {
         "first_name": "Bonnie",
@@ -73,8 +67,7 @@
         "street_address": "10300 Taylor Ln",
         "city": "Manor",
         "state": "TX",
-        "zipcode": "78653",
-        "farms": "Lucky Star Acres"
+        "zipcode": "78653"
     },
     {
         "first_name": "Toad",
@@ -84,8 +77,7 @@
         "street_address": "12550 FM2325",
         "city": "Wimberley",
         "state": "TX",
-        "zipcode": "78676",
-        "farms": "Old Stone Farm"
+        "zipcode": "78676"
     },
     {
         "first_name": "Martha",
@@ -95,8 +87,7 @@
         "street_address": "680 Co Rd 476",
         "city": "Thrall",
         "state": "TX",
-        "zipcode": "76578",
-        "farms": "Willow Creek Farms"
+        "zipcode": "76578"
     },
     {
         "first_name": "Jed",
@@ -106,7 +97,6 @@
         "street_address": "1250 Co Rd 249",
         "city": "Florence",
         "state": "TX",
-        "zipcode": "76527",
-        "farms": "Happy Acres"
+        "zipcode": "76527"
     }
 ]

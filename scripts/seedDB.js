@@ -10,37 +10,28 @@ const farmerData = require("./farmerData.json");
 const farmData = require("./farmData.json");
 const productData = require("./productData.json");
 
-db.Farmer
-    .remove({})
-    .then(() => db.Farmer.collection.insertMany(farmerData))
-    .then(data => {
-        console.log(data.result.n + " records inserted!");
-        process.exit(0);
-    })
-    .catch(err => {
-        console.error(err);
-        process.exit(1);
-    });
+db.Farmer.deleteMany({})
+db.User.remove({})
+db.Farm.remove({})
 
-db.Farm
-    .remove({})
-    .then(() => db.Farm.collection.insertMany(farmData))
-    .then(data => {
-        console.log(data.result.n + " records inserted!");
-        process.exit(0);
-    })
+farmerData.forEach((Farmer, index) => {
+    db.Farmer.create(Farmer)
     .catch(err => {
         console.error(err);
-        process.exit(1);
-    });
-db.Product
-    .remove({})
-    .then(() => db.Product.collection.insertMany(productData))
-    .then(data => {
-        console.log(data.result.n + " records inserted!");
-        process.exit(0);
     })
-    .catch(err => {
-        console.error(err);
-        process.exit(1);
-    });
+    .then(farmerEntry => {
+        console.log(farmerEntry);
+        let Farm = farmData[index]
+        Farm.owner = farmerEntry._id
+        db.Farm.create(Farm)
+        .catch(err => {
+            console.error(err);
+        })
+        .then(farmEntry => {
+            db.Farmer.updateOne({_id: farmerEntry._id}, {farms: [farmEntry._id]})
+            .then(data => console.log(data))
+            console.log(farmEntry); 
+        })
+    })
+}) 
+
