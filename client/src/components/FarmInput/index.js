@@ -74,7 +74,7 @@ function FarmInput() {
 
       if (edit.editable === false) {
         return (
-          <div className="column is-half has-background-primary">
+          <div className="column is-half">
             <form>
               <fieldset disabled>
 
@@ -131,7 +131,7 @@ function FarmInput() {
 
               <div className="field">
                 <div className="control">
-                  <button className="button is-link" onClick={setEditTrue}>Edit (editable = false)</button>
+                  <button className="button is-link" onClick={setEditTrue}>Edit</button>
                 </div>
               </div>
 
@@ -143,7 +143,7 @@ function FarmInput() {
       } else if (edit.editable === true) {
 
         return (
-          <div className="column is-half has-background-primary">
+          <div className="column is-half">
             <form>
 
               <div className="field">
@@ -251,7 +251,7 @@ function FarmInput() {
 
               <div className="field">
                 <div className="control">
-                  <button className="button is-warning" onClick={updateFarm}>Submit (editable = true)</button>
+                  <button className="button is-warning" onClick={updateFarm}>Submit</button>
                 </div>
               </div>
 
