@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 import Home from "./Pages/Homepage";
 import Login from "./Pages/Login";
 import Results from "./Pages/Results";
@@ -44,7 +44,7 @@ function App() {
             <Route exact path="/farmerportal" component={FarmerPortal} />
 
           </Switch>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </AuthContext.Provider>
     </Router>

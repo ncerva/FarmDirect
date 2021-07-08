@@ -55,7 +55,7 @@ function ProductBlock(props) {
           <p className="control">
             <strong>{props.title}</strong>
           </p>
-          <p className="control">
+          <p className="control is-fluid">
             <label className="label is-small">Price</label>
             <input className="input" type="number" placeholder={props.price} onChange={e => setProductInfo({ ...productInfo, price: e.target.value })}></input>
           </p>

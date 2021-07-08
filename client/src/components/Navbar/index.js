@@ -64,11 +64,6 @@ function Navbar() {
                     farmerportal
                   </Link>
                 </li>
-                <li className="search-box">
-                  <input type="text" name="" className="search-txt" placeholder="Search">
-                  </input>
-                  <a className="search-btn" href="#"> <FaSearch className="searchicon" /> </a>
-                </li>
 
                 <li className="nav-item">
                   <p>logged in as {currentUser}</p>
@@ -119,11 +114,6 @@ function Navbar() {
                   >
                     <FaShoppingCart />
                   </Link>
-                </li>
-                <li className="search-box">
-                  <input type="text" name="" className="search-txt" placeholder="Search">
-                  </input>
-                  <a className="search-btn" href="#"> <FaSearch className="searchicon" /> </a>
                 </li>
 
 
