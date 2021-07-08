@@ -32,8 +32,8 @@ export function SignUpCard() {
     zipcode: "",
   });
 
-// toggle
-const [show, setShow] = useState(false)
+// // toggle
+// const [show, setShow] = useState(false)
 
   const addFarmer = (e) => {
     e.preventDefault();
@@ -60,16 +60,15 @@ const [show, setShow] = useState(false)
           <div className="hero">
             <div className="box">
             <div className="button-box">
-                <button className="button is-info is-rounded toggle-btn"  type="button" onClick={() => setShow(false)}>
+                <button className="button is-info is-rounded toggle-btn"  type="button">
                   Start Connecting
                 </button>
                 </div> 
                 <div>
-                <button className="button toggle-btn"  type="button" onClick={() => setShow(true)}>
+                <button className="button toggle-btn"  type="button">
                   Don't have an account? Click here to sign up
                 </button>
                 </div>
-              {show?
               <form id="register" className="input-group">
                 <div className="box" id="formBox">
               <div
@@ -189,7 +188,7 @@ const [show, setShow] = useState(false)
                 </div>
               </div>
               </div>
-            </form>:null}
+            </form>
             </div>
             </div>
         );
