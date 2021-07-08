@@ -32,8 +32,6 @@ export function SignUpCard() {
     zipcode: "",
   });
 
-// // toggle
-// const [show, setShow] = useState(false)
 
   const addFarmer = (e) => {
     e.preventDefault();
