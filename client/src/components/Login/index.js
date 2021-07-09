@@ -214,6 +214,7 @@ export function LoginCard() {
           token,
           isFarmer,
           currentUser,
+          zipcode,
           setAuthState,
         } = context;
 
@@ -242,7 +243,7 @@ export function LoginCard() {
                   alert('invalid username or password')
                 } else if (success) {
                   alert(`${res.data.email} is now logged in!`)
-                  setAuthState(res.data._id, true, true, res.data.email);
+                  setAuthState(res.data._id, true, true, res.data.email, res.data.zipcode);
                 } else {
                   alert('invalid username or password')
                 }
@@ -260,7 +261,7 @@ export function LoginCard() {
                   alert('invalid username or password')
                 } else if (success) {
                   alert(`${res.data.email} is now logged in!`)
-                  setAuthState(res.data._id, true, true, res.data.email);
+                  setAuthState(res.data._id, true, true, res.data.email, res.data.zipcode);
                 } else {
                   alert('invalid username or password')
                 }
