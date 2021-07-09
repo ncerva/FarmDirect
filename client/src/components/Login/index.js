@@ -5,18 +5,6 @@ import { FaCarrot } from "react-icons/fa";
 import AuthContext from "../../utils/AuthContext";
 import "./style.css";
 
-const bcrypt = require("bcryptjs");
-
-// to toggle 
-// const [editable, setEditable] = useState(false);
-// const [deleting, setDeleting] = useState(false)
-// const [productInfo, setProductInfo] = useState({
-//   title: props.title,
-//   price: props.price,
-//   packsize: props.packsize,
-//   quantity: props.quantity
-// })
-
 // const toggleEditable = (e) => {
 //   e.preventDefault();
 //   setEditable(editable ? false : true)
@@ -34,8 +22,6 @@ export function SignUpCard() {
     zipcode: "",
   });
 
-// toggle
-const [show, setShow] = useState(false)
 
   const addFarmer = (e) => {
     e.preventDefault();
@@ -62,16 +48,15 @@ const [show, setShow] = useState(false)
           <div className="hero">
             <div className="box">
             <div className="button-box">
-                <button className="button is-info is-rounded toggle-btn"  type="button" onClick={() => setShow(false)}>
+                <button className="button is-info is-rounded toggle-btn"  type="button">
                   Start Connecting
                 </button>
                 </div> 
                 <div>
-                <button className="button toggle-btn"  type="button" onClick={() => setShow(true)}>
+                <button className="button toggle-btn"  type="button">
                   Don't have an account? Click here to sign up
                 </button>
                 </div>
-              {show?
               <form id="register" className="input-group">
                 <div className="box" id="formBox">
               <div
@@ -191,7 +176,7 @@ const [show, setShow] = useState(false)
                 </div>
               </div>
               </div>
-            </form>:null}
+            </form>
             </div>
             </div>
         );
@@ -217,57 +202,40 @@ export function LoginCard() {
           setAuthState,
         } = context;
 
-        // const handleLoginUser = async (event) => {
-        //   event.preventDefault();
-        //   await API.loginUser(login.email)
-        //     .then((res) => {
-        //       if (res.data.password === login.password) {
-        //         alert(`${res.data.email} is now logged in!`);
-        //         setAuthState(res.data._id, true, false, res.data.email);
-        //       } else {
-        //         alert(`invalid username or password`);
-        //       }
-        //     })
-        //     .catch((err) => {
-        //       console.log(err);
-        //       alert(`invalid username or password`);
-        //     });
-        // };
         const handleLoginUser = async (event) => {
           event.preventDefault();
           await API.loginUser(login.email)
-            .then(res => {
-              if (bcrypt.compare(login.password, res.data.password, (err, success) => {
-                if (err) {
-                  alert('invalid username or password')
-                } else if (success) {
-                  alert(`${res.data.email} is now logged in!`)
-                  setAuthState(res.data._id, true, true, res.data.email);
-                } else {
-                  alert('invalid username or password')
-                }
-              }));
+            .then((res) => {
+              if (res.data.password === login.password) {
+                alert(`${res.data.email} is now logged in!`);
+                setAuthState(res.data._id, true, false, res.data.email);
+              } else {
+                alert(`invalid username or password`);
+              }
             })
-          }
-
+            .catch((err) => {
+              console.log(err);
+              alert(`invalid username or password`);
+            });
+        };
 
         const handleLoginFarmer = async (event) => {
           event.preventDefault();
           await API.loginFarmer(login.email)
-            .then(res => {
-              if (bcrypt.compare(login.password, res.data.password, (err, success) => {
-                if (err) {
-                  alert('invalid username or password')
-                } else if (success) {
-                  alert(`${res.data.email} is now logged in!`)
-                  setAuthState(res.data._id, true, true, res.data.email);
-                } else {
-                  alert('invalid username or password')
-                }
-              }));
+            .then((res) => {
+              if (res.data.password === login.password) {
+                alert(`${res.data.email} is now logged in!`);
+                setAuthState(res.data._id, true, true, res.data.email);
+              } else {
+                alert(`invalid username or password`);
+              }
             })
-          }
-       
+            .catch((err) => {
+              console.log(err);
+              alert(`invalid username or password`);
+            });
+        };
+
         return (
             <form id="login" className="input-group">
             <div className="field">

@@ -44,7 +44,7 @@ font-weight: 400;
     box-shadow: inset 200px 0 0 0 #0d60c0;;
 }
 
-.container {
+.is-fluid {
     position: absolute;
     top: 100%;
     left: 0;
@@ -71,4 +71,22 @@ font-weight: 400;
     border-radius: 50%;
     width: 75%;
     height: auto;
+}
+
+#box {
+    margin-top: 5%;
+    background-color: rgb(238, 238, 238);
+    width: 380px;
+    height: 150px;
+    padding: 20px;
+    top: 30%;
+    left: 40%;
+    border-radius: 15px;
+
+}
+
+.head {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
 }
