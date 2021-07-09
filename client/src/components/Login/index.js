@@ -4,6 +4,7 @@ import { GiFarmer } from "react-icons/gi";
 import { FaCarrot } from "react-icons/fa";
 import AuthContext from "../../utils/AuthContext";
 import "./style.css";
+const bcrypt = require('bcryptjs');
 
 // const toggleEditable = (e) => {
 //   e.preventDefault();
@@ -199,19 +200,24 @@ export function LoginCard() {
           token,
           isFarmer,
           currentUser,
+          zipcode,
           setAuthState,
         } = context;
 
         const handleLoginUser = async (event) => {
           event.preventDefault();
           await API.loginUser(login.email)
-            .then((res) => {
-              if (res.data.password === login.password) {
-                alert(`${res.data.email} is now logged in!`);
-                setAuthState(res.data._id, true, false, res.data.email);
-              } else {
-                alert(`invalid username or password`);
-              }
+            .then(res => {
+              if (bcrypt.compare(login.password, res.data.password, (err, success) => {
+                if (err) {
+                  alert('invalid username or password')
+                } else if (success) {
+                  alert(`${res.data.email} is now logged in!`)
+                  setAuthState(res.data._id, true, true, res.data.email, res.data.zipcode);
+                } else {
+                  alert('invalid username or password')
+                }
+              }));
             })
             .catch((err) => {
               console.log(err);
@@ -222,13 +228,17 @@ export function LoginCard() {
         const handleLoginFarmer = async (event) => {
           event.preventDefault();
           await API.loginFarmer(login.email)
-            .then((res) => {
-              if (res.data.password === login.password) {
-                alert(`${res.data.email} is now logged in!`);
-                setAuthState(res.data._id, true, true, res.data.email);
-              } else {
-                alert(`invalid username or password`);
-              }
+            .then(res => {
+              if (bcrypt.compare(login.password, res.data.password, (err, success) => {
+                if (err) {
+                  alert('invalid username or password')
+                } else if (success) {
+                  alert(`${res.data.email} is now logged in!`)
+                  setAuthState(res.data._id, true, true, res.data.email, res.data.zipcode);
+                } else {
+                  alert('invalid username or password')
+                }
+              }));
             })
             .catch((err) => {
               console.log(err);
