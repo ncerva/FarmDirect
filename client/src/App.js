@@ -24,11 +24,12 @@ function App() {
     <Router>
       <AuthContext.Provider value={{
         ...authState,
-        setAuthState: (token, isAuthorized, isFarmer, currentUser) => setAuthState({
+        setAuthState: (token, isAuthorized, isFarmer, currentUser, zipcode) => setAuthState({
           token: token,
           isAuthorized: isAuthorized,
           isFarmer: isFarmer,
-          currentUser: currentUser
+          currentUser: currentUser,
+          zipcode: zipcode
         })
       }}>
         <div>

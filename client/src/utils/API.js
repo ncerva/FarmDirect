@@ -1,4 +1,6 @@
 import axios from 'axios';
+require("dotenv").config();
+
 
 export default {
   //get all users
@@ -44,5 +46,8 @@ export default {
   },
   deleteProduct: function(id) {
     return axios.delete(`api/product/${id}`)
+  },
+  getZips: function(radius, zipcode) {
+    return axios.get(`https://www.zipcodeapi.com/rest/${process.env.CLIENT_KEY}/radius.json/${zipcode}/${radius}/mile`)
   }
 };

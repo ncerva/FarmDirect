@@ -3,6 +3,7 @@ const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const mongoose = require("mongoose");
+require("dotenv").config();
 
 // imports models to use with queries
 const db = require('./models/index');
