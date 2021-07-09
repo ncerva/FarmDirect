@@ -7,7 +7,7 @@ import AuthContext from "../utils/AuthContext";
 
 
 const Results = () => {
-  const [farm, setFarm] = useState([ 1,2,3])
+  const [farm, setFarm] = useState([1, 2, 3])
   const [formObject, setFormObject] = useState({})
 
   useEffect(() => {
@@ -16,7 +16,7 @@ const Results = () => {
 
   function loadFarms() {
     API.getFarm()
-      .then(res => 
+      .then(res =>
         setFarm(res.data)
       )
       .catch(err => console.log(err));
@@ -24,24 +24,24 @@ const Results = () => {
 
   function handleInputChange(event) {
     const { name, value } = event.target;
-    setFormObject({...formObject, [name]: value})
+    setFormObject({ ...formObject, [name]: value })
   };
 
   function handleFormSubmit(event) {
     event.preventDefault();
     if (formObject.title && formObject.farmer) {
       API.getFarm(this.state.farm)
-      .then(res => {
-        this.setState({
+        .then(res => {
+          this.setState({
             farm: res.data.items,
             products: ""
-        });
-        console.log(this.state.farms)
-    })
-    .catch(err => console.log(err));
+          });
+          console.log(this.state.farms)
+        })
+        .catch(err => console.log(err));
     }
   };
-  
+
   return (
     <AuthContext.Consumer>{(context) => {
       const { isAuthorized, token, isFarmer, currentUser, setAuthState } = context;
@@ -52,7 +52,7 @@ const Results = () => {
         alertLogin()
         return (
           <Redirect to='/login'>
-            
+
           </Redirect>
         );
       }
@@ -62,19 +62,20 @@ const Results = () => {
           <div className="container">
             <div className="column is-full">
               <div className="container">
-                <SearchForm 
+                <SearchForm
                   onChange={handleInputChange}
                   onClick={handleFormSubmit}
                 />
-                  {farm.map(farm => (
-                <ResultsCard heading="Search Results"
-                key={farm._id}
-                farm_name={farm.farm_name}
-                farmer={farm.farmer}
-                image={farm.image}
-                description={farm.description} >
+                <p className="title is-1"> Search results</p>
+                {farm.map(farm => (
+                  <ResultsCard heading="Search Results"
+                    key={farm._id}
+                    farm_name={farm.farm_name}
+                    farmer={farm.farmer}
+                    image={farm.image}
+                    description={farm.description} >
                   </ResultsCard>
-                /* {farm.length ? ( */
+                  /* {farm.length ? ( */
                   /* farm.map(farm => (
                 <ResultsCard heading="Search Results"
                 key={farm._id}
@@ -83,13 +84,13 @@ const Results = () => {
                 image={farm.image}
                 description={farm.description} >
                   </ResultsCard> */
-                  
+
                   /* //   <ResultsCard>
                   // {/* <h3>No Results to Display</h3>           */
                   /* //   </ResultsCard> */
                 ))}
+              </div>
             </div>
-          </div>
           </div>
         </div>
       )

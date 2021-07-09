@@ -40,9 +40,7 @@ function FarmerPortal() {
           </Redirect>
         )
       }
-
     }}
-
     </AuthContext.Consumer>
   )
 }

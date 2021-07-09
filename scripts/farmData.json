@@ -4,89 +4,79 @@
         "zipcode": "78606",
         "description": "A fourth generation corn farmer in Blanco, TX. In addition to corn, Misty River Farmstead now produces carrots and yellow onions.",
         "bio": "A fourth generation corn farmer in Blanco, TX. My great grandfather started to grow corn back in 1945 as a way to suport and feed his family. In addition to corn, Misty River Farmstead now produces carrots and onions.",
-        "owner": "Billy Jones",
         "image": "https://user-images.githubusercontent.com/76696641/124362268-820a8800-dbf9-11eb-8b0a-4759ac8417ad.png",
-        "products": "corn, carrots, and yellow onions"
+        "products": []
     },
     {
         "farm_name": "Paradise Meadow",
         "zipcode": "78602",
         "description": "Howdy, my name is Sheryl Hayes! My family and I are very proud of our produce.",
         "bio": "Howdy, my name is Sheryl Hayes! I live on 25 aceres in Bastrop, TX with my hunsband and two sons. My family and I are very proud of the carrots, romain lettuce, and radishes that we produce.",
-        "owner": "Sheryl Hayes",
         "image": "https://user-images.githubusercontent.com/76696641/124362227-4ec7f900-dbf9-11eb-8ebe-78fe8a5fd976.png",
-        "products": "carrots, romain lettuce, & radishes"
+        "products": []
     },
     {
         "farm_name": "Crossroad Farms",
         "zipcode": "78702",
         "description": "I am a third generation beet and carrot farmer who is passionate about his sustainable produce.",
         "bio": "I am a third generation beet and carrot farmer who is passionate about his sustainable produce. My pride and joy is Crossroad Farms located in the state's capital, the great Austin, TX.",
-        "owner": "Rufus Winston",
         "image": "https://user-images.githubusercontent.com/76696641/124362384-1248cd00-dbfa-11eb-83dc-53efb5bea747.png",
-        "products": "beets, carrots, and radishes"
+        "products": []
     },
     {
         "farm_name": "Sleeping Hills Fields",
         "zipcode": "78626",
         "description": "A passionate strawberry and blueberry producer in Georgetown, TX.",
         "bio": "My husband Jeff and I live in Georgetown, TX where we grow our strawberries and blueberries. We are first generation strawberry farmers and are incredibly proud of our delicious produce.",
-        "owner": "Sarah Deere",
         "image": "https://user-images.githubusercontent.com/76696641/124362484-c185a400-dbfa-11eb-8c5c-94077936c8a8.png",
-        "products": "strawberries and blueberries"
+        "products": []
     },
     {
         "farm_name": "Sweet Dreams Orchard",
         "zipcode": "78624",
         "description": "Located in Fredericksburg, TX is Sweet Dreams Orchard- home of the best Texas peaches and plums you can find.",
         "bio": "Located in Fredericksburg, TX is Sweet Dreams Orchard- home of the best Texas peaches and plums you can find. I have been growing and producing my own peaches for the past 15 years and my own plums for the past 10.",
-        "owner": "Hoy Kelly",
         "image": "https://user-images.githubusercontent.com/76696641/124362519-fa257d80-dbfa-11eb-810d-31b65322d296.png",
-        "products": "peaches and plums"
+        "products": []
     },
     {
         "farm_name": "Moonlight Ranch",
         "zipcode": "76501",
         "description": "Moonlight Ranch in Temple, TX under the ownership of Neatha Kelley, grows quality corn.",
         "bio": "Moonlight Ranch in Temple, TX under the esteemed ownership of Neatha Kelley, has grown quality corn for the past 40 years.",
-        "owner": "Neatha Kelley",
         "image": "https://user-images.githubusercontent.com/76696641/124362586-6acc9a00-dbfb-11eb-8bb4-199edbad467b.png",
-        "products": "corn and vine tomatoes"
+        "products": []
     },
     {
         "farm_name": "Lucky Star Acres",
         "zipcode": "78653",
         "description": "I am a very proud corn, cauliflower, and broccoli farmer.",
         "bio": "I am a very proud corn, cauliflower, and broccoli farmer. I own and run Lucky Star Acres with my husband Ron in Manor, TX.",
-        "owner": "Bonnie Parker",
         "image": "https://user-images.githubusercontent.com/76696641/124362550-31942a00-dbfb-11eb-8828-ccc94d606f1a.png",
-        "products": "corn, broccoli, and cauliflower"
+        "products": []
     },
     {
         "farm_name": "Old Stone Farm",
         "zipcode": "78676",
         "description": "Howdy! I am Toad McNeil and I grow the most delicious carrots and bell peppers in all of Texas.",
         "bio": "Howdy! I am Toad McNeil and I grow the most delicious carrots and bell peppers in all of Texas. My farm, Old Stone Farm is located in the heart of Wimberley, TX.",
-        "owner": "Toad McNeil",
         "image": "https://user-images.githubusercontent.com/76696641/124362623-a36c7380-dbfb-11eb-8b33-87a7a7aa0549.png",
-        "products": "carrots, red bell peppers, green bell peppers, and orange bell peppers"
+        "products": []
     },
     {
         "farm_name": "Willow Creek Farms",
         "zipcode": "76578",
         "description": "Here at Willow Creak Farms, we grow tasty and sustainable corn and onions.",
         "bio": "Here at Willow Creak Farms, we grow tasty and sustainable corn and onions. Named after the last and great Mrs. Jefferson I hope that farm leaves just as large a legacy.",
-        "owner": "Martha Jefferson",
         "image": "https://user-images.githubusercontent.com/76696641/124362675-1249cc80-dbfc-11eb-908d-4e35ca7afc3e.png",
-        "products": "corn, red onion, and yellow onion"
+        "products": []
     },
     {
         "farm_name": "Happy Acres",
         "zipcode": "76527",
         "description": "Happy Acres Farm is truly the HAPPIEST farm in Texas with the tastiest veggies.",
         "bio": "Happy Acres Farm is truly the HAPPIEST farm in Texas with the tastiest veggies. We produce the yummiest red onions, tomatoes, and romain lettuce in all of Texas, right here in Florence.",
-        "owner": "Jed Withers",
         "image": "https://user-images.githubusercontent.com/76696641/124362699-3dccb700-dbfc-11eb-9a5b-3608dbadb211.png",
-        "products": "red onions, romain lettuce, and vine tomatoes"
+        "products": []
     }
 ]
