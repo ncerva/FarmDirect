@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { get } = require('mongoose');
 const farmController = require('../../controllers/farmController'); 
 
 router
@@ -12,6 +13,14 @@ router
   .get(farmController.findByOwner)
   .post(farmController.createById)
   .put(farmController.Update)
+
+router
+  .route('/zip/:zipcode')
+  .get(farmController.findAllByZip)
+
+router
+  .route('/profile/:id')
+  .get(farmController.findById)
 
 
 module.exports = router;

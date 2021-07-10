@@ -1,0 +1,68 @@
+[
+  {
+    "city": "Pleasanton",
+    "distance": 41.707,
+    "state": "TX",
+    "zip_code": "78602"
+  },
+  {
+    "city": "Somerset",
+    "distance": 27.052,
+    "state": "TX",
+    "zip_code": "78606"
+  },
+  {
+    "city": "San Antonio",
+    "distance": 23.769,
+    "state": "TX",
+    "zip_code": "78702"
+  },
+  {
+    "city": "Adkins",
+    "distance": 19.672,
+    "state": "TX",
+    "zip_code": "78653"
+  },
+  {
+    "city": "San Antonio",
+    "distance": 13.137,
+    "state": "TX",
+    "zip_code": "78626"
+  },
+  {
+    "city": "San Antonio",
+    "distance": 9.876,
+    "state": "TX",
+    "zip_code": "78624"
+  },
+  {
+    "city": "San Antonio",
+    "distance": 7.71,
+    "state": "TX",
+    "zip_code": "76501"
+  },
+  {
+    "city": "San Antonio",
+    "distance": 5.347,
+    "state": "TX",
+    "zip_code": "78676"
+  },
+  {
+    "city": "San Antonio",
+    "distance": 2.548,
+    "state": "TX",
+    "zip_code": "76578"
+  },
+  {
+    "city": "San Antonio",
+    "distance": 0,
+    "state": "TX",
+    "zip_code": "76527"
+  },
+  {
+    "city": "San Antonio",
+    "distance": 0,
+    "state": "TX",
+    "zip_code": "78201"
+  }
+]
