@@ -50,8 +50,8 @@
     {
         "farm_name": "Lucky Star Acres",
         "zipcode": "78653",
-        "description": "I am a very proud corn, cauliflower, and broccoli farmer.",
-        "bio": "I am a very proud corn, cauliflower, and broccoli farmer. I own and run Lucky Star Acres with my husband Ron in Manor, TX.",
+        "description": "My name is Bonnie Parker and I am a very proud corn, cauliflower, and broccoli farmer.",
+        "bio": "My name is Bonnie Parker and I am a very proud corn, cauliflower, and broccoli farmer. I own and run Lucky Star Acres with my husband Ron in Manor, TX.",
         "image": "https://user-images.githubusercontent.com/76696641/124362550-31942a00-dbfb-11eb-8828-ccc94d606f1a.png",
         "products": []
     },
@@ -75,7 +75,7 @@
         "farm_name": "Happy Acres",
         "zipcode": "76527",
         "description": "Happy Acres Farm is truly the HAPPIEST farm in Texas with the tastiest veggies.",
-        "bio": "Happy Acres Farm is truly the HAPPIEST farm in Texas with the tastiest veggies. We produce the yummiest red onions, tomatoes, and romain lettuce in all of Texas, right here in Florence.",
+        "bio": "My name is Jed Withers and my farm Happy Acres Farm is truly the HAPPIEST farm in Texas with the tastiest veggies. We produce the yummiest red onions, tomatoes, and romain lettuce in all of Texas, right here in Florence.",
         "image": "https://user-images.githubusercontent.com/76696641/124362699-3dccb700-dbfc-11eb-9a5b-3608dbadb211.png",
         "products": []
     }

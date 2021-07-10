@@ -14,17 +14,13 @@ function ResultsCard(props) {
   return (
     <div>
       <div className="card">
-        {/* <header className="card-header">
-        </header> */}
         <div className="card-content">
           <div className="content">
             <div className="media">
               <figure className="media-left">
                   <Link
                   to={linkFarmerProfile}>
-                  {/* <p className="is-128x128" note="thumbnail"> */}
-                    <img  src={props.image} width="128" alt="Placeholder image" />
-                  {/* </p> */}
+                    <img  src={props.image} width="160" alt="Placeholder image" />
                   </Link>
               </figure>
               <div className="media-content">

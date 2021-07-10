@@ -41,7 +41,7 @@ function ProfileCard(props) {
         <div className="media">
           
             <figure className="media-left">
-              <img src={farmInfo.image}  width="128" alt="Placeholder image" />
+              <img src={farmInfo.image} width="200" alt="Placeholder image" />
             </figure>
           
 
