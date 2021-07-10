@@ -38,5 +38,20 @@ module.exports = {
     .then(dbFarm => res.json(dbFarm))
     .catch(err => res.status(422).json(err));
   },
+  findAllByZip: function( req, res) {
+    db.Farm.find({
+      zipcode: req.params.zipcode
+    })
+    .then(dbFarm => {
+      res.json(dbFarm)
+      console.log('server ' + dbFarm)
+    })
+    .catch(err => res.status(422).json(err))
+  },
+  findById: function( req, res) {
+    db.Farm.findById(req.params.id)
+    .then(dbFarm => res.json(dbFarm))
+    .catch(err => res.status(400).json(err))
+  }
   
 }

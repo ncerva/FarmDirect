@@ -27,7 +27,13 @@ export default {
     return axios.get(`api/farmer/${email}`)
   },
   getFarm: function(token) {
-    return axios.get(`api/farm/${token}`)
+    return axios.get(`/api/farm/${token}`)
+  },
+  getFarmProfile: function(id) {
+    return axios.get(`/api/farm/profile/${id}`)
+  },
+  getFarmsByZip: function(zipcode) {
+    return axios.get(`api/farm/zip/${zipcode}`)
   },
   createFarmById: function(token) {
     return axios.post(`api/farm/${token}`)
@@ -47,7 +53,7 @@ export default {
   deleteProduct: function(id) {
     return axios.delete(`api/product/${id}`)
   },
-  getZips: function(radius, zipcode) {
-    return axios.get(`https://www.zipcodeapi.com/rest/${process.env.CLIENT_KEY}/radius.json/${zipcode}/${radius}/mile`)
+  getZips: function(zipcode, radius) {
+    return axios.get(`https://www.zipcodeapi.com/rest/js-85x4Mlt4kT70lFqer89XAkYluRRhsStCyoGFqBplQXqg6OF0MKG4iqOgxNWUsfwE/radius.json/${zipcode}/${radius}/mile`)
   }
 };
