@@ -41,7 +41,7 @@ function App() {
             <Route exact path="/home" component={Home} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/results" component={Results} />
-            <Route exact path="/profile" component={Profile} />
+            <Route path="/profile/:farmerid" component={Profile} />
             <Route exact path="/cart" component={Cart} />
             <Route exact path="/checkout" component={Checkout} />
             <Route exact path="/farmerportal" component={FarmerPortal} />

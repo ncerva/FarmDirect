@@ -8,29 +8,6 @@ import ProductBlock from "../components/ProductBlock";
 const dummyZips = require("../utils/zipCodes.json")
 
 const Results = () => {
-
-
-  // const [farm, setFarm] = useState([1, 2, 3])
-  // const [formObject, setFormObject] = useState({})
-
-  // useEffect(() => {
-  //   loadFarms()
-  // }, [])
-
-  // function loadFarms() {
-  //   API.getFarm()
-  //     .then(res =>
-  //       setFarm(res.data)
-  //     )
-  //     .catch(err => console.log(err));
-  // };
-
-  function handleInputChange(event) {
-    event.preventDefault();
-    alert("you have pressed a button without a purpose");
-    // const { name, value } = event.target;
-    // setFormObject({ ...formObject, [name]: value })
-  };
   const [currentZip, setCurrentZip] = useState(78216);
   const [radius, setRadius] = useState(100);
   const [zipsWithinRadius, setZipsWithinRadius] = useState();
@@ -39,6 +16,14 @@ const Results = () => {
 
   const FARM_ARRAY = []
   const context = useContext(AuthContext);
+  
+  
+  function handleInputChange(event) {
+    event.preventDefault();
+    alert("you have pressed a button without a purpose");
+    // const { name, value } = event.target;
+    // setFormObject({ ...formObject, [name]: value })
+  };
 
 
   /* Production useEffect() *calls zipcode API */
@@ -50,7 +35,6 @@ const Results = () => {
   //     setZipsWithinRadius({...res.data})
   //     console.log(zipsWithinRadius)
   //   });
-
   // }, [])
 
   useEffect(() => {
@@ -117,7 +101,6 @@ const Results = () => {
   //       // .then(setResults(searchResults))
   //       .then(console.log(results))
   //       .catch(err => console.log(err))
-
   //   }
   //   setResults(searchResults);
   // }, [])
@@ -157,6 +140,7 @@ const Results = () => {
                       Farm Search
                     </p>
                   </header>
+                  {/* Search Form */}
                   <div className="card-content">
                     <div className="content">
                       <div className="field">
@@ -174,30 +158,17 @@ const Results = () => {
                   </div>
                 </div>
                 <p className="title is-1"> Search results</p>
-
+                {/* search results render here */}
                 {results.map(farm => (
                   <ResultsCard heading="Search Results"
                     key={farm._id}
+                    _id={farm._id}
                     farm_name={farm.farm_name}
                     farmer={farm.farmer}
                     image={farm.image}
                     description={farm.description} >
                   </ResultsCard>
-
                 ))}
-
-                {/* farm.map(farm => (
-                <ResultsCard heading="Search Results"
-                key={farm._id}
-                farm_name={farm.farm_name}
-                farmer={farm.farmer}
-                image={farm.image}
-                description={farm.description} >
-                  </ResultsCard> */
-
-                  /* //   <ResultsCard>
-                  // {/* <h3>No Results to Display</h3>           */
-                  /* //   </ResultsCard> */}
 
               </div>
             </div>

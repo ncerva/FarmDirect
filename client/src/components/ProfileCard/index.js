@@ -1,10 +1,21 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+import {useParams} from "react-router-dom"
 import { MdAddShoppingCart } from "react-icons/md";
 import "./style.css";
 import ProfileProductBlock from "../ProfileProductBlock"
+import API from "../../utils/API";
 
 
 function ProfileCard(props) {
+
+  const { farmerid } = useParams();
+  
+
+  useEffect(() => {
+    API.getFarm(farmerid)
+    .then(res => console.log(res.data))
+  })
+
 return (
     <div className="card">
         <div className="card-content">
@@ -15,8 +26,8 @@ return (
             </figure>
 
         <div className="media-content">
-            <p className="title">{props.farm_name}Farm Name Goes Here</p>
-            <p className="subtitle">{props.bio}Once upon a time a farm bio went here. lorem ipsum dolorem setum upem knckom kljfgoseja</p>
+            <p className="title">Farm Name Goes Here</p>
+            <p className="subtitle">Once upon a time a farm bio went here. lorem ipsum dolorem setum upem knckom kljfgoseja</p>
         </div>
         </div>
         <div className="content">

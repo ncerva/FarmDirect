@@ -1,8 +1,16 @@
 import React from "react";
 import "./style.css";
+import { Link } from "react-router-dom"
 
 
 function ResultsCard(props) {
+
+  function linkFarmerProfile(){
+    return(`/profile/${props._id}`)
+  }
+
+
+
   return (
     <div>
       <div className="card">
@@ -15,10 +23,13 @@ function ResultsCard(props) {
           <div className="content">
             <div className="media">
               <figure className="media-left">
-                <a href="/profile">
+                <a href="">
+                  <Link
+                  to={linkFarmerProfile}>
                   <p className="image is-128x128" note="thumbnail">
                     <img src={props.image} alt="Placeholder image" />
                   </p>
+                  </Link>
                 </a>
               </figure>
               <div className="media-content">
