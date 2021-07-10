@@ -8,7 +8,7 @@ mongoose.connect(
 
 const farmerData = require("./farmerData.json");
 const farmData = require("./farmData.json");
-const productData = require("./productData.json");
+//const productData = require("./productData.json");
 
 db.Farmer.deleteMany({})
 db.User.remove({})

@@ -5,7 +5,6 @@ import { FaCarrot } from "react-icons/fa";
 import AuthContext from "../../utils/AuthContext";
 import "./style.css";
 const bcrypt = require('bcryptjs');
-
 // const toggleEditable = (e) => {
 //   e.preventDefault();
 //   setEditable(editable ? false : true)
