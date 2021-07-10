@@ -27,7 +27,10 @@ export default {
     return axios.get(`api/farmer/${email}`)
   },
   getFarm: function(token) {
-    return axios.get(`api/farm/${token}`)
+    return axios.get(`/api/farm/${token}`)
+  },
+  getFarmProfile: function(id) {
+    return axios.get(`/api/farm/profile/${id}`)
   },
   getFarmsByZip: function(zipcode) {
     return axios.get(`api/farm/zip/${zipcode}`)

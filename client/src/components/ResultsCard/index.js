@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 function ResultsCard(props) {
 
   function linkFarmerProfile(){
-    return(`/profile/${props._id}`)
+    return(`/profile/${props._id}`);
   }
 
 

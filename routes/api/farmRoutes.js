@@ -18,5 +18,9 @@ router
   .route('/zip/:zipcode')
   .get(farmController.findAllByZip)
 
+router
+  .route('/profile/:id')
+  .get(farmController.findById)
+
 
 module.exports = router;

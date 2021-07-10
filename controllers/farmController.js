@@ -47,6 +47,11 @@ module.exports = {
       console.log('server ' + dbFarm)
     })
     .catch(err => res.status(422).json(err))
+  },
+  findById: function( req, res) {
+    db.Farm.findById(req.params.id)
+    .then(dbFarm => res.json(dbFarm))
+    .catch(err => res.status(400).json(err))
   }
   
 }
