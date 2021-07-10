@@ -47,8 +47,8 @@ function Navbar() {
                 </li>
                 <li className="nav-item">
                   <Link
-                    to="/checkout"
-                    className={window.location.pathname === "/checkout" ? "nav-link active" : "nav-link"}
+                    to="/cart"
+                    className={window.location.pathname === "/cart" ? "nav-link active" : "nav-link"}
                   >
                     <FaShoppingCart />
                   </Link>
