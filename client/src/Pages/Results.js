@@ -122,8 +122,9 @@ const Results = () => {
 
   function handleFormSubmit(event) {
     event.preventDefault();
+    console.log('not yet')
     }
-  };
+ 
 
   return (
     <AuthContext.Consumer>{(context) => {
