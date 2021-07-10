@@ -32,11 +32,12 @@ const Results = () => {
     // setFormObject({ ...formObject, [name]: value })
   };
   const [currentZip, setCurrentZip] = useState(78216);
-  const [radius, setRadius] = useState(50);
+  const [radius, setRadius] = useState(100);
   const [zipsWithinRadius, setZipsWithinRadius] = useState();
   const [demoZips, setDemoZips] = useState(dummyZips)
   const [results, setResults] = useState([])
 
+  const FARM_ARRAY = []
   const context = useContext(AuthContext);
 
 
@@ -52,28 +53,31 @@ const Results = () => {
 
   // }, [])
 
-  useEffect(async () => {
-    await API.getZips(currentZip, radius)
+  useEffect(() => {
+    API.getZips(currentZip, radius)
       .then(res => {
-        setZipsWithinRadius(res.data);
+        setZipsWithinRadius(res.data.zip_codes);
       })
-      
       .catch(err => console.log(err))
-  }, [])
+  }, []);
 
-  function logger(data){
-    console.log(data)
-  }
+  function logger(e) {
+    e.preventDefault()
+    console.log(results)
+  };
 
-  function setSearch(res) {
-    let searchResults = [];
-    for (let i = 0; i < res.data.length; i++) {
-      console.log(res.data[i])
-      API.getFarmsByZip(res.data[i].zip_code)
-        .then(res => console.log(res))
+  function setSearch(arr) {
+    for (let i = 0; i < arr.length; i++) {
+      API.getFarmsByZip(arr[i].zip_code)
+        .then(res => {
+          if (res.data.length > 0) {
+            FARM_ARRAY.push(res.data[0])
+          }
+        })
+        .then(setResults(FARM_ARRAY))
         .catch(err => console.log(err))
     }
-  }
+  };
   // const setSearch = (res) => {
   //   let searchResults = [];
   //   for (let i = 0; i < res.data.length; i++) {
@@ -121,10 +125,11 @@ const Results = () => {
 
 
   function handleFormSubmit(event) {
-    event.preventDefault();
-    console.log('not yet')
-    }
- 
+    event.preventDefault()
+    console.log(zipsWithinRadius)
+    setSearch(zipsWithinRadius);
+  };
+
 
   return (
     <AuthContext.Consumer>{(context) => {
@@ -146,10 +151,28 @@ const Results = () => {
           <div className="container">
             <div className="column is-full">
               <div className="container">
-                <SearchForm
-                  onChange={handleInputChange}
-                  onClick={handleFormSubmit}
-                />
+                <div className="card">
+                  <header className="card-header">
+                    <p className="title">
+                      Farm Search
+                    </p>
+                  </header>
+                  <div className="card-content">
+                    <div className="content">
+                      <div className="field">
+                        <div className="control">
+                          <input onChange={handleInputChange} className="input" type="text" placeholder="Search for farm by zip code" />
+                        </div>
+                      </div>
+                      <div className="control">
+                        <button onClick={handleFormSubmit} className="button">Submit</button>
+                      </div>
+                      <div className="control">
+                        <button onClick={logger} className="button">logger</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <p className="title is-1"> Search results</p>
 
                 {results.map(farm => (

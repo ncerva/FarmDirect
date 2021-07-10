@@ -44,7 +44,7 @@ module.exports = {
     })
     .then(dbFarm => {
       res.json(dbFarm)
-      console.log(dbFarm)
+      console.log('server ' + dbFarm)
     })
     .catch(err => res.status(422).json(err))
   }
