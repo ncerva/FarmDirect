@@ -9,16 +9,16 @@ function CartCard() {
         <div className="card">
             <header className="card-header">
             <p className="title">
-            Checkout
+            Cart
             </p>
             </header>
             <div className="card-content">
                 <div className="content">
                   {/* CartItem will be mapped for each item in cart */}
-                   <CartItem />
-                   <CartItem />
-                   <CartItem />
-                   <CartItem />
+                  <CartItem />
+                  <CartItem />
+                  <CartItem />
+                  <CartItem />
                 </div>
                 <div className="columns">
                   <div className="column is-half"></div>
@@ -29,9 +29,9 @@ function CartCard() {
                     
                   </div>
                   <div className="column is-one-quarter">
-                    <button className="button is-primary">
+                    <a className="button is-primary" href="/checkout">
                       Checkout
-                    </button>
+                    </a>
                   </div>
 
                 </div>
