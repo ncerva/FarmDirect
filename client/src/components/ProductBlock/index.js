@@ -40,7 +40,7 @@ function ProductBlock(props) {
 
   if (!editable) {
     return (
-      <div className="box has-background-primary-light is-flex is-justify-content-space-evenly" >
+      <div className="box is-flex is-justify-content-space-evenly" >
         <span>{props.title}</span>
         <span>${props.price}/{props.packsize}</span>
         <span>{props.quantity}/{props.packsize}</span>
@@ -49,7 +49,7 @@ function ProductBlock(props) {
     )
   }
   return (
-    <div className="box has-background-primary-light is-flex is-justify-content-space-evenly" >
+    <div className="box is-flex is-justify-content-space-evenly" >
       <form>
         <div className="field is-grouped">
           <p className="control">

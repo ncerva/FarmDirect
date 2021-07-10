@@ -74,12 +74,17 @@ function FarmInput() {
 
         if (edit.editable === false) {
           return (
-              <div class="container">
+            <div className="column is-half">
+              <div className="container">
+                <section className="section">
+              <h1 className="title"> <strong> Farmer Portal </strong></h1>
+              <p className="info"> Howdy! Make it easy for customers to find you by filling out your Farm Info. </p>
+            </section>
                 <div className="column is-half">
-              <form>
+              <form action="#">
                 <fieldset disabled>
-                  <div className="field">
-                    <label className="label is-small">Farm Name</label>
+                  <div className="user-details">
+                    <span className="details">Farm Name</span>
                     <div className="control">
                       <input
                         className="input"
@@ -93,8 +98,8 @@ function FarmInput() {
                     </div>
                   </div>
 
-                  <div className="field">
-                    <label className="label is-small">Street Adress</label>
+                  <div className="user-details">
+                    <label className="details">Street Adress</label>
                     <div className="control">
                       <input
                         className="input"
@@ -108,8 +113,8 @@ function FarmInput() {
                     </div>
                   </div>
 
-                  <div className="field">
-                    <label className="label is-small">City</label>
+                  <div className="user-details">
+                    <label className="details">City</label>
                     <div className="control">
                       <input
                         className="input"
@@ -119,8 +124,8 @@ function FarmInput() {
                     </div>
                   </div>
 
-                  <div className="field">
-                    <label className="label is-small">State</label>
+                  <div className="user-details">
+                    <label className="details">State</label>
                     <div className="control">
                       <input
                         className="input"
@@ -130,8 +135,8 @@ function FarmInput() {
                     </div>
                   </div>
 
-                  <div className="field">
-                    <label className="label is-small">Zip Code</label>
+                  <div className="user-details">
+                    <label className="details">Zip Code</label>
                     <div className="control">
                       <input
                         className="input"
@@ -143,8 +148,8 @@ function FarmInput() {
                     </div>
                   </div>
 
-                  <div className="field">
-                    <label className="label is-small">Description</label>
+                  <div className="user-details">
+                    <label className="ldetails">Description</label>
                     <div className="control">
                       <textarea
                         className="textarea"
@@ -157,8 +162,8 @@ function FarmInput() {
                     </div>
                   </div>
 
-                  <div className="field">
-                    <label className="label is-small">Bio</label>
+                  <div className="user-details">
+                    <label className="details">Bio</label>
                     <div className="control">
                       <textarea
                         className="textarea"
@@ -173,23 +178,28 @@ function FarmInput() {
                   </div>
                 </fieldset>
 
-                <div className="field">
+                <div className="user-details">
                   <div className="control">
                     <button className="button is-link" onClick={setEditTrue}>
-                      Edit (editable = false)
+                      Edit
                     </button>
                   </div>
                 </div>
               </form>
               </div>
             </div>
+            </div>
           );
         } else if (edit.editable === true) {
           return (
             <div className="column is-half">
-              <form>
-                <div className="field">
-                  <label className="label is-small">Farm Name</label>
+              <section className="section">
+              <h1 className="title"> <strong> Farmer Portal </strong></h1>
+              <p className="info"> Howdy! Make it easy for customers to find you by filling out your Farm Info. </p>
+            </section>
+              <form action="#">
+                <div className="user-details">
+                  <label className="details">Farm Name</label>
                   <div className="control">
                     <input
                       className="input"
@@ -204,8 +214,8 @@ function FarmInput() {
                   </div>
                 </div>
 
-                <div className="field">
-                  <label className="label is-small">Street Adress</label>
+                <div className="user-details">
+                  <label className="details">Street Adress</label>
                   <div className="control">
                     <input
                       className="input"
@@ -225,8 +235,8 @@ function FarmInput() {
                   </div>
                 </div>
 
-                <div className="field">
-                  <label className="label is-small">City</label>
+                <div className="user-details">
+                  <label className="details">City</label>
                   <div className="control">
                     <input
                       className="input"
@@ -239,8 +249,8 @@ function FarmInput() {
                   </div>
                 </div>
 
-                <div className="field">
-                  <label className="label is-small">State</label>
+                <div className="user-details">
+                  <label className="details">State</label>
                   <p className="control">
                     <select
                       className="form-control"
@@ -307,8 +317,8 @@ function FarmInput() {
                   </p>
                 </div>
 
-                <div className="field">
-                  <label className="label is-small">Zip Code</label>
+                <div className="user-details">
+                  <label className="details">Zip Code</label>
                   <div className="control">
                     <input
                       className="input"
@@ -323,8 +333,8 @@ function FarmInput() {
                   </div>
                 </div>
 
-                <div className="field">
-                  <label className="label is-small">Description</label>
+                <div className="user-details">
+                  <label className="details">Description</label>
                   <div className="control">
                     <textarea
                       className="textarea"
@@ -343,8 +353,8 @@ function FarmInput() {
                   </div>
                 </div>
 
-                <div className="field">
-                  <label className="label is-small">Bio</label>
+                <div className="user-details">
+                  <label className="details">Bio</label>
                   <div className="control">
                     <textarea
                       className="textarea"
@@ -361,10 +371,10 @@ function FarmInput() {
                   </div>
                 </div>
 
-                <div className="field">
+                <div className="user-details">
                   <div className="control">
                     <button className="button is-warning" onClick={updateFarm}>
-                      Submit (editable = true)
+                      Submit
                     </button>
                   </div>
                 </div>

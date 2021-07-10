@@ -1,4 +1,4 @@
-.hero {
+/* .hero {
     position: absolute;
     top: 0;
     left: 0;
@@ -16,7 +16,6 @@
     left: 40%;
     margin-top: -50px;
     margin-left: -50px;
-    /* overflow: hidden; */
 }
 
 .button-box {
@@ -91,4 +90,59 @@
     left: 0%;
     margin-top: -50px;
     margin-left: -50px;
+} */
+
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+
+body {
+  /* display: relative; */
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.section {
+  font-size: 72px;
+}
+/* .container {
+  max-width: 700px;
+  width: 100%;
+} */
+
+form .user-details {
+  margin: 20px 0 12px 0;
+  width: calc(100% / 2 -20px);
+}
+
+.user-details .details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.user-details input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid white;
+  padding-left: 15px;
+  font-size: 16px;
+}
+
+.info {
+  font-size: 24px;
+}
+
+.title {
+  font-size: 72px;
+  color: rgb(0, 82, 120);
+  font-weight: 700;
 }

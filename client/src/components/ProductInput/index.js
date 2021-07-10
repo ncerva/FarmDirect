@@ -50,49 +50,50 @@ function ProductInput(props) {
 
 
   return (
-    <div className="column is-half has-background-primary">
-      <div className="block">
-        <form className="box has-background-primary-light">
+    <div className="container">
+    <div className="column is-half">
+      {/* <div className="block"> */}
+        <form action="#">
 
           <div className="field">
 
-            <label className="label is-small">Product Name</label>
+            <label className="label is-small user-details">Product Name</label>
             <div className="control">
               <input className="input" type="text" placeholder="e.g. Carrots..." onChange={e => setNewProduct({ ...newProduct, title: e.target.value })} />
             </div>
 
-            <label className="label is-small">Price</label>
+            <label className="label is-small user-details">Price</label>
             <div className="control">
               <input className="input" type="number" placeholder="12" onChange={e => setNewProduct({ ...newProduct, price: e.target.value })} />
             </div>
 
-            <label className="label is-small">Unit</label>
+            <label className="label is-small user-details">Unit</label>
             <div className="control">
-              <select className="form-control" id="unit-select" name="unit" onChange={e => setNewProduct({ ...newProduct, packsize: e.target.value })}>
+              <select className="form-control user-details" id="unit-select" name="unit" onChange={e => setNewProduct({ ...newProduct, packsize: e.target.value })}>
                 <option value="">Select Unit</option>
                 <option value="lb">Per Pound</option>
                 <option value="oz">Per Ounce</option>
                 <option value="ea">Each</option>
                 <option value="cs">Per Case</option>
-                <option value="bu">per bunch</option>
+                <option value="bu">Per Bunch</option>
               </select>
             </div>
 
-            <label className="label is-small">Quantity in stock</label>
+            <label className="label is-small user-details">Quantity in stock</label>
             <div className="control">
               <input className="input" type="number" placeholder="12" onChange={e => setNewProduct({ ...newProduct, quantity: e.target.value })} />
             </div>
 
-            <div className="control">
-              <button className="button is-link" onClick={submitNewProduct}>Add product</button>
+            <div className="control user-details">
+              <button className="button is-link details" onClick={submitNewProduct}>Add product</button>
             </div>
           </div>
         </form>
 
-        <div className="box has-background-primary-light is-flex is-justify-content-space-evenly">
+        <div className="box is-flex is-justify-content-space-evenly">
           <span>Product Name</span>
           <span>Price/pack</span>
-          <span>stock</span>
+          <span>Stock</span>
           <span></span>
         </div>
 
@@ -125,7 +126,8 @@ function ProductInput(props) {
         <section id="product field">
           <ProductList />
         </section>
-      </div>
+      {/* </div> */}
+    </div>
     </div>
   )
 }
