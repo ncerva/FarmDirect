@@ -4,7 +4,7 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 const mongoose = require("mongoose");
 require("dotenv").config();
-import cors from 'cors'
+const cors = require('cors');
 // imports models to use with queries
 const db = require('./models/index');
 const routes = require('./routes');
