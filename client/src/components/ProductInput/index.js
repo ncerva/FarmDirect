@@ -25,14 +25,14 @@ function ProductInput(props) {
       quantity: newProduct.quantity,
       farmerId: context.token
     })
-    .then(setNewProduct({
-    title: '',
-    packsize: '',
-    price: '',
-    quantity: '',
-    farmerId: ''
-    }))
-    .then(props.onAdd());
+      .then(setNewProduct({
+        title: '',
+        packsize: '',
+        price: '',
+        quantity: '',
+        farmerId: ''
+      }))
+      .then(props.onAdd());
   }
 
 
@@ -51,8 +51,8 @@ function ProductInput(props) {
 
   return (
     <div className="container">
-    <div className="column is-half">
-      {/* <div className="block"> */}
+      <div className="column is-half">
+        {/* <div className="block"> */}
         <form action="#">
 
           <div className="field">
@@ -126,8 +126,8 @@ function ProductInput(props) {
         <section id="product field">
           <ProductList />
         </section>
-      {/* </div> */}
-    </div>
+        {/* </div> */}
+      </div>
     </div>
   )
 }
