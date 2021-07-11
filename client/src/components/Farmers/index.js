@@ -53,13 +53,13 @@ const index = () => {
                 src="https://user-images.githubusercontent.com/76188076/124308137-6f774c80-db2e-11eb-9a04-115e919abb58.png"
               ></img>
               <div className="right">
-                <h1 className="about"> Zed Smith</h1>
+                <h1 className="about"> Billy Jones</h1>
                 <p id="hello">
                   {" "}
                   "Agriculture is the most healthful, most useful and most noble
                   employment of man." - George Washington
                 </p>
-                <button className="btn"> Learn more about Zed </button>
+                <button className="btn"> Learn more about Billy </button>
               </div>
             </div>
           </div>

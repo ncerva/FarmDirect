@@ -51,13 +51,11 @@ function ProfileCard(props) {
     <div className="card">
       <div className="card-content">
         <div className="media">
-
-          <figure className="media-left is-128x128">
-            <p className="is-128x128">
-              <img src={farmInfo.image} style={{width: '128px'}} alt="Placeholder image" />
-            </p>
-          </figure>
-
+          
+            <figure className="media-left">
+              <img src={farmInfo.image} width="200" alt="Placeholder image" />
+            </figure>
+          
 
           <div className="media-content">
             <p className="title">{farmInfo.farm_name}</p>

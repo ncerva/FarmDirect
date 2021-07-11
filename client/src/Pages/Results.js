@@ -157,14 +157,16 @@ const Results = () => {
                     </div>
                   </div>
                 </div>
+                <br/>
                 <p className="title is-1"> Search results</p>
+                <br/>
                 {/* search results render here */}
                 {results.map(farm => (
                   <ResultsCard heading="Search Results"
                     key={farm._id}
                     _id={farm._id}
                     farm_name={farm.farm_name}
-                    farmer={farm.farmer}
+                    farmer={farm.owner}
                     image={farm.image}
                     description={farm.description} >
                   </ResultsCard>
