@@ -45,49 +45,57 @@ export function SignUpCard() {
         } = context;
         return (
           //toggle button
-          <div className="hero">
-            <div className="">
-                <div>
-                </div>
-              <form id="register" className="input-group">
-                <div className="box" id="formBox">
-              <div
-                className="text-block login-block logout-block"
-                id="signup-block"
-              >
-              <div className="field user-details">
-              <p className="control">
-                <input className="input details" id="email-signup" type="text" placeholder="Email" onChange={e => setSignup({ ...signup, email: e.target.value })} />
+          <div className="container">
+          <section>
+              <h1 className="register">Register to Start Connecting 😃</h1>
+            </section>
+              <form action="#">
+              <div className="user-details">
+              <div className="input-box">
+              <p>
+                <input className="details" id="email-signup" type="text" placeholder="Email" onChange={e => setSignup({ ...signup, email: e.target.value })} />
               </p>
+              </div>
             </div>
-            <div className="field user-details">
-              <p className="control">
-                <input className="input details" id="password-signup" type="password" placeholder="Password" onChange={e => setSignup({ ...signup, password: e.target.value })} />
+            <div className="user-details">
+              <div className="input-box">
+              <p>
+                <input className="details" id="password-signup" type="password"  placeholder="Password" onChange={e => setSignup({ ...signup, password: e.target.value})} />
               </p>
+              </div>
             </div>
-            <div className="field user-details">
-              <p className="control">
-                <input className="input details" id="first-name-signup" type="text" placeholder="First Name" onChange={e => setSignup({ ...signup, first_name: e.target.value })} />
+            <div className="user-details">
+              <div className="input-box">
+              <p>
+                <input className="details" iid="first-name-signup" type="text" placeholder="First Name" onChange={e => setSignup({ ...signup, first_name: e.target.value})} />
               </p>
+              </div>
             </div>
-            <div className="field user-details">
-              <p className="control">
-                <input className="input details" id="last-name-signup" type="text" placeholder="Last Name" onChange={e => setSignup({ ...signup, last_name: e.target.value })} />
+            <div className="user-details">
+              <div className="input-box">
+              <p>
+                <input className="details" id="last-name-signup" type="text" placeholder="Last Name" onChange={e => setSignup({ ...signup, last_name: e.target.value })}/>
               </p>
+              </div>
             </div>
-            <div className="field user-details">
-              <p className="control">
-                <input className="input details" id="street address-signup" type="text" placeholder="Street address e.g. '123 Farm st'" onChange={e => setSignup({ ...signup, street_address: e.target.value })} />
+            <div className="user-details">
+              <div className="input-box">
+              <p>
+                <input className="details" id="street address-signup" type="text" placeholder="Street address e.g. '123 Farm st'" onChange={e => setSignup({ ...signup, street_address: e.target.value })} />
               </p>
+              </div>
             </div>
-            <div className="field user-details">
-              <p className="control">
-                <input className="input details" id="city-signup" type="text" placeholder="City" onChange={e => setSignup({ ...signup, city: e.target.value })} />
+            <div className="user-details">
+              <div className="input-box">
+              <p>
+                <input className="details" id="city-signup" type="text" placeholder="City" onChange={e => setSignup({ ...signup, city: e.target.value })}  />
               </p>
-            </div> 
-                <div className="field user-details">
-              <p className="control">
-                <select className="form-control" id="state-signup" name="state" onChange={e => setSignup({ ...signup, state: e.target.value })}>
+              </div>
+            </div>
+                <div className="user-details">
+                  <div className="input-box">
+              <p>
+                <select className="form-control details" id="state-signup" name="state" onChange={e => setSignup({ ...signup, state: e.target.value })}>
                   <option value="">Select State</option>
                   <option value="AK">Alaska</option>
                   <option value="AL">Alabama</option>
@@ -143,33 +151,28 @@ export function SignUpCard() {
                   <option value="WY">Wyoming</option>
                 </select>
               </p>
+              </div>
             </div>
-            <div className="field user-details">
-              <p className="control">
-                <input className="input details" id="zip-signup" type="text" placeholder="Zipcode" onChange={e => setSignup({ ...signup, zipcode: e.target.value })} />
+            <div className="user-details">
+              <div className="input-box">
+              <p>
+                <input className="details" id="zip-signup" type="text" placeholder="Zipcode" onChange={e => setSignup({ ...signup, zipcode: e.target.value })} />
               </p>
-            </div> 
-                <div className="field user-details">
-                  <p className="control">
+              </div>
+            </div>
+            <div className="user-details">
+              <div className="input-box">
                     <button className="button is-info is-rounded" id="signup-farmer" onClick={addFarmer}>
-                      I am a farmer! <GiFarmer />
+                      I am a farmer <GiFarmer />
                     </button>
-                  </p>
-                </div>
-                <div className="field user-details">
-                  <p className="control">
                     <button className="button is-info is-rounded"
                       id="signup-customer"
-                      onClick={() => API.addNewUser(signup)}
-                    >
-                      I am a customer! <FaCarrot />
+                      onClick={() => API.addNewUser(signup)}>
+                      I am a customer <FaCarrot />
                     </button>
-                  </p>
                 </div>
-              </div>
-              </div>
+                </div>
             </form>
-            </div>
             </div>
         );
       }}
@@ -238,11 +241,16 @@ export function LoginCard() {
         };
 
         return (
-            <form id="login" className="input-group">
-            <div className="field user-details">
+          <div className="container">
+          <section>
+              <h1 className="register">Welcome Back Partner 🤠</h1>
+            </section>
+            <form action="#">
+            <div className="user-details">
+              <div className="input-box">
                 <input
                   id="email-login"
-                  className="input details"
+                  className="details"
                   type="text"
                   placeholder="Email"
                   onChange={(e) =>
@@ -250,10 +258,12 @@ export function LoginCard() {
                   }
                 />
             </div>
-            <div className="field user-details">
+            </div>
+            <div className="user-details">
+              <div className="input-box">
                 <input
                   id="password-login"
-                  className="input details"
+                  className="details"
                   type="password"
                   placeholder="Password"
                   onChange={(e) =>
@@ -261,8 +271,9 @@ export function LoginCard() {
                   }
                 />
             </div>
-            <div className="field user-details">
-              <div className="button-box">
+            </div>
+            <div className="user-details">
+              <div className="input-box">
                   <button className="button is-info is-rounded" onClick={handleLoginUser}>
                     Login as customer <FaCarrot />
                   </button>
@@ -272,6 +283,7 @@ export function LoginCard() {
               </div>
             </div>
           </form>
+          </div>
         );
       }}
     </AuthContext.Consumer>

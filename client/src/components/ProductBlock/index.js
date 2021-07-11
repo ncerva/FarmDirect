@@ -49,17 +49,17 @@ function ProductBlock(props) {
     )
   }
   return (
-    <div className="box is-flex is-justify-content-space-evenly" >
-      <form>
-        <div className="field is-grouped">
-          <p className="control">
+    <div className="column is-two-thirds">
+      <form action="#">
+        <div className="user-details">
+          <p className="input-box">
             <strong>{props.title}</strong>
           </p>
-          <p className="control is-fluid">
+          <p className="control is-two-thirds">
             <label className="label is-small">Price</label>
             <input className="input" type="number" placeholder={props.price} onChange={e => setProductInfo({ ...productInfo, price: e.target.value })}></input>
           </p>
-          <p className="control">
+          <p className="input-box">
             <label className="label is-small">Pack size</label>
             <select className="form-control" id="unit-select" name="unit" onChange={e => setProductInfo({ ...productInfo, packsize: e.target.value })}>
                 <option value="">Select Unit</option>
@@ -71,8 +71,8 @@ function ProductBlock(props) {
               </select>
           </p>
         </div>
-        <div className="field is-grouped">
-          <p className="control">
+        <div className="user-details">
+          <p className="input-box">
             <label className="label is-small">Stock</label>
             <input className="input" type="number" placeholder={props.quantity} onChange={e => setProductInfo({ ...productInfo, quantity: e.target.value })}></input>
           </p>

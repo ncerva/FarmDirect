@@ -1,27 +1,50 @@
+/* body {
+  background: url(https://user-images.githubusercontent.com/76188076/123734826-a960fe00-d863-11eb-8f83-abef5dc64d25.jpeg)
+    no-repeat 75% 75%;
+  background-attachment: fixed;
+  min-height: 100%;
+  background-repeat: no-repeat; */
+  /* vertical-align: baseline; */
+  /* top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; */
+  /* box-shadow: inset 0 0 0 1000px rgba(114, 210, 255, 0.2);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+} */
+
+html {
+  background: url(https://user-images.githubusercontent.com/76188076/123734826-a960fe00-d863-11eb-8f83-abef5dc64d25.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 body {
-    background: url(https://user-images.githubusercontent.com/76188076/123734826-a960fe00-d863-11eb-8f83-abef5dc64d25.jpeg) no-repeat 75% 75%; 
-    /* position: fixed; */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    box-shadow: inset 0 0 0 1000px rgba(114, 210, 255, 0.2);
+  background: transparent;
+}
+
+.containers{
+  background: transparent;
 }
 
 .img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 25%;
-    height: auto;
-    margin-top: 10%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  height: auto;
+  margin-top: 3%;
 }
 
 .containers > p {
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 3vw;
-    justify-content: center;
-    text-align:center;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 3vw;
+  justify-content: center;
+  text-align: center;
 }

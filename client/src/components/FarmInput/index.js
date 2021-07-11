@@ -74,18 +74,19 @@ function FarmInput() {
 
         if (edit.editable === false) {
           return (
-            <div className="column is-half">
-              <div className="container">
+            // <div className="column is-half">
+              <div className="container column is-half">
                 <section className="section">
-              <h1 className="title"> <strong> Farmer Portal </strong></h1>
+              <h1 className="title">Farmer Portal</h1>
               <p className="info"> Howdy! Make it easy for customers to find you by filling out your Farm Info. </p>
             </section>
-                <div className="column is-half">
+                
               <form action="#">
                 <fieldset disabled>
                   <div className="user-details">
-                    <span className="details">Farm Name</span>
-                    <div className="control">
+                  <div className="input-box">
+                    <div className="details">Farm Name</div>
+                    
                       <input
                         className="input"
                         type="text"
@@ -95,12 +96,14 @@ function FarmInput() {
                             : "Sample Farms"
                         }
                       />
+                    
                     </div>
                   </div>
 
                   <div className="user-details">
+                    <div className="input-box">
                     <label className="details">Street Adress</label>
-                    <div className="control">
+                    
                       <input
                         className="input"
                         type="text"
@@ -111,33 +114,38 @@ function FarmInput() {
                         }
                       />
                     </div>
-                  </div>
+                    </div>
+                  
 
                   <div className="user-details">
+                    <div className="input-box">
                     <label className="details">City</label>
-                    <div className="control">
+                    
                       <input
                         className="input"
                         type="text"
                         placeholder={farmInfo.city ? farmInfo.city : "Anytown"}
                       />
                     </div>
-                  </div>
+                    </div>
 
                   <div className="user-details">
+                    <div className="input-box">
                     <label className="details">State</label>
-                    <div className="control">
+                    
                       <input
                         className="input"
                         type="text"
                         placeholder={farmInfo.state ? farmInfo.state : "State"}
                       />
                     </div>
-                  </div>
+                    </div>
+                  
 
                   <div className="user-details">
+                    <div className="input-box">
                     <label className="details">Zip Code</label>
-                    <div className="control">
+                    
                       <input
                         className="input"
                         type="text"
@@ -146,11 +154,13 @@ function FarmInput() {
                         }
                       />
                     </div>
-                  </div>
+                    </div>
+                  
 
                   <div className="user-details">
+                    <div className="input-box">
                     <label className="ldetails">Description</label>
-                    <div className="control">
+                    
                       <textarea
                         className="textarea"
                         placeholder={
@@ -160,11 +170,12 @@ function FarmInput() {
                         }
                       />
                     </div>
-                  </div>
-
+                    </div>
+                  
                   <div className="user-details">
+                    <div className="input-box">
                     <label className="details">Bio</label>
-                    <div className="control">
+                    
                       <textarea
                         className="textarea"
                         placeholder={
@@ -176,20 +187,23 @@ function FarmInput() {
                       />
                     </div>
                   </div>
+                  
                 </fieldset>
-
                 <div className="user-details">
-                  <div className="control">
+                  <div className="input-box">
+                  
                     <button className="button is-link" onClick={setEditTrue}>
                       Edit
                     </button>
                   </div>
-                </div>
+                  </div>
               </form>
               </div>
-            </div>
-            </div>
+            // </div>
+            
           );
+
+
         } else if (edit.editable === true) {
           return (
             <div className="column is-half">
@@ -199,6 +213,7 @@ function FarmInput() {
             </section>
               <form action="#">
                 <div className="user-details">
+                  <div className="input-box"></div>
                   <label className="details">Farm Name</label>
                   <div className="control">
                     <input
@@ -215,6 +230,7 @@ function FarmInput() {
                 </div>
 
                 <div className="user-details">
+                  <div className="input-box">
                   <label className="details">Street Adress</label>
                   <div className="control">
                     <input
@@ -233,9 +249,11 @@ function FarmInput() {
                       }
                     />
                   </div>
+                  </div>
                 </div>
 
                 <div className="user-details">
+                  <div className="input-box">
                   <label className="details">City</label>
                   <div className="control">
                     <input
@@ -247,9 +265,11 @@ function FarmInput() {
                       }
                     />
                   </div>
+                  </div>
                 </div>
 
                 <div className="user-details">
+                  <div className="input-box">
                   <label className="details">State</label>
                   <p className="control">
                     <select
@@ -316,8 +336,10 @@ function FarmInput() {
                     </select>
                   </p>
                 </div>
+                </div>
 
                 <div className="user-details">
+                  <div className="input-box">
                   <label className="details">Zip Code</label>
                   <div className="control">
                     <input
@@ -331,9 +353,11 @@ function FarmInput() {
                       }
                     />
                   </div>
+                  </div>
                 </div>
 
                 <div className="user-details">
+                  <div className="input-box">
                   <label className="details">Description</label>
                   <div className="control">
                     <textarea
@@ -351,9 +375,11 @@ function FarmInput() {
                       }
                     />
                   </div>
+                  </div>
                 </div>
 
                 <div className="user-details">
+                  <div className="input-box">
                   <label className="details">Bio</label>
                   <div className="control">
                     <textarea
@@ -369,14 +395,17 @@ function FarmInput() {
                       }
                     />
                   </div>
+                  </div>
                 </div>
 
                 <div className="user-details">
+                  <div className="input-box">
                   <div className="control">
                     <button className="button is-warning" onClick={updateFarm}>
                       Submit
                     </button>
                   </div>
+                </div>
                 </div>
               </form>
               
