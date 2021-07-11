@@ -24,7 +24,7 @@ function CartCard() {
                   <div className="column is-half"></div>
                   <div className="column is-one-quarter">
                     <p className="title is-4">
-                      Total: GrandTotal$$$
+                      Total: GrandTotal $$$
                     </p>
                     
                   </div>
