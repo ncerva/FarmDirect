@@ -22,5 +22,8 @@ router
   .route('/profile/:id')
   .get(farmController.findById)
 
+router
+  .route('/bigchungus')
+  .get(farmController.bigChungus)
 
 module.exports = router;

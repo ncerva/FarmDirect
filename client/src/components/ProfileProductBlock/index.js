@@ -3,14 +3,15 @@ import "./style.css"
 import API from "../../utils/API"
 import AuthContext from "../../utils/AuthContext";
 import { MdAddShoppingCart } from "react-icons/md";
-import {FiMinusCircle, FiPlusCircle  } from "react-icons/fi";
-function ProfileProductBlock() {
+import { FiMinusCircle, FiPlusCircle } from "react-icons/fi";
+
+function ProfileProductBlock(props) {
 
   const [count, setCount] = useState(1);
 
   const handleAddToCart = () => {
-   alert(`${count} productName added to cart!`)
-   setCount(1);
+    alert(`${count} productName added to cart!`)
+    setCount(1);
   }
   const countMinus = () => {
     if (count > 1) {
@@ -23,7 +24,7 @@ function ProfileProductBlock() {
   }
 
 
-  return(
+  return (
     <div className="box has-background-primary-light is-flex is-justify-content-space-evenly">
       <span>Product name</span>
       <span>product price/pack</span>

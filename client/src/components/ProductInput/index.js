@@ -25,14 +25,14 @@ function ProductInput(props) {
       quantity: newProduct.quantity,
       farmerId: context.token
     })
-    .then(setNewProduct({
-    title: '',
-    packsize: '',
-    price: '',
-    quantity: '',
-    farmerId: ''
-    }))
-    .then(props.onAdd());
+      .then(setNewProduct({
+        title: '',
+        packsize: '',
+        price: '',
+        quantity: '',
+        farmerId: ''
+      }))
+      .then(props.onAdd());
   }
 
 
@@ -52,8 +52,8 @@ function ProductInput(props) {
   return (
     <div className="column is-half has-background-primary">
       <div className="block">
-        <form className="box has-background-primary-light">
 
+        <form className="box has-background-primary-light">
           <div className="field">
 
             <label className="label is-small">Product Name</label>

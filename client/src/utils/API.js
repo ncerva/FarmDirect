@@ -44,6 +44,9 @@ export default {
   getProductsByFarmer: function(token) {
     return axios.get(`api/product/${token}`)
   },
+  getProductsProfile: function(token) {
+    return axios.get(`api/product/profile/${token}`)
+  },
   addProduct: function(postData) {
     return axios.post(`api/product/`, postData)
   },
@@ -55,5 +58,8 @@ export default {
   },
   getZips: function(zipcode, radius) {
     return axios.get(`https://www.zipcodeapi.com/rest/js-85x4Mlt4kT70lFqer89XAkYluRRhsStCyoGFqBplQXqg6OF0MKG4iqOgxNWUsfwE/radius.json/${zipcode}/${radius}/mile`)
+  },
+  bigChungus: function(zipArray) {
+    return axios.get(`api/farm/bigchungus`, {params: {zipcodes: zipArray}})
   }
 };

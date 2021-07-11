@@ -12,5 +12,11 @@ router
     .put(productController.updateProduct)
     .delete(productController.deleteProduct)
 
+  router
+    .route('/profile/:id')
+    .get(productController.getByFarmer)
+  
+
+
 
 module.exports = router;

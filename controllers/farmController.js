@@ -52,6 +52,17 @@ module.exports = {
     db.Farm.findById(req.params.id)
     .then(dbFarm => res.json(dbFarm))
     .catch(err => res.status(400).json(err))
+  },
+  bigChungus: function(req, res){
+    let zipArr = req.params.zipcodes
+    let resArr = []
+    for(let i = 0; i < zipArr.length; i++) {
+      db.Farm.find({zipcode: zipArr[i]})
+      .then(dbFarm => resArr.push(dbFarm))
+      .then(console.log(resArr))
+    }
+    res.json(zipArr)
+    
   }
   
 }
