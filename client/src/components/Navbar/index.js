@@ -108,6 +108,8 @@ function Navbar() {
                     <FaShoppingCart />
                   </Link>
                 </li>
+
+
                 
                 <li className="nav-item">
                   <p className="notLogged">{currentUser}</p>
