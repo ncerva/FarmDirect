@@ -21,39 +21,6 @@ function ProfileCard(props) {
     image: "",
     owner: ""
   })
-  // const fetchData = async () => {
-  //   const res = await fetch(`/api/product/${farmInfo.owner}`)
-  //   const data = await res.json()
-  //   return data
-  //     // for (let i = 0; i < data.length; i++) {
-  //     //   resultsArr.push(data[i])
-  //     //   return resultsArr
-  //     //   console.log(resultsArr)
-  //     // }
-  //   }
-  const fetchData = async () => {
-    let res = await fetch(`/api/product/${farmInfo.owner}`)
-    if(!res.ok) {
-      throw new Error(`HTTP error! status: ${res.status}`);
-    }
-    let productData = await res.json()
-    let productArr = []
-    let seedArr = () => {
-      for ( i=0; i < productData.length; i++ ) {
-        productArr.push(productData[i])
-        console.log(productData[i])
-      }
-    seedArr();
-    } 
-    }
-    
-    // for (let i = 0; i < data.length; i++) {
-    //   resultsArr.push(data[i])
-    //   return resultsArr
-    //   console.log(resultsArr)
-    // }
-  
-
 
   useEffect(() => {
     API.getFarmProfile(farmerid)
@@ -71,31 +38,14 @@ function ProfileCard(props) {
         })
         fetchProducts(res.data.owner)
     })
-    //   .then(res => {
-    //     API.getProductsByFarmer(res.data.owner)
-    //     .then(res => console.log(`response ${res}`))
-    //   })
-    
   }, [])
 
   const fetchProducts = (owner) => {
     API.getProductsForProfile(owner)
     .then(res => setProducts(res.data))
 
-
   } 
-  // useEffect(() => {
-  //   // API.getProductsByFarmer(farmInfo.owner)
-  //   // .then(res => console.log('getting products' + res))
-  //   fetchData()
-  //     // .then(data => {
-  //     //   for (let i = 0; i < data.length; i++) {
-  //     //     resultsArr.push(data[i])
-  //     //     return resultsArr
-  //     //     console.log(resultsArr)
-  //     //   }
-  //     // })
-  // }, [])
+ 
 
   return (
     <div className="card">
