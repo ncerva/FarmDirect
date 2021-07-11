@@ -40,10 +40,8 @@ function ProfileCard(props) {
       <div className="card-content">
         <div className="media">
           
-            <figure className="media-left is-128x128">
-              <p className="is-image is-128x128">
-              <img src='https://via.placeholder.com/128' alt="Placeholder image" />
-              </p>
+            <figure className="media-left">
+              <img src={farmInfo.image} width="200" alt="Placeholder image" />
             </figure>
           
 
