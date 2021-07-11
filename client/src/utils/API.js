@@ -44,8 +44,8 @@ export default {
   getProductsByFarmer: function(token) {
     return axios.get(`api/product/${token}`)
   },
-  getProductsProfile: function(token) {
-    return axios.get(`api/product/profile/${token}`)
+  getProductsForProfile: function(token) {
+    return axios.get(`/api/product/profile/${token}`)
   },
   addProduct: function(postData) {
     return axios.post(`api/product/`, postData)
