@@ -6,19 +6,16 @@ function CartItem(props) {
   return (
     <div className="columns">
       <div className="column">
-        <p className="title is-4">Product </p>
+        <p className="title is-4">{props.title} </p>
       </div>
       <div className="column">
-        <p className="title is-4">Name of Farm </p>
+        <p className="title is-4">${props.price}/{props.packsize}</p>
       </div>
       <div className="column">
-        <p className="title is-4">Price </p>
+        <p className="title is-4">{props.quantity}/{props.packsize}</p>
       </div>
       <div className="column">
-        <p className="title is-4">Quantity </p>
-      </div>
-      <div className="column">
-        <p className="title is-4">Total </p>
+        <p className="title is-4">${props.total}</p>
       </div>
       <div className="column">
         <button className="button is-danger">Remove from cart</button>

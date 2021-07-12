@@ -10,6 +10,7 @@ import Checkout from "./Pages/Checkout";
 import Profile from "./Pages/Profile";
 import FarmerPortal from "./Pages/FarmerPortal";
 import AuthContext from "./utils/AuthContext";
+import {CartContext, CartProvider} from "./utils/CartContext";
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
     currentUser: 'Not logged in'
   });
 
+  const [cartState, setCartState] = useState([])
 
   return (
     <Router>
@@ -33,22 +35,24 @@ function App() {
           zipcode: zipcode
         })
       }}>
-        <div>
-          <Navbar />
-          <Switch>
+        <CartProvider>
+          <div>
+            <Navbar />
+            <Switch>
 
-            <Route exact path="/" component={Home} />
-            <Route exact path="/home" component={Home} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/results" component={Results} />
-            <Route path="/profile/:farmerid" component={Profile} />
-            <Route exact path="/cart" component={Cart} />
-            <Route exact path="/checkout" component={Checkout} />
-            <Route exact path="/farmerportal" component={FarmerPortal} />
+              <Route exact path="/" component={Home} />
+              <Route exact path="/home" component={Home} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/results" component={Results} />
+              <Route path="/profile/:farmerid" component={Profile} />
+              <Route exact path="/cart" component={Cart} />
+              <Route exact path="/checkout" component={Checkout} />
+              <Route exact path="/farmerportal" component={FarmerPortal} />
 
-          </Switch>
-          <Footer />
-        </div>
+            </Switch>
+            <Footer />
+          </div>
+          </CartProvider>
       </AuthContext.Provider>
     </Router>
   );
