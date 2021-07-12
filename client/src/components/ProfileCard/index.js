@@ -5,10 +5,10 @@ import "./style.css";
 import ProfileProductBlock from "../ProfileProductBlock"
 import API from "../../utils/API";
 
-
 function ProfileCard(props) {
-
+  const [products, setProducts] = useState([]);
   const { farmerid } = useParams();
+  const resultsArr = [];
 
   const [farmInfo, setFarmInfo] = useState({
     farm_name: "",
@@ -18,12 +18,14 @@ function ProfileCard(props) {
     zipcode: "",
     description: "",
     bio: "",
-    image: ""
+    image: "",
+    owner: ""
   })
 
   useEffect(() => {
     API.getFarmProfile(farmerid)
-      .then(res => setFarmInfo({
+      .then(res => {
+        setFarmInfo({
         farm_name: res.data.farm_name,
         street_address: res.data.street_address,
         city: res.data.city,
@@ -31,9 +33,19 @@ function ProfileCard(props) {
         zipcode: res.data.zipcode,
         image: res.data.image,
         description: res.data.description,
-        bio: res.data.bio
-      }))
+        bio: res.data.bio,
+        owner: res.data.owner
+        })
+        fetchProducts(res.data.owner)
+    })
   }, [])
+
+  const fetchProducts = (owner) => {
+    API.getProductsForProfile(owner)
+    .then(res => setProducts(res.data))
+
+  } 
+ 
 
   return (
     <div className="card">
@@ -55,10 +67,12 @@ function ProfileCard(props) {
             <div className="column">
               <p className="title is-4">What I grow </p>
               <ul>
-                < ProfileProductBlock />
-                < ProfileProductBlock />
-                < ProfileProductBlock />
-                < ProfileProductBlock />
+                {products.map(product => (
+                  <ProfileProductBlock key={product._id} id={product._id} title={product.title} price={product.price} packsize={product.packsize} />
+                )
+                )}
+
+
               </ul>
             </div>
           </div>

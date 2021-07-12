@@ -1,43 +1,53 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./style.css";
 import CartItem from "../CartItem";
+import { CartContext } from "../../utils/CartContext";
 
 function CartCard() {
   const [grandTotal, setGrandTotal] = useState();
-  
-    return (
-        <div className="card">
-            <header className="card-header">
-            <p className="title">
-            Cart
-            </p>
-            </header>
-            <div className="card-content">
-                <div className="content">
-                  {/* CartItem will be mapped for each item in cart */}
-                  <CartItem />
-                  <CartItem />
-                  <CartItem />
-                  <CartItem />
-                </div>
-                <div className="columns">
-                  <div className="column is-half"></div>
-                  <div className="column is-one-quarter">
-                    <p className="title is-4">
-                      Total: GrandTotal $$$
-                    </p>
-                    
-                  </div>
-                  <div className="column is-one-quarter">
-                    <a className="button is-primary" href="/checkout">
-                      Checkout
-                    </a>
-                  </div>
 
-                </div>
-            </div>
+  const [cart, setCart] = useContext(CartContext)
+
+  const multiplier = (a, b) => {
+    return a * b;
+  }
+
+  const totalPrice = cart.reduce((acc, curr) => acc + curr.total, 0)
+  return (
+    <div className="card">
+      <header className="card-header">
+        <p className="title">
+          Cart
+        </p>
+      </header>
+
+      <div className="card-content">
+        <div className="content">
+          {/* CartItem will be mapped for each item in cart */}
+          {cart.map(item => (
+            <CartItem key={item.id} id={item.id} total={item.total} title={item.title} price={item.price} packsize={item.packsize} total={item.total} quantity={item.quantity} />
+          ))}
+          
+
         </div>
-    )
+        <div className="columns">
+          <div className="column is-half"></div>
+          <div className="column is-one-quarter">
+            <p className="title is-4">
+              Total: ${totalPrice}
+            </p>
+
+          </div>
+          <div className="column is-one-quarter">
+            <a className="button is-primary" href="/checkout">
+              Checkout
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default CartCard;

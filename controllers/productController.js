@@ -16,7 +16,10 @@ module.exports = {
     db.Product.find({
       farmerId: req.params.id
     })
-    .then(dbProduct => res.json(dbProduct))
+    .then(dbProduct => {
+      res.json(dbProduct)
+      console.log(dbProduct)
+    })
     .catch(err => res.status(404).json(err));
   }, 
   updateProduct: function(req, res) {
