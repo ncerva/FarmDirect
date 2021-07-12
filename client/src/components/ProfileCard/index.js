@@ -68,7 +68,7 @@ function ProfileCard(props) {
               <p className="title is-4">What I grow </p>
               <ul>
                 {products.map(product => (
-                  <ProfileProductBlock key={product.id} id={product._id} title={product.title} price={product.price} packsize={product.packsize} />
+                  <ProfileProductBlock key={product._id} id={product._id} title={product.title} price={product.price} packsize={product.packsize} />
                 )
                 )}
 
