@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import "./style.css";
 import CartItem from "../CartItem";
 import { CartContext } from "../../utils/CartContext";
+import { Link } from "react-router-dom"
 
 function CartCard() {
   const [grandTotal, setGrandTotal] = useState();
@@ -13,6 +14,10 @@ function CartCard() {
   }
 
   const totalPrice = cart.reduce((acc, curr) => acc + curr.total, 0)
+
+  function linkCheckoutPage(){
+    return(`/checkout`);
+  }
   return (
     <div className="card">
       <header className="card-header">
@@ -39,9 +44,10 @@ function CartCard() {
 
           </div>
           <div className="column is-one-quarter">
-            <a className="button is-primary" href="/checkout">
-              Checkout
-            </a>
+          <Link
+                  to={linkCheckoutPage}>
+                    <button className="button is-primary" >Checkout</button>
+                  </Link>
           </div>
 
         </div>
