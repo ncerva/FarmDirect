@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { withRouter } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const index = () => {
   useEffect(() => {
@@ -99,13 +100,17 @@ const index = () => {
                   contribute most to real wealth, good morals and happiness." -
                   Thomas Jefferson
                 </p>
+                <Link
+                    to="/login"
+                    className={window.location.pathname === "/login" ? "nav-link active" : "nav-link"}
+                  >
                 <button
-                  onClick={() => this.nextPath("../login/index.js")}
                   className="btn"
                 >
                   {" "}
                   Learn more about John{" "}
                 </button>
+                </Link>
               </div>
             </div>
           </div>
