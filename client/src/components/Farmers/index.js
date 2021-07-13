@@ -80,7 +80,12 @@ const index = () => {
                   doctor, a lawyer, a policeman, and a preacher. But every day,
                   three times a day, you need a farmer." - Brenda Schoepp
                 </p>
+                <Link
+                    to="/login"
+                    className={window.location.pathname === "/login" ? "nav-link active" : "nav-link"}
+                  >
                 <button className="btn"> Learn more about Suzie </button>
+                </Link>
               </div>
               <img
                 className="image"
