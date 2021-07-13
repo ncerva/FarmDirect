@@ -61,7 +61,7 @@ module.exports = {
       .then(dbFarm => resArr.push(dbFarm))
       .then(console.log(resArr))
     }
-    res.json(zipArr)
+    
     
   }
   
