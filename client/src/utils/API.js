@@ -33,7 +33,7 @@ export default {
     return axios.get(`/api/farm/profile/${id}`)
   },
   getFarmsByZip: function(zipcode) {
-    return axios.get(`api/farm/zip/${zipcode}`)
+    return axios.get(`/api/farm/zip/${zipcode}`)
   },
   createFarmById: function(token) {
     return axios.post(`api/farm/${token}`)
@@ -57,7 +57,7 @@ export default {
     return axios.delete(`api/product/${id}`)
   },
   getZips: function(zipcode, radius) {
-    return axios.get(`https://www.zipcodeapi.com/rest/${process.env.ZIP_KEY}/radius.json/${zipcode}/${radius}/mile`)
+    return axios.get(`api/zip/${zipcode}/${radius}`)
   },
   bigChungus: function(zipArray) {
     return axios.get(`api/farm/bigchungus`, {params: {zipcodes: zipArray}})
