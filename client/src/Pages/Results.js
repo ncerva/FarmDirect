@@ -62,6 +62,13 @@ const Results = () => {
         .catch(err => console.log(err))
     }
   };
+  
+  // function setSearch(arr) {
+  //     API.bigChungus(arr)
+  //       .then(res => console.log(res))
+  //       .catch(err => console.log(err))
+  //   }
+  
   // const setSearch = (res) => {
   //   let searchResults = [];
   //   for (let i = 0; i < res.data.length; i++) {
@@ -109,7 +116,7 @@ const Results = () => {
 
   function handleFormSubmit(event) {
     event.preventDefault()
-    console.log(zipsWithinRadius)
+    console.log("submitting" + zipsWithinRadius)
     setSearch(zipsWithinRadius);
   };
 

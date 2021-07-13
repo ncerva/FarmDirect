@@ -57,7 +57,7 @@ export default {
     return axios.delete(`api/product/${id}`)
   },
   getZips: function(zipcode, radius) {
-    return axios.get(`https://www.zipcodeapi.com/rest/js-85x4Mlt4kT70lFqer89XAkYluRRhsStCyoGFqBplQXqg6OF0MKG4iqOgxNWUsfwE/radius.json/${zipcode}/${radius}/mile`)
+    return axios.get(`https://www.zipcodeapi.com/rest/${process.env.ZIP_KEY}/radius.json/${zipcode}/${radius}/mile`)
   },
   bigChungus: function(zipArray) {
     return axios.get(`api/farm/bigchungus`, {params: {zipcodes: zipArray}})
