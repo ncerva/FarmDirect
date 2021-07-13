@@ -14,10 +14,10 @@ const Results = () => {
   const [demoZips, setDemoZips] = useState(dummyZips)
   const [results, setResults] = useState([])
 
-  const FARM_ARRAY = []
+  
   const context = useContext(AuthContext);
-  
-  
+
+
   function handleInputChange(event) {
     event.preventDefault();
     alert("you have pressed a button without a purpose");
@@ -40,7 +40,7 @@ const Results = () => {
   useEffect(() => {
     API.getZips(currentZip, radius)
       .then(res => {
-        setZipsWithinRadius(res.data.zip_codes);
+        setZipsWithinRadius(res.data);
       })
       .catch(err => console.log(err))
   }, []);
@@ -51,7 +51,9 @@ const Results = () => {
   };
 
   function setSearch(arr) {
+    let FARM_ARRAY = []
     for (let i = 0; i < arr.length; i++) {
+      console.log(arr[i])
       API.getFarmsByZip(arr[i].zip_code)
         .then(res => {
           if (res.data.length > 0) {
@@ -62,13 +64,15 @@ const Results = () => {
         .catch(err => console.log(err))
     }
   };
-  
+
+  console.log(results);
+
   // function setSearch(arr) {
   //     API.bigChungus(arr)
   //       .then(res => console.log(res))
   //       .catch(err => console.log(err))
   //   }
-  
+
   // const setSearch = (res) => {
   //   let searchResults = [];
   //   for (let i = 0; i < res.data.length; i++) {
@@ -116,7 +120,12 @@ const Results = () => {
 
   function handleFormSubmit(event) {
     event.preventDefault()
-    console.log("submitting" + zipsWithinRadius)
+    console.log("submitting" + JSON.stringify(zipsWithinRadius))
+    zipsWithinRadius.map(e => {
+      console.log(e)
+    })
+      
+    
     setSearch(zipsWithinRadius);
   };
 
@@ -164,9 +173,9 @@ const Results = () => {
                     </div>
                   </div>
                 </div>
-                <br/>
+                <br />
                 <p className="title is-1"> Search results</p>
-                <br/>
+                <br />
                 {/* search results render here */}
                 {results.map(farm => (
                   <ResultsCard heading="Search Results"
