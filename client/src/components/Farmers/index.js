@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { withRouter } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const index = () => {
   useEffect(() => {
@@ -59,7 +60,12 @@ const index = () => {
                   "Agriculture is the most healthful, most useful and most noble
                   employment of man." - George Washington
                 </p>
+                <Link
+                    to="/login"
+                    className={window.location.pathname === "/login" ? "nav-link active" : "nav-link"}
+                  >
                 <button className="btn"> Learn more about Billy </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -75,7 +81,12 @@ const index = () => {
                   doctor, a lawyer, a policeman, and a preacher. But every day,
                   three times a day, you need a farmer." - Brenda Schoepp
                 </p>
+                <Link
+                    to="/login"
+                    className={window.location.pathname === "/login" ? "nav-link active" : "nav-link"}
+                  >
                 <button className="btn"> Learn more about Suzie </button>
+                </Link>
               </div>
               <img
                 className="image"
@@ -99,13 +110,17 @@ const index = () => {
                   contribute most to real wealth, good morals and happiness." -
                   Thomas Jefferson
                 </p>
+                <Link
+                    to="/login"
+                    className={window.location.pathname === "/login" ? "nav-link active" : "nav-link"}
+                  >
                 <button
-                  onClick={() => this.nextPath("../login/index.js")}
                   className="btn"
                 >
                   {" "}
                   Learn more about John{" "}
                 </button>
+                </Link>
               </div>
             </div>
           </div>
