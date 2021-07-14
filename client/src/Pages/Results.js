@@ -8,47 +8,37 @@ import ProductBlock from "../components/ProductBlock";
 const dummyZips = require("../utils/zipCodes.json")
 
 const Results = () => {
-  const [currentZip, setCurrentZip] = useState(78216);
+  const [currentZip, setCurrentZip] = useState();
   const [radius, setRadius] = useState(100);
   const [zipsWithinRadius, setZipsWithinRadius] = useState();
   const [demoZips, setDemoZips] = useState(dummyZips)
   const [results, setResults] = useState([])
 
-  
+
   const context = useContext(AuthContext);
 
 
   function handleInputChange(event) {
     event.preventDefault();
     alert("you have pressed a button without a purpose");
-    // const { name, value } = event.target;
-    // setFormObject({ ...formObject, [name]: value })
   };
 
 
-  /* Production useEffect() *calls zipcode API */
-
-  // useEffect(() => {
-  //   API.getZips(currentZip, radius)
-  //   .then(res => {
-  //     console.log(res.data)
-  //     setZipsWithinRadius({...res.data})
-  //     console.log(zipsWithinRadius)
-  //   });
-  // }, [])
-
   useEffect(() => {
-    API.getZips(currentZip, radius)
+    API.getZips(context.zipcode, radius)
       .then(res => {
         setZipsWithinRadius(res.data);
+        setCurrentZip(context.zipcode);
+        setResults([]);
       })
       .catch(err => console.log(err))
-  }, []);
+  }, [radius]);
 
   function logger(e) {
     e.preventDefault()
     console.log(results)
   };
+
 
   function setSearch(arr) {
     let FARM_ARRAY = []
@@ -57,64 +47,15 @@ const Results = () => {
       API.getFarmsByZip(arr[i].zip_code)
         .then(res => {
           if (res.data.length > 0) {
-            FARM_ARRAY.push(res.data[0])
+            setResults(current => [...current, res.data[0]]);
           }
         })
-        .then(setResults(FARM_ARRAY))
         .catch(err => console.log(err))
     }
   };
 
   console.log(results);
 
-  // function setSearch(arr) {
-  //     API.bigChungus(arr)
-  //       .then(res => console.log(res))
-  //       .catch(err => console.log(err))
-  //   }
-
-  // const setSearch = (res) => {
-  //   let searchResults = [];
-  //   for (let i = 0; i < res.data.length; i++) {
-  //     console.log(res.data[i])
-  // API.getFarmsByZip(res.data[i].zip_code)
-  //   .then(res => console.log(res))
-  //    .then(res => {
-  //      if (res.length) {
-  //        searchResults.push(res)
-  //        console.log('line 71')
-  //        return searchResults
-  //      }
-  //    })
-  //    .then(searchResults => {
-  //      setSearch(searchResults)
-  //      console.log('line 77')
-  //    })
-  //   .catch(err => console.log(err))
-  //   }
-  // }
-
-
-  /* Test useEffect() calls dummy JSON data */
-
-
-  // useEffect(async () => {
-  //   // console.log(demoZips)
-  //   let searchResults = results
-  //   for (let i = 0; i < demoZips.length; i++) {
-  //     await API.getFarmsByZip(demoZips[i].zip_code)
-  //       .then(res => {
-  //         // console.log(res.data[0])
-  //         if (res.data.length) {
-  //           searchResults.push({ ...res.data[0] });
-  //         }
-  //       })
-  //       // .then(setResults(searchResults))
-  //       .then(console.log(results))
-  //       .catch(err => console.log(err))
-  //   }
-  //   setResults(searchResults);
-  // }, [])
 
 
 
@@ -124,8 +65,8 @@ const Results = () => {
     zipsWithinRadius.map(e => {
       console.log(e)
     })
-      
-    
+
+
     setSearch(zipsWithinRadius);
   };
 
@@ -159,22 +100,29 @@ const Results = () => {
                   {/* Search Form */}
                   <div className="card-content">
                     <div className="content">
+                      <label>Search for farms within 100 miles</label>
                       <div className="field">
-                        <div className="control">
-                          <input onChange={handleInputChange} className="input" type="text" placeholder="Search for farm by zip code" />
+                        
+                        <div class="select" onChange={e => {setRadius(e.target.value)}}>
+                          <select>
+                            <option value="10">10 miles</option>
+                            <option value="25">25 miles</option>
+                            <option value="50">50 miles</option>
+                            <option value="75">75 miles</option>
+                            <option selected value="100">100 miles</option>
+                            <option value="200">200 miles</option>
+                          </select>
                         </div>
                       </div>
                       <div className="control">
                         <button onClick={handleFormSubmit} className="button">Submit</button>
                       </div>
-                      <div className="control">
-                        <button onClick={logger} className="button">logger</button>
-                      </div>
+
                     </div>
                   </div>
                 </div>
                 <br />
-                <p className="title is-1"> Search results</p>
+                <p className="title is-1"> Search results within {radius} miles</p>
                 <br />
                 {/* search results render here */}
                 {results.map(farm => (

@@ -42,6 +42,8 @@ function ProductList() {
       setProducts({...products, items: res.data})
     })
   }
+  
+
 
   return (
     <div>
