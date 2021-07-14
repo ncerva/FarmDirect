@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 
 export function SearchForm(props) {
     return (
@@ -16,7 +17,7 @@ export function SearchForm(props) {
                         </div>
                     </div>
                     <div className="control">
-                        <button onClick={props.handleFormSubmit} className="button">Submit</button>
+                        <button className="button is-info is-rounded" onClick={props.handleFormSubmit} >Submit</button>
                     </div>
                 </div>
             </div>
